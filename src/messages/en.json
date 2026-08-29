@@ -1,0 +1,2254 @@
+{
+  "SalesReportsPage": {
+    "salesTrend": {
+      "title": "A",
+      "startDateLabel": "B",
+      "endDateLabel": "C",
+      "sales": "D",
+      "workedDays": "E",
+      "remaining": "F",
+      "projection": "G"
+    }
+  },
+  "Dashboard": {
+      "title": "Dashboard",
+      "description": "Overview of your business metrics.",
+      "timeRanges": {
+        "day": "Day",
+        "week": "Week",
+        "month": "Month",
+        "year": "Year"
+      },
+      "printButton": "Print",
+      "reportTitle": "Dashboard Report",
+      "reportSubtitle": "{currentLabel} vs. {comparisonLabel}",
+      "comparisonLabels": {
+        "day": "from yesterday",
+        "week": "from last week",
+        "month": "from last month",
+        "year": "from last year"
+      },
+      "currentLabels": {
+        "day": "Today",
+        "week": "This Week",
+        "month": "This Month",
+        "year": "This Year"
+      },
+      "metrics": {
+        "piecesMade": "Pieces Made",
+        "rawMaterialsUsed": "Raw Materials Used",
+        "costOfRawMaterialsUsed": "Cost of Raw Materials Used",
+        "currentInventory": "Current Inventory",
+        "piecesSold": "Pieces Sold",
+        "totalRevenue": "Total Revenue"
+      },
+      "charts": {
+        "salesOverview": {
+          "title": "Sales & Expenses Overview",
+          "description": "Showing data for the last 12 months."
+        },
+        "inventory": {
+          "title": "Raw Material Inventory",
+          "description": "Current stock levels of key materials."
+        },
+        "topProducts": {
+          "title": "Top 10 Sold Products",
+          "description": "Products with the highest sales volume."
+        }
+      }
+    },
+  "Sidebar": {
+    "Dashboard": "Dashboard",
+    "Users": "Users",
+    "Catalogs": "Catalogs",
+    "Accounts": "Accounts",
+    "Customers": "Customers",
+    "MaterialTypes": "Material Types",
+    "Phases": "Phases",
+    "Products": "Products",
+    "RawMaterials": "Raw Materials",
+    "Scales": "Scales",
+    "Vendors": "Vendors",
+    "Intakes": "Intakes",
+    "Inventories": "Inventories",
+    "Invoices": "Invoices",
+    "Production": "Production",
+    "Reports": "Reports",
+    "ProfitLoss": "Profit & Loss",
+    "AccessLog": "Access Log",
+    "Sales": "Sales",
+    "ExpensesMetrics": "Expenses Metrics",
+    "Team": "Team",
+    "Waste": "Waste",
+    "WasteAnalytics": "Waste Analytics",
+    "DamagedLog": "Damaged Log",
+    "Analytics": "Analytics",
+    "Expenses": "Expenses",
+    "IntakesReport": "Intakes"
+  },
+  "SidebarTooltips": {
+    "Dashboard": "Dashboard",
+    "Users": "Users",
+    "Catalogs": "Catalogs",
+    "Accounts": "Accounts",
+    "Customers": "Customers",
+    "MaterialTypes": "Material Types",
+    "Phases": "Phases",
+    "Products": "Products",
+    "RawMaterials": "Raw Materials",
+    "Scales": "Scales",
+    "Vendors": "Vendors",
+    "Expenses": "Expenses",
+    "Intakes": "Intakes",
+    "Inventories": "Inventories",
+    "Invoices": "Invoices",
+    "Production": "Production",
+    "Reports": "Reports",
+    "AccessLog": "Access Log",
+    "ExpensesMetrics": "Expenses Metrics",
+    "Sales": "Sales",
+    "Team": "Team Permissions",
+    "Waste": "Waste",
+    "WasteAnalytics": "Waste Analytics",
+    "DamagedLog": "Damaged Log",
+    "Analytics": "Analytics"
+  },
+  "Login": {
+    "title": "Login",
+    "description": "Enter your email below to login to your account.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "emailPlaceholder": "name@example.com",
+    "passwordPlaceholder": "••••••••",
+    "signInButton": "Sign In",
+    "signupPrompt": "Don't have an account?",
+    "signupLink": "Sign up",
+    "successToast": {
+      "title": "Login Successful",
+      "description": "Welcome back!"
+    },
+    "errorToast": {
+      "title": "Login Failed",
+      "unknown": "An unknown error occurred.",
+      "invalidCredentials": "Invalid email or password."
+    },
+    "validation": {
+      "emailInvalid": "Please enter a valid email.",
+      "passwordRequired": "Password is required."
+    }
+  },
+  "Signup": {
+    "title": "Sign Up",
+    "description": "Create an account to get started.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "emailPlaceholder": "name@example.com",
+    "passwordPlaceholder": "••••••••",
+    "signUpButton": "Sign Up",
+    "loginPrompt": "Already have an account?",
+    "loginLink": "Sign in",
+    "successToast": {
+      "title": "Account Created",
+      "description": "You have been successfully signed up."
+    },
+    "errorToast": {
+      "title": "Signup Failed"
+    },
+    "validation": {
+      "emailInvalid": "Please enter a valid email.",
+      "passwordRequired": "Password must be at least 6 characters."
+    }
+  },
+  "UsersPage": {
+    "title": "User Management",
+    "printButton": "Print Users",
+    "createUser": {
+      "title": "Create New User",
+      "description": "Add a new user to the system. An email will be sent with login instructions.",
+      "emailLabel": "User Email",
+      "emailPlaceholder": "new.user@example.com",
+      "createButton": "Create User",
+      "limitReached": "User limit reached. You cannot add more users."
+    },
+    "myAccount": {
+      "title": "My Account",
+      "description": "Manage your personal account settings.",
+      "emailLabel": "Your Email",
+      "changePasswordButton": "Send Password Reset Email"
+    },
+    "registeredUsers": {
+      "title": "Registered Users",
+      "description": "A list of all users in the system.",
+      "noUsers": "No users found.",
+      "table": {
+        "number": "N°",
+        "email": "Email",
+        "created": "Created At",
+        "actions": "Actions"
+      }
+    },
+    "editDialog": {
+      "title": "Edit User",
+      "description": "You are editing the email for {email}.",
+      "emailLabel": "Email",
+      "save": "Save Changes"
+    },
+    "deleteDialog": {
+      "title": "Are you sure?",
+      "description": "This will permanently delete the user <strong>{email}</strong>. This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete User"
+    },
+    "toasts": {
+      "loadUsersError": {
+        "title": "Error Loading Users"
+      },
+      "updateSuccess": {
+        "title": "User Updated"
+      },
+      "updateError": {
+        "title": "Update Failed",
+        "unknownError": "An unknown error occurred."
+      },
+      "createSuccess": {
+        "title": "User Created"
+      },
+      "createError": {
+        "title": "Creation Failed"
+      },
+      "deleteSuccess": {
+        "title": "User Deleted"
+      },
+      "deleteError": {
+        "title": "Deletion Failed",
+        "unknownError": "An unknown error occurred."
+      },
+      "passwordResetSuccess": {
+        "title": "Password Reset Email Sent",
+        "description": "If an account exists for {email}, an email has been sent with password reset instructions."
+      },
+      "passwordResetError": {
+        "title": "Password Reset Failed",
+        "noEmail": "Could not determine your email address.",
+        "unknownError": "An unknown error occurred."
+      },
+      "popupBlocked": {
+        "title": "Popup Blocked",
+        "description": "Please allow popups for this site to print the user list."
+      },
+      "reportGenerationFailed": {
+        "title": "Report Generation Failed"
+      }
+    },
+    "report": {
+      "title": "User Directory",
+      "generatedDate": "Generated on: {date}",
+      "table": {
+        "email": "Email",
+        "created": "Created"
+      }
+    },
+    "validation": {
+      "emailInvalid": "Please enter a valid email address."
+    }
+  },
+  "AccountsPage": {
+    "title": "Chart of Accounts",
+    "generateReport": {
+      "button": "Generate Report",
+      "errorTitle": "Report Generation Failed"
+    },
+    "newCategoryButton": "New Category",
+    "manageAccounts": {
+      "title": "Manage Accounts",
+      "description": "Organize your financial accounts into categories.",
+      "grandTotal": "Grand Total"
+    },
+    "category": {
+      "editDialog": {
+        "title": "Edit Category",
+        "saveButton": "Save"
+      },
+      "addDialog": {
+        "title": "Add New Category",
+        "description": "Create a new category to group your accounts.",
+        "nameLabel": "Category Name",
+        "namePlaceholder": "e.g., Office Expenses",
+        "saveButton": "Save Category"
+      },
+      "deleteDialog": {
+        "title": "Delete Category?",
+        "description": "This category will be permanently deleted. This action cannot be undone if there are no accounts associated with it.",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "toasts": {
+        "updated": "Category updated.",
+        "added": "Category Added",
+        "addedDesc": "The new category is now available.",
+        "updateError": "Error Updating Category",
+        "addError": "Error Adding Category",
+        "deleted": "Category Deleted",
+        "deletedDesc": "The category has been removed.",
+        "deleteError": "Error Deleting Category"
+      }
+    },
+    "account": {
+      "addButton": "Add Account",
+      "table": {
+        "nameHeader": "Account Name",
+        "descriptionHeader": "Description",
+        "typeHeader": "Type",
+        "actionsHeader": "Actions",
+        "noAccounts": "No accounts in this category yet."
+      },
+      "addDialog": {
+        "title": "Add Account to",
+        "nameLabel": "Account Name",
+        "namePlaceholder": "e.g., Monthly Rent",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Optional description of the account",
+        "saveButton": "Save Account"
+      },
+      "editDialog": {
+        "title": "Edit Account",
+        "categoryLabel": "Category",
+        "categoryPlaceholder": "Select a category",
+        "saveButton": "Save Changes"
+      },
+      "deleteDialog": {
+        "title": "Delete Account?",
+        "description": "This will permanently delete this account. This action cannot be undone.",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "toasts": {
+        "updated": "Account Updated",
+        "updatedDesc": "The account details have been saved.",
+        "added": "Account Added",
+        "addedDesc": "The new account has been created.",
+        "updateError": "Error Updating Account",
+        "addError": "Error Adding Account",
+        "deleted": "Account Deleted",
+        "deletedDesc": "The account has been removed.",
+        "deleteError": "Error Deleting Account"
+      }
+    },
+    "uncategorized": {
+      "title": "Uncategorized",
+      "warningTitle": "Uncategorized Accounts Found",
+      "warningDescription": "The following accounts do not belong to any category. Please edit them to assign a category."
+    },
+    "validation": {
+      "categoryNameRequired": "Category name is required.",
+      "accountNameRequired": "Account name is required.",
+      "categoryRequired": "Category is required."
+    }
+  },
+  "CustomersPage": {
+    "title": "Customers",
+    "printButton": "Print",
+    "mobileWarning": {
+      "title": "Mobile View",
+      "description": "This page is best viewed on a wider screen for a better experience."
+    },
+    "reportDialog": {
+      "title": "Generate Customer Report",
+      "description": "Select a customer to print their profile or choose all to print a directory.",
+      "label": "Customer",
+      "selectPlaceholder": "Select a customer",
+      "searchPlaceholder": "Search customer...",
+      "empty": "No customer found.",
+      "allOption": "All Customers",
+      "generateButton": "Generate"
+    },
+    "newCustomer": {
+      "title": "New Customer",
+      "description": "Add a new customer to your database.",
+      "saveButton": "Save Customer"
+    },
+    "form": {
+      "nameLabel": "Customer Name",
+      "namePlaceholder": "e.g., Jane Doe's Boutique",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "(555) 123-4567",
+      "emailLabel": "Contact Email",
+      "emailPlaceholder": "orders@example.com",
+      "websiteLabel": "Website",
+      "websitePlaceholder": "https://example.com",
+      "addressLabel": "Address",
+      "addressPlaceholder": "123 Main St",
+      "cityLabel": "City",
+      "cityPlaceholder": "Anytown, USA"
+    },
+    "customerList": {
+      "title": "Customer List",
+      "description": "A view of all your existing customers.",
+      "table": {
+        "name": "Name",
+        "email": "Contact",
+        "phone": "Phone",
+        "city": "City",
+        "actions": "Actions"
+      },
+      "empty": "No customers found. Add one to get started!"
+    },
+    "editDialog": {
+      "title": "Edit {customerName}",
+      "saveButton": "Save Changes"
+    },
+    "deleteDialog": {
+      "title": "Are you sure?",
+      "description": "This will permanently delete <strong>{customerName}</strong>. This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "toasts": {
+      "saved": {
+        "title": "Customer Saved",
+        "description": "{customerName} has been added to your customers."
+      },
+      "saveError": {
+        "title": "Save Error"
+      },
+      "reportError": {
+        "title": "Report Error",
+        "description": "Could not generate the report."
+      },
+      "updated": {
+        "title": "Customer Updated",
+        "description": "Changes to {customerName} have been saved."
+      },
+      "updateError": {
+        "title": "Update Error"
+      },
+      "deleted": {
+        "title": "Customer Deleted",
+        "description": "The customer has been removed."
+      },
+      "deleteError": {
+        "title": "Delete Error"
+      }
+    },
+    "validation": {
+      "nameRequired": "Customer name is required.",
+      "addressRequired": "Address is required.",
+      "phoneRequired": "Phone number is required.",
+      "cityRequired": "City is required.",
+      "urlInvalid": "Please enter a valid URL.",
+      "emailInvalid": "Please enter a valid email.",
+      "itemRequired": "An item must be selected."
+    },
+    "report": {
+      "profileTitle": "Customer Profile: {name}",
+      "directoryTitle": "Customer Directory",
+      "generatedDateLabel": "Generated on",
+      "totalLabel": "Total Customers",
+      "websiteLabel": "Website",
+      "joinDateLabel": "Join Date"
+    }
+  },
+  "MaterialTypesPage": {
+    "title": "Material Types",
+    "printButton": "Print Report",
+    "newMaterialType": {
+      "title": "New Material Type",
+      "description": "Add a new type of material to categorize your inventory.",
+      "nameLabel": "Name",
+      "namePlaceholder": "e.g., Cotton, Polyester",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "(Optional) Short description",
+      "saveButton": "Save Material Type"
+    },
+    "existingMaterialTypes": {
+      "title": "Existing Material Types",
+      "description": "A list of all material types currently in the system.",
+      "table": {
+        "name": "Name",
+        "description": "Description",
+        "actions": "Actions"
+      },
+      "inUseTooltip": "This type is in use and cannot be deleted.",
+      "empty": "No material types found. Add one to get started."
+    },
+    "reportDialog": {
+      "title": "Material Types Report",
+      "description": "Select a type to print a single report, or choose all.",
+      "label": "Material Type",
+      "allOption": "All Material Types",
+      "selectPlaceholder": "Select a type",
+      "searchPlaceholder": "Search types...",
+      "empty": "No types found.",
+      "generateButton": "Generate"
+    },
+    "editDialog": {
+      "title": "Edit {typeName}",
+      "description": "Modify the name and description of this material type.",
+      "saveButton": "Save Changes"
+    },
+    "deleteDialog": {
+      "title": "Are you sure?",
+      "description": "This will permanently delete the material type <strong>{typeName}</strong>. This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "toasts": {
+      "saved": {
+        "title": "Material Type Saved",
+        "description": "{typeName} has been added."
+      },
+      "updated": {
+        "title": "Material Type Updated",
+        "description": "Changes to {typeName} have been saved."
+      },
+      "deleted": {
+        "title": "Material Type Deleted",
+        "description": "{typeName} has been removed."
+      },
+      "saveError": "Error saving material type.",
+      "updateError": "Error updating material type.",
+      "deleteError": "Error deleting material type."
+    },
+    "validation": {
+      "nameRequired": "Name is required.",
+      "itemRequired": "An item must be selected."
+    },
+    "report": {
+      "allTitle": "All Material Types",
+      "singleTitle": "Material Type: {name}"
+    }
+  },
+  "PhasesPage": {
+    "title": "Production Phases",
+    "printButton": "Print",
+    "newPhase": {
+      "title": "New Phase",
+      "description": "Add a new stage to your production workflow.",
+      "nameLabel": "Phase Name",
+      "namePlaceholder": "e.g., Cutting, Sewing, Finishing",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Describe what happens in this phase.",
+      "saveButton": "Save Phase"
+    },
+    "existingPhases": {
+      "title": "Existing Phases",
+      "description": "Manage and view your current production phases.",
+      "table": {
+        "number": "Order",
+        "name": "Name",
+        "description": "Description",
+        "actions": "Actions"
+      },
+      "empty": "No production phases found."
+    },
+    "reportDialog": {
+      "title": "Phases Report",
+      "description": "Select a phase to print, or print all.",
+      "label": "Phase",
+      "selectPlaceholder": "Select a phase",
+      "searchPlaceholder": "Search phases...",
+      "empty": "No phases found.",
+      "allOption": "All Phases",
+      "generateButton": "Generate"
+    },
+    "editDialog": {
+      "title": "Edit {phaseName}",
+      "description": "Update the details for this production phase.",
+      "saveButton": "Save Changes"
+    },
+    "deleteDialog": {
+      "title": "Are you sure?",
+      "description": "This will permanently delete the <strong>{phaseName}</strong> phase. This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "toasts": {
+      "saved": {
+        "title": "Phase Saved",
+        "description": "The phase '{phaseName}' has been added."
+      },
+      "saveError": "Error saving the new phase.",
+      "editNotAllowed": {
+        "title": "Edit Not Allowed",
+        "description": "The '{phaseName}' phase is a default phase and cannot be edited."
+      },
+      "updateSuccess": {
+        "title": "Update Successful",
+        "description": "The phase '{phaseName}' has been updated."
+      },
+      "updateError": "Error updating the phase.",
+      "deleteNotAllowed": {
+        "title": "Delete Not Allowed",
+        "description": "Default phases cannot be deleted."
+      },
+      "deleteSuccess": {
+        "title": "Phase Deleted",
+        "description": "The phase has been successfully removed."
+      },
+      "deleteError": "Error deleting the phase.",
+      "reportError": "Report Error",
+      "reportErrorDesc": "Failed to generate the phases report."
+    },
+    "validation": {
+      "nameRequired": "Phase name is required.",
+      "descriptionRequired": "Description is required.",
+      "itemRequired": "An item must be selected."
+    }
+  },
+  "RawMaterialsPage": {
+    "title": "Raw Materials",
+    "reportCard": {
+      "title": "Generate Report",
+      "description": "Generate a report for a specific raw material or for all materials.",
+      "button": "Generate Report",
+      "label": "Raw Material",
+      "selectPlaceholder": "Select a material",
+      "allOption": "All Raw Materials",
+      "searchPlaceholder": "Search material...",
+      "empty": "No material found."
+    },
+    "listCard": {
+      "title": "All Raw Materials",
+      "description": "This is a consolidated list of all individual items available from your vendors."
+    },
+    "table": {
+      "sku": "SKU",
+      "item": "Item",
+      "vendor": "Vendor",
+      "price": "Price",
+      "scale": "Scale",
+      "inStock": "In Stock"
+    },
+    "empty": "No raw materials found. Add items to your vendors in the Vendors catalog.",
+    "toasts": {
+      "reportError": {
+        "title": "Report Error",
+        "description": "An unknown error occurred while generating the report.",
+        "popupBlockedTitle": "Popup Blocked",
+        "popupBlockedDescription": "Please allow popups for this site to view the report."
+      }
+    },
+    "report": {
+      "singleTitle": "Raw Material Report: {itemName}",
+      "allTitle": "Complete Raw Materials Report",
+      "totalLabel": "Total Materials: {count}"
+    }
+  },
+  "ScalesPage": {
+    "title": "Scales",
+    "reportButton": "Generate Report",
+    "newScale": {
+      "title": "New Scale",
+      "description": "Add a new unit of measurement to the system.",
+      "nameLabel": "Scale Name",
+      "namePlaceholder": "e.g., Kilograms, Liters",
+      "typeLabel": "Type",
+      "typePlaceholder": "Select type",
+      "saveButton": "Save Scale"
+    },
+    "existingScales": {
+      "title": "Existing Scales",
+      "description": "A list of all measurement units currently available.",
+      "table": {
+        "name": "Name",
+        "type": "Type",
+        "actions": "Actions"
+      },
+      "empty": "No scales found. Add one to get started."
+    },
+    "editDialog": {
+      "title": "Edit Scale",
+      "description": "Modify the name and type of this scale.",
+      "saveButton": "Save Changes"
+    },
+    "deleteDialog": {
+      "title": "Are you sure?",
+      "description": "This will permanently delete the scale <strong>{scaleName}</strong>. This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "toasts": {
+      "saveSuccess": {
+        "title": "Scale Saved",
+        "description": "{scaleName} has been added."
+      },
+      "updateSuccess": {
+        "title": "Scale Updated",
+        "description": "Changes to {scaleName} have been saved."
+      },
+      "deleteSuccess": {
+        "title": "Scale Deleted",
+        "description": "{scaleName} has been removed."
+      },
+      "alreadyExists": "A scale with this name already exists.",
+      "saveError": "Error saving scale.",
+      "updateError": "Error updating scale.",
+      "deleteError": "Error deleting scale.",
+      "popupBlocked": {
+        "title": "Popup Blocked",
+        "description": "Please allow popups for this site to view the report."
+      },
+      "reportError": "Report Error",
+      "reportErrorDesc": "An unknown error occurred while generating the report."
+    },
+    "validation": {
+      "nameRequired": "Scale name is required.",
+      "typeRequired": "Type is required."
+    },
+    "report": {
+      "title": "Scales Catalog",
+      "generatedDateLabel": "Generated on"
+    }
+  },
+  "ProductsPage": {
+    "title": "Products",
+    "mobileWarning": {
+      "title": "Desktop Recommended",
+      "description": "This section is optimized for desktop use. Some features may be limited on smaller screens."
+    },
+    "readonly": {
+      "title": "Read-Only Mode",
+      "description": "Subscription required to create, edit, or delete products and categories."
+    },
+    "generateReport": {
+      "title": "Generate Catalog Report",
+      "description": "Generate a catalog of a specific product or all products.",
+      "allOption": "All Products",
+      "selectPlaceholder": "Select product",
+      "searchPlaceholder": "Search product...",
+      "empty": "No product found.",
+      "button": "Generate",
+      "error": {
+        "title": "Report Error",
+        "description": "Could not generate the product catalog.",
+        "noProducts": "There are no products matching the criteria to generate a report."
+      }
+    },
+    "manageCategories": {
+      "title": "Product Categories",
+      "description": "Group your products into categories for better organization.",
+      "newCategoryButton": "New Category",
+      "editCategoriesButton": "Manage Categories",
+      "addDialog": {
+        "title": "Add New Category",
+        "description": "Create a new category for your products.",
+        "label": "Category Name",
+        "placeholder": "e.g., T-Shirts, Hoodies",
+        "existingLabel": "Existing Categories",
+        "saveButton": "Save Category"
+      },
+      "editDialog": {
+        "title": "Manage Product Categories",
+        "description": "Edit or delete existing product categories.",
+        "doneButton": "Done"
+      },
+      "deleteDialog": {
+        "title": "Delete Category?",
+        "description": "This will permanently delete the category <strong>{categoryName}</strong>. This action cannot be undone.",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "toasts": {
+        "addSuccess": "Category Added",
+        "addSuccessDesc": "The category '{categoryName}' is now available.",
+        "addError": "Error Adding Category",
+        "updateSuccess": "Category Renamed",
+        "updateError": "Error Renaming Category",
+        "deleteSuccess": "Category Deleted",
+        "deleteError": "Error Deleting Category"
+      }
+    },
+    "addNewProduct": {
+      "title": "Add New Product",
+      "existingProductsPlaceholder": "Copy from existing product...",
+      "saveButton": "Save Product",
+      "namePlaceholder": "Enter Product",
+      "itemsBadge": "{count} items",
+      "editSr": "Edit Product Details",
+      "viewComponentsSr": "View/Edit Components",
+      "table": {
+        "productName": "Product",
+        "scale": "Scale",
+        "salePrice": "Sale Price",
+        "category": "Category",
+        "components": "Components",
+        "actions": "Actions"
+      },
+
+      "toasts": {
+        "saveSuccess": "Product Saved",
+        "saveSuccessDesc": "{productName} has been added to your catalog.",
+        "saveError": "Error Saving Product"
+      }
+    },
+    "availableProducts": {
+      "title": "Available Products",
+      "description": "A list of all your configured products and their components.",
+      "loading": "Loading products...",
+      "empty": "No products found. Add one to get started.",
+      "table": {
+        "productName": "Product",
+        "scale": "Scale",
+        "salePrice": "Sale Price",
+        "category": "Category",
+        "components": "Components",
+        "actions": "Actions"
+      },
+      "bom": {
+        "title": "Bill of Materials for {productName}",
+        "editButton": "Edit Components",
+        "empty": "No components defined for this product.",
+        "table": {
+          "rawMaterial": "Raw Material",
+          "material":"Material",
+          "vendor": "Vendor",
+          "quantity": "Quantity"
+        }
+      },
+      "deleteDialog": {
+        "title": "Delete Product?",
+        "description": "Are you sure you want to delete {productName}? This action cannot be undone.",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "toasts": {
+        "deleteSuccess": "Product Deleted",
+        "deleteSuccessDesc": "The product has been removed.",
+        "deleteError": "Error Deleting Product"
+      }
+    },
+    "editProductDialog": {
+      "title": "Edit {productName}",
+      "description": "Modify the general details of this product.",
+      "categoryLabel": "Category",
+      "categoryPlaceholder": "Select a category",
+      "salePriceLabel": "Sale Price",
+      "saveButton": "Save Changes",
+      "scaleAmountLabel": "Amount",
+      "scaleUnitLabel": "Scale",
+      "toasts": {
+        "updateSuccess": "Product Updated",
+        "updateSuccessDesc": "The product details have been saved.",
+        "updateError": "Error Updating Product"
+      }
+    },
+    "editComponentsDialog": {
+      "title": "Edit Components for {productName}",
+      "materialLabel": "Material",
+      "materialPlaceholder": "Select a material",
+      "quantityLabel": "Quantity",
+      "quantityPlaceholder": "0",
+      "removeSr": "Remove component",
+      "addButton": "Add Component",
+      "saveButton": "Save Components",
+      "toasts": {
+        "updateSuccess": "Components Updated",
+        "updateSuccessDesc": "The bill of materials has been saved.",
+        "updateError": "Error Updating Components"
+      }
+    },
+    "validation": {
+      "itemRequired": "Please select a product."
+    },
+    "report": {
+      "productTitle": "Product Catalog",
+      "inventoryTitle": "Full Product Catalog",
+      "totalLabel": "Total Products",
+      "nameLabel": "Product Name",
+      "categoryLabel": "Category",
+      "priceLabel": "Sale Price",
+      "bom": {
+        "title": "Bill of Materials",
+        "sku": "SKU",
+        "item": "Item",
+        "vendor": "Vendor",
+        "quantity": "Quantity",
+        "scale": "Scale",
+        "noComponents": "This product has no components defined."
+      }
+    }
+  },
+
+  "VendorsPage": {
+    "totalVendors": "Total Vendors: {count}",
+  "title": "Vendors",
+
+  "addItemButton": "Add Item",
+
+  "addItemDialog": {
+    "title": "Add Item to {vendorName}",
+    "description": "Add a new raw material item for this vendor.",
+    "saveButton": "Save Item"
+  },
+
+  "addNewVendor": {
+    "title": "Add New Vendor",
+    "description": "Register a new supplier and the raw materials they provide.",
+    "saveButton": "Save Vendor"
+  },
+
+  "toasts": {
+    "itemAdded": {
+      "title": "Item Added",
+      "description": "{itemName} has been added to the vendor."
+    },
+    "itemAddError": "Error Adding Item"
+  },
+
+  "validation": {
+    "skuExists": "This SKU already exists for this vendor."
+  },
+
+
+    "form": {
+      "vendorName": "Vendor Name",
+      "vendorNamePlaceholder": "e.g., Fabric & Co.",
+      "contactPerson": "Contact Person",
+      "contactPersonPlaceholder": "e.g., John Smith",
+      "email": "Email",
+      "emailPlaceholder": "contact@fabric.co",
+      "phone": "Phone",
+      "phonePlaceholder": "(555) 123-4567",
+      "address": "Address",
+      "addressPlaceholder": "123 Textile Ave",
+      "country": "Country",
+      "countryPlaceholder": "e.g., USA",
+      "itemsTitle": "Items provided by this vendor",
+      "sku": "SKU",
+      "item": "Item Name",
+      "type": "Material Type",
+      "typePlaceholder": "Select type",
+      "price": "Price per Unit",
+      "scale": "Scale",
+      "scalePlaceholder": "Select a scale",
+      "addItemButton": "Add another item"
+    },
+    "vendorList": {
+      "title": "Vendor List",
+      "description": "A list of all your registered vendors and their items.",
+      "noVendors": "No vendors found. Add one to get started.",
+      "noItems": "No items for this vendor."
+    },
+    "reportDialog": {
+      "trigger": "Print Report",
+      "title": "Generate Vendor Report",
+      "description": "Select a vendor to print their profile or choose all to print a directory.",
+      "label": "Vendor",
+      "selectPlaceholder": "Select a vendor",
+      "searchPlaceholder": "Search vendor...",
+      "empty": "No vendor found.",
+      "allOption": "All Vendors",
+      "generateButton": "Generate"
+    },
+    "editItemDialog": {
+      "title": "Edit {itemName}",
+      "description": "Modify the details of this raw material.",
+      "itemNameLabel": "Item Name",
+      "saveButton": "Save Changes"
+    },
+    "editVendorDialog": {
+      "title": "Edit {vendorName}",
+      "saveButton": "Save Changes"
+    },
+    "deleteDialogs": {
+      "vendorTitle": "Delete Vendor?",
+      "vendorDescription": "This will permanently delete <strong>{vendorName}</strong> and all of its associated items. This action cannot be undone.",
+      "itemTitle": "Delete Item?",
+      "itemDescription": "This will permanently delete <strong>{itemName}</strong>. This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "toasts": {
+      "vendorCreated": {
+        "title": "Vendor Created",
+        "description": "{vendorName} has been successfully added."
+      },
+      "error": "Error",
+      "reportError": {
+        "title": "Report Error"
+      },
+      "itemUpdated": {
+        "title": "Item Updated"
+      },
+      "itemUpdateError": "Error Updating Item",
+      "itemDeleted": {
+        "title": "Item Deleted"
+      },
+      "vendorUpdated": {
+        "title": "Vendor Updated"
+      },
+      "vendorUpdateError": "Error Updating Vendor",
+      "vendorDeleted": {
+        "title": "Vendor Deleted"
+      },
+      "vendorDeleteError": "Error Deleting Vendor"
+    },
+    "validation": {
+      "skuRequired": "SKU is required.",
+      "itemNameRequired": "Item name is required.",
+      "pricePositive": "Price must be a positive number.",
+      "scaleRequired": "Scale is required.",
+      "typeRequired": "Type is required.",
+      "vendorNameRequired": "Vendor name is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "vendorRequired": "Vendor is required."
+    },
+    "report": {
+      "singleTitle": "Vendor Profile: {name}",
+      "allTitle": "All Vendors Report",
+      "generatedDateLabel": "Generated on",
+      "noItems": "No items listed for this vendor.",
+      "contactInfo": "Contact Information",
+      "itemsSupplied": "Items Supplied",
+      "headers": {
+        "sku": "SKU",
+        "item": "Item",
+        "type": "Type",
+        "price": "Price",
+        "scale": "Scale",
+        "name": "Vendor Name",
+        "contactPerson": "Contact",
+        "email": "Email",
+        "phone": "Phone"
+      }
+    }
+  },
+  "ExpensesPage": {
+  "title": "Expenses",
+  "newExpense": {
+    "title": "Log New Expense",
+    "description": "Record a business expense to keep your finances in order.",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "e.g., Office supply purchase",
+    "amountLabel": "Amount",
+    "categoryLabel": "Category",
+    "categoryPlaceholder": "Select a category",
+    "dateLabel": "Date of Expense",
+    "datePlaceholder": "Pick a date",
+    "notesLabel": "Notes (Optional)",
+    "notesPlaceholder": "Add any relevant notes here...",
+    "saveButton": "Save Expense"
+  },
+  "filters": {
+    "title": "Report Filters",
+    "categoryLabel": "Category",
+    "allCategories": "All Categories",
+    "allProducts": "All Products",
+    "searchPlaceholder": "Search category...",
+    "empty": "No categories found.",
+    "startDateLabel": "Start Date",
+    "endDateLabel": "End Date"
+  },
+  "generateButton": "Generate Report",
+  "log": {
+    "title": "Expense Log",
+    "description": "A history of all recorded expenses.",
+    "dateHeader": "Date",
+    "categoryHeader": "Category",
+    "descriptionHeader": "Description",
+    "amountHeader": "Amount",
+    "actionsHeader": "Actions",
+    "grandTotal": "Grand Total"
+  },
+  "empty": "No expenses recorded yet.",
+  "deleteDialog": {
+    "title": "Delete Expense?",
+    "description": "This will permanently delete this expense record. This action cannot be undone.",
+    "cancel": "Cancel",
+    "delete": "Delete"
+  },
+  "toasts": {
+    "expenseAdded": "Expense successfully logged.",
+    "reportError": "Report Error",
+    "error": "An error occurred."
+  },
+  "validation": {
+    "descriptionRequired": "Description is required.",
+    "amountPositive": "Amount must be greater than 0.",
+    "categoryRequired": "Category is required.",
+    "dateRequired": "A date for the expense is required."
+  }
+},
+  "ArrivalsPage": {
+    "title": "Raw Material Intakes",
+    "newIntake": {
+      "title": "New Raw Material Intake",
+      "description": "Record the arrival of raw materials from your vendors.",
+      "dateLabel": "Date of Arrival",
+      "datePlaceholder": "Select date",
+      "materialLabel": "Material",
+      "materialPlaceholder": "Select a material",
+      "materialSearchPlaceholder": "Search materials...",
+      "materialEmpty": "No materials found. Add items to vendors first.",
+      "quantityLabel": "Quantity Received",
+      "quantityPlaceholder": "0",
+      "scaleLabel": "Scale",
+      "submitButton": "Record Intake"
+    },
+    "report": {
+      "title": "Generate Intake Report",
+      "description": "Filter and print a report of material arrivals.",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date",
+      "pickDatePlaceholder": "Pick a date",
+      "printButton": "Print Report"
+    },
+    "history": {
+      "title": "Recent Intakes",
+      "description": "A log of the most recent raw material arrivals.",
+      "table": {
+        "material": "Material",
+        "vendor": "Vendor",
+        "quantity": "Quantity",
+        "date": "Date"
+      },
+      "empty": "No intake records found."
+    },
+    "toasts": {
+      "success": {
+        "title": "Intake Recorded",
+        "description": "{quantity} {scale} of {materialName} has been added to inventory."
+      },
+      "error": {
+        "title": "Error",
+        "materialNotFound": "Material could not be found in the inventory.",
+        "vendorNotFound": "Vendor for this material not found."
+      },
+      "reportError": {
+        "title": "Report Error",
+        "popupBlocked": "Your browser blocked the report popup. Please enable popups and try again."
+      }
+    },
+    "validation": {
+      "materialRequired": "Material is required.",
+      "quantityRequired": "Quantity is required.",
+      "quantityPositive": "Quantity must be greater than 0.",
+      "dateRequired": "Date is required."
+    }
+  },
+  "IntakesReport": {
+    "title": "Raw Material Intakes Report",
+    "noRecords": "No intake records found for the selected filters.",
+    "total": "Total",
+    "table": {
+      "material": "Material",
+      "vendor": "Vendor",
+      "quantity": "Quantity",
+      "date": "Date"
+    },
+    "itemTotal": "Item Total",
+    "grandTotal": "Grand Total",
+    "uncategorized": "Uncategorized"
+  },
+  "ProductsInventoryPage": {
+    "title": "Finished Products Inventory",
+    "card": {
+      "title": "Inventory Status",
+      "description": "View current stock levels of your finished products.",
+      "printButton": "Print Report"
+    },
+    "table": {
+      "product": "Product",
+      "category": "Category",
+      "packed": "Total Packed",
+      "sold": "Total Sold",
+      "inStock": "In Stock"
+    },
+    "empty": {
+      "title": "No Product Inventory",
+      "subtitle": "Packaged products from the Production page will appear here."
+    },
+    "toasts": {
+      "reportError": {
+        "title": "Report Error",
+        "description": "An unknown error occurred while generating the report."
+      },
+      "popupBlocked": {
+        "title": "Popup Blocked",
+        "description": "Please allow popups for this site to view the report."
+      }
+    }
+  },
+  "ProductsInventoryReport": {
+    "title": "Finished Products Inventory Report",
+    "subtitle": "Current stock levels of all finished goods.",
+    "table": {
+      "product": "Product",
+      "category": "Category",
+      "packed": "Total Packed",
+      "sold": "Total Sold",
+      "inStock": "In Stock"
+    },
+    "noRecords": "No records found.",
+    "grandTotals": "Grand Totals",
+    "totalLabel": "Total Items in Stock"
+  },
+  "RawMaterialsInventoryPage": {
+    "title": "Raw Materials Inventory",
+    "reportCard": {
+      "title": "Generate Report",
+      "description": "Generate a report for a specific raw material or for all materials.",
+      "button": "Generate Report",
+      "label": "Raw Material",
+      "selectPlaceholder": "Select a material",
+      "allOption": "All Raw Materials",
+      "searchPlaceholder": "Search material...",
+      "empty": "No material found."
+    },
+    "listCard": {
+      "title": "Current Inventory",
+      "description": "A consolidated list of all raw materials currently in stock."
+    },
+    "table": {
+      "sku": "SKU",
+      "item": "Item",
+      "vendor": "Vendor",
+      "price": "Price",
+      "scale": "Scale",
+      "inStock": "In Stock",
+      "actions": "Actions"
+    },
+    "empty": "No raw materials found. Add items to your vendors in the Vendors catalog.",
+    "toasts": {
+      "reportError": {
+        "title": "Report Error",
+        "description": "An unknown error occurred while generating the report.",
+        "popupBlockedTitle": "Popup Blocked",
+        "popupBlockedDescription": "Please allow popups for this site to view the report."
+      },
+      "updateSuccess": "Inventory updated successfully.",
+      "updateError": "Failed to update inventory.",
+      "deleteSuccess": "Item removed from inventory count.",
+      "deleteError": "Failed to delete item."
+    },
+    "report": {
+      "singleTitle": "Raw Material Report: {itemName}",
+      "allTitle": "Complete Raw Materials Report",
+      "generatedDateLabel": "Generated on",
+      "totalLabel": "Total Materials: {count}"
+    },
+    "editDialog": {
+      "title": "Edit {itemName}",
+      "description": "Update the details and current stock of this raw material.",
+      "skuLabel": "SKU",
+      "itemNameLabel": "Item Name",
+      "typeLabel": "Type",
+      "typePlaceholder": "Select a type",
+      "priceLabel": "Price",
+      "scaleLabel": "Scale",
+      "scalePlaceholder": "Select a scale",
+      "inStockLabel": "Quantity In Stock",
+      "saveButton": "Save Changes"
+    },
+    "deleteDialog": {
+      "title": "Confirm Deletion",
+      "description": "This will remove <strong>{itemName}</strong> from vendor <strong>{vendorName}</strong>. This action is permanent.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+  "InvoicesPage": {
+    "title": "Invoices",
+    "mobileWarning": {
+      "title": "Desktop Recommended",
+      "description": "This page is optimized for desktop use. Some features may be limited on smaller screens."
+    },
+    "createCard": {
+      "title": "Create Invoice",
+      "description": "Build a new proforma or final invoice for a customer."
+    },
+    "form": {
+      "customerLabel": "Customer",
+      "customerPlaceholder": "Select a customer",
+      "typeLabel": "Type",
+      "typePlaceholder": "Select type",
+      "finalInvoice": "Final Invoice",
+      "proforma": "Proforma",
+      "invoiceNumberLabel": "Invoice N°",
+      "invoiceNumberPlaceholder": "e.g., INV-2024-001",
+      "invoiceDateLabel": "Invoice Date",
+      "dueDateLabel": "Due Date"
+    },
+    "lineItemsCard": {
+      "title": "Line Items",
+      "productLabel": "Product",
+      "productPlaceholder": "Select a product",
+      "quantityLabel": "Quantity",
+      "priceLabel": "Unit Price",
+      "totalLabel": "Total",
+      "addItemButton": "Add Item"
+    },
+    "summary": {
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "tax": "Tax",
+      "total": "Grand Total"
+    },
+    "dialogs": {
+      "discount": {
+        "title": "Set Discount",
+        "label": "Discount Amount",
+        "saveButton": "Set Discount"
+      }
+    },
+    "notesCard": {
+      "title": "Notes",
+      "label": "Optional notes or terms",
+      "placeholder": "Enter any additional notes for the invoice here...",
+      "defaultNote": "Thank you for your business."
+    },
+    "generateButton": "Generate & Print",
+    "reportCard": {
+      "title": "Print Existing Invoice",
+      "description": "Select a date range to find and reprint a previously generated invoice.",
+      "label": "Invoice",
+      "selectPlaceholder": "Select an invoice",
+      "searchPlaceholder": "Search by invoice number...",
+      "empty": "No invoices found.",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date",
+      "pickDatePlaceholder": "Elige una fecha",
+      "generateButton": "Print Invoice"
+    },
+    "toasts": {
+      "generateError": "Generation Failed",
+      "timeoutError": "The request timed out. Please try again.",
+      "generateSuccess": "Invoice Generated",
+      "generateSuccessDesc": "Invoice {invoiceNumber} created successfully.",
+      "reportSelectionError": "Selection Required",
+      "reportSelectionErrorDesc": "Please select an invoice to print.",
+      "reportError": "Report Error",
+      "reportTimeoutError": "The report generation timed out. Please try again."
+    },
+    "validation": {
+      "productRequired": "Product is required.",
+      "descriptionRequired": "Description is required.",
+      "quantityInt": "Quantity must be a whole number.",
+      "quantityMin": "Quantity must be at least 1.",
+      "pricePositive": "Price must be a positive number.",
+      "customerRequired": "Customer is required.",
+      "invoiceNumberRequired": "Invoice number is required.",
+      "invoiceNumberExists": "This invoice number is already in use.",
+      "invoiceDateRequired": "Invoice date is required.",
+      "dueDateRequired": "Due date is required.",
+      "lineItemsRequired": "At least one line item is required.",
+      "discountPositive": "Discount must be a positive number.",
+      "taxPositive": "Tax must be a positive number.",
+      "invoiceIdRequired": "An invoice must be selected."
+    }
+  },
+  "InvoiceTemplate": {
+    "invoiceNumber": "Invoice Number:",
+    "issued": "Issued:",
+    "due": "Due:",
+    "billTo": "Bill To",
+    "description": "Description",
+    "quantity": "Qty",
+    "unitPrice": "Unit Price",
+    "totalHeader": "Total",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "tax": "Tax",
+    "grandTotal": "Total Amount Due",
+    "notes": "Notes"
+  },
+  "ProductionPage": {
+    "title": "Production Dashboard",
+    "desktop": {
+      "title": "Desktop Recommended",
+      "description": "This section is optimized for desktop use. Please access it from a computer for the best experience."
+    },
+    "readonly": {
+      "title": "Read-Only Mode",
+      "description": "Se requiere una suscripción para registrar datos de producción."
+    },
+    "loading": "Loading production phases...",
+    "form": {
+      "productLabel": "Product",
+      "selectProductPlaceholder": "Select Product",
+      "toProduceLabel": "To Process",
+      "producedLabel": "Processed",
+      "damagedLabel": "Damaged",
+      "recordButton": "Record",
+      "subscriptionRequiredTitle": "Subscription required"
+    },
+    "toasts": {
+      "validationErrorTitle": "Validation Error",
+      "selectProductError": "Please select a product for the row before recording.",
+      "noPiecesToProduceError": "No pieces to produce in this phase.",
+      "enterQuantityError": "Please enter a quantity for Produced or Damaged.",
+      "totalProcessedError": "Total processed ({totalProcessed}) cannot exceed amount to produce ({totalToProcess}).",
+      "productNotFoundError": "Product details could not be found.",
+      "productionLoggedTitle": "Production Logged",
+      "productionLoggedDesc": "{totalProcessed} units of {productName} processed in {phaseName} ({goodQuantity} good, {damagedQuantity} damaged).",
+      "productionCompleteTitle": "Production Complete",
+      "productionCompleteDesc": "All units of {productName} have finished the production cycle.",
+      "phaseRowCompleteTitle": "Phase Row Complete",
+      "phaseRowCompleteDesc": "All units in this row have completed the {phaseName} phase.",
+      "recordingFailedTitle": "Recording Failed"
+    }
+  },
+  "AccessLogPage": {
+    "title": "Access Log",
+    "generateButton": "Generate Report",
+    "filterTitle": "Filter Log",
+    "startDateLabel": "Start Date",
+    "endDateLabel": "End Date",
+    "logTitle": "Access Log",
+    "logDescription": "A list of the most recent user access events.",
+    "table": {
+      "date": "Date",
+      "time": "Time",
+      "userEmail": "User Email"
+    },
+    "empty": "No access records found.",
+    "report": {
+      "title": "User Access Log",
+      "filters": {
+        "from": "From",
+        "to": "To"
+      },
+      "noRecords": "No records found for the selected date range.",
+      "accesses": "accesses",
+      "timeHeader": "Time",
+      "emailHeader": "User Email",
+      "headerNote": "All times are in your local timezone."
+    }
+  },
+  "CustomerReportsPage": {
+    "title": "Customer Reports",
+    "totalCustomers": "{count} Customers",
+    "generateReport": {
+      "title": "Generate Customer Report",
+      "description": "Select a customer and date range to generate a detailed invoice history.",
+      "customerLabel": "Customer",
+      "allOption": "All Customers",
+      "selectPlaceholder": "Select a customer",
+      "searchPlaceholder": "Search customer...",
+      "empty": "No customers found.",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date",
+      "generateButton": "Generate Report"
+    },
+    "existingCustomers": {
+      "title": "Recent Customers",
+      "description": "A quick view of your most recently added customers.",
+      "table": {
+        "name": "Name",
+        "email": "Contact",
+        "phone": "Phone",
+        "joinDate": "Join Date"
+      },
+      "empty": "No customers found."
+    },
+    "toasts": {
+      "errorTitle": "Report Error",
+      "errorDescription": "An unknown error occurred while generating the report."
+    }
+  },
+  "CustomerReportsReport": {
+    "titleAll": "All Customers Report",
+    "titleSingle": "Customer Report: {name}",
+    "subtitleAll": "{count} Customers",
+    "subtitleSingle": "{count} Invoices",
+    "period": "Period: {start} to {end}",
+    "totalInvoices": "Total Invoices",
+    "customerProfile": {
+      "customer": "Customer",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "invoiceHistory": {
+      "title": "Invoice History",
+      "table": {
+        "invoiceNo": "Invoice N°",
+        "date": "Date",
+        "dueDate": "Due Date",
+        "status": "Status",
+        "amount": "Amount"
+      },
+      "items": {
+        "title": "Items",
+        "description": "Description",
+        "qty": "Qty",
+        "price": "Price",
+        "total": "Total"
+      },
+      "totalInvoiced": "Total Invoiced",
+      "noInvoices": "No invoices found for this period."
+    }
+  },
+  "IntakesReportPage": {
+    "title": "Intake Reports",
+    "generateButton": "Generate Report",
+    "filterTitle": "Report Filters",
+    "allMaterialsOption": "All Materials",
+    "allVendorsOption": "All Vendors",
+    "startDateLabel": "Start Date",
+    "endDateLabel": "End Date",
+    "pickDatePlaceholder": "Pick a date",
+    "materialLabel": "Material",
+    "materialPlaceholder": "Select a material",
+    "searchMaterialPlaceholder": "Search material...",
+    "noMaterialFound": "No material found.",
+    "vendorLabel": "Vendor",
+    "vendorPlaceholder": "Select a vendor",
+    "searchVendorPlaceholder": "Search vendor...",
+    "noVendorFound": "No vendor found.",
+    "logTitle": "Recent Intakes",
+    "logDescription": "A list of the most recent raw material arrivals.",
+    "table": {
+      "date": "Date",
+      "material": "Material",
+      "vendor": "Vendor",
+      "quantity": "Quantity"
+    },
+    "emptyLog": "No intake records found.",
+    "toasts": {
+      "popupBlockedTitle": "Popup Blocked",
+      "popupBlockedDescription": "Please allow popups to view the report.",
+      "printErrorTitle": "Print Error",
+      "printErrorDescription": "Could not generate the report."
+    }
+  },
+  "ProductionReportsPage": {
+    "title": "Production Reports",
+    "generateButton": "Generate Report",
+    "filterTitle": "Report Filters",
+    "productLabel": "Product",
+    "selectProductPlaceholder": "Select product",
+    "allProductsOption": "All Products",
+    "searchProductPlaceholder": "Search product...",
+    "noProductFound": "No product found.",
+    "startDateLabel": "Start Date",
+    "endDateLabel": "End Date",
+    "logTitle": "Production Log",
+    "logDescription": "A feed of the most recent production events.",
+    "table": {
+      "date": "Date",
+      "product": "Product",
+      "phase": "Phase",
+      "produced": "Produced",
+      "damaged": "Damaged"
+    },
+    "emptyLog": "No production records found."
+  },
+  "ProductionReport": {
+    "title": "Production Report",
+    "generatedOn": "Generated on",
+    "table": {
+      "time": "Time",
+      "product": "Product",
+      "phase": "Phase",
+      "produced": "Produced",
+      "damaged": "Damaged"
+    },
+    "totals": {
+      "daily": "Daily Total",
+      "produced": "Grand Total Produced",
+      "damaged": "Grand Total Damaged"
+    },
+    "noRecords": "No records found for the selected filters."
+  },
+  "SalesReportsPage": {
+    "title": "Sales Reports",
+    "allProductsOption": "All Products",
+    "allCustomersOption": "All Customers",
+    "filter": {
+      "title": "Filter Report",
+      "productLabel": "Product",
+      "productPlaceholder": "Select a product",
+      "productSearch": "Search product...",
+      "productEmpty": "No product found.",
+      "customerLabel": "Customer",
+      "customerPlaceholder": "Select a customer",
+      "customerSearch": "Search customer...",
+      "customerEmpty": "No customer found.",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date",
+      "printButton": "Print Report"
+    },
+    "log": {
+      "title": "Sales Log",
+      "description": "Historical data of all sales activities from invoices.",
+      "table": {
+        "date": "Date",
+        "product": "Product",
+        "customer": "Customer",
+        "quantity": "Quantity",
+        "unitPrice": "Unit Price",
+        "total": "Total Value"
+      },
+      "empty": "No sales records found for the selected filters."
+    },
+    "report": {
+      "title": "Sales Report",
+      "noSales": "No sales found for the selected filters.",
+      "grandTotal": "Grand Totals",
+      "filterLabels": {
+        "customer": "Customer",
+        "product": "Product",
+        "from": "From",
+        "to": "To"
+      },
+      "tableHeaders": {
+        "date": "Date",
+        "product": "Product",
+        "customer": "Customer",
+        "quantity": "Quantity",
+        "price": "Unit Price",
+        "total": "Total Value"
+      }
+    },
+    "toasts": {
+      "popupBlocked": {
+        "title": "Popup Blocked",
+        "description": "Please allow popups for this site to print the report."
+      },
+      "printError": {
+        "title": "Error Printing Report",
+        "description": "An unknown error occurred."
+      }
+    }
+      ,
+      "salesTrend": {
+        "title": "Sales Trend",
+        "startDateLabel": "Start Date",
+        "endDateLabel": "End Date",
+        "sales": "Sales",
+        "workedDays": "Worked Days",
+        "remaining": "Remaining Days",
+        "projection": "Projection",
+        "datePlaceholder": "mm/dd/yyyy"
+      }
+  },
+  "WastePage": {
+    "title": "Damaged Goods Log",
+    "cardTitle": "Waste Log by Phase",
+    "cardDescription": "Review items marked as damaged during each production phase.",
+    "printButton": "Print Report",
+    "table": {
+      "date": "Date",
+      "time": "Time",
+      "phase": "Phase",
+      "product": "Product",
+      "damaged": "Damaged"
+    },
+    "empty": "No damaged goods recorded.",
+    "dialog": {
+      "title": "Generate Waste Report",
+      "description": "Filter the waste log by phase and date range before printing.",
+      "phaseLabel": "Production Phase",
+      "phasePlaceholder": "Select a phase",
+      "allPhases": "All Phases",
+      "dateFilterLabel": "Filter by Date Range",
+      "startDateLabel": "Start",
+      "endDateLabel": "End",
+      "generateButton": "Generate Report"
+    },
+    "report": {
+      "totalDamaged": "Total Damaged"
+    },
+    "toasts": {
+      "noRecordsTitle": "No Records",
+      "noRecordsDescription": "There are no waste records matching your filters.",
+      "errorTitle": "Report Error"
+    }
+  },
+  "WasteAnalyticsPage": {},
+  "CatalogReports": {
+    "customers": {
+      "singleTitle": "Customer Report: {name}",
+      "allTitle": "All Customers Report",
+      "headers": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "city": "City",
+        "joinDate": "Join Date"
+      }
+    },
+    "phases": {
+      "singleTitle": "Phase Report: {name}",
+      "allTitle": "All Phases Report",
+      "headers": {
+        "order": "Order",
+        "name": "Name",
+        "description": "Description"
+      }
+    },
+    "vendors": {
+      "singleTitle": "Vendor Report: {name}",
+      "allTitle": "All Vendors Report",
+      "noItems": "No items for this vendor.",
+      "headers": {
+        "name": "Vendor Name",
+        "contactPerson": "Contact",
+        "email": "Email",
+        "phone": "Phone",
+        "items": "Items",
+        "sku": "SKU",
+        "item": "Item Name",
+        "type": "Type",
+        "price": "Price"
+      }
+    },
+    "products": {
+      "singleTitle": "Product Report: {name}",
+      "allTitle": "All Products Report",
+      "headers": {
+        "name": "Product Name",
+        "category": "Category",
+        "salePrice": "Sale Price"
+      }
+    },
+    "rawMaterials": {
+      "singleTitle": "Raw Material Report: {name}",
+      "allTitle": "All Raw Materials Report",
+      "headers": {
+        "sku": "SKU",
+        "item": "Item",
+        "vendor": "Vendor",
+        "price": "Price",
+        "scale": "Scale",
+        "inStock": "In Stock"
+      }
+    },
+    "scales": {
+      "title": "Scales Report",
+      "uncategorized": "Uncategorized",
+      "noScales": "No scales to report.",
+      "headers": {
+        "name": "Name"
+      }
+    }
+  },
+  "DefaultData": {
+    "PhasesData": {
+      "Processing": "Processing",
+      "Processing_desc": "Initial processing of raw materials.",
+      "Assembly/Fabrication": "Assembly/Fabrication",
+      "Assembly/Fabrication_desc": "Assembling components into the final product.",
+      "Quality Control & Testing": "Quality Control & Testing",
+      "Quality Control & Testing_desc": "Ensuring the product meets quality standards.",
+      "Packaging": "Packaging",
+      "Packaging_desc": "Preparing the product for shipment."
+    },
+    "MaterialTypesData": {
+      "Alloy": "Alloy",
+      "Aluminum": "Aluminum",
+      "Article": "Article",
+      "Biomaterial": "Biomaterial",
+      "Board": "Board",
+      "Carbon Fiber": "Carbon Fiber",
+      "Ceramic": "Ceramic",
+      "Clay": "Clay",
+      "Combustible": "Combustible",
+      "Component": "Component",
+      "Composite": "Composite",
+      "Copper": "Copper",
+      "Fabric": "Fabric",
+      "Fiber": "Fiber",
+      "Fiberglass": "Fiberglass",
+      "Flour": "Flour",
+      "Glass": "Glass",
+      "Grain": "Grain",
+      "Honey": "Honey",
+      "Iron": "Iron",
+      "Item": "Item",
+      "Jam": "Jam",
+      "Jelly": "Jelly",
+      "Metal": "Metal",
+      "Natural Leather": "Natural Leather",
+      "Natural Wood": "Natural Wood",
+      "Nylon": "Nylon",
+      "Object": "Object",
+      "Paper": "Paper",
+      "Plastic": "Plastic",
+      "Plastics": "Plastics",
+      "Polyester": "Polyester",
+      "Polymer": "Polymer",
+      "Porcelain": "Porcelain",
+      "Rubber": "Rubber",
+      "Salt": "Salt",
+      "Semiconductor": "Semiconductor",
+      "Silicon": "Silicon",
+      "Steel": "Steel",
+      "Sugar": "Sugar",
+      "Synthetic": "Synthetic",
+      "Timber": "Timber",
+      "Unit": "Unit",
+      "Yeast": "Yeast"
+    },
+    "AccountCategories": {
+      "People Costs": "People Costs",
+      "Location Costs": "Location Costs",
+      "Marketing & Sales": "Marketing & Sales",
+      "Professional Services": "Professional Services",
+      "Operations & Admin": "Operations & Admin",
+      "Cost of Goods Sold (COGS)": "Cost of Goods Sold (COGS)",
+      "Income": "Income"
+    },
+    "Accounts": {
+      "Salaries": {
+        "name": "Salaries",
+        "description": "Employee salaries."
+      },
+      "Wages": {
+        "name": "Wages",
+        "description": "Hourly employee wages."
+      },
+      "Contractor Fees": {
+        "name": "Contractor Fees",
+        "description": "Fees for independent contractors."
+      },
+      "Employee Benefits": {
+        "name": "Employee Benefits",
+        "description": "Health, retirement, etc."
+      },
+      "Payroll Taxes": {
+        "name": "Payroll Taxes",
+        "description": "Employer portion of payroll taxes."
+      },
+      "Rent": {
+        "name": "Rent",
+        "description": "Office or facility rent."
+      },
+      "Mortgage Interest": {
+        "name": "Mortgage Interest",
+        "description": "Interest on property mortgage."
+      },
+      "Property Taxes": {
+        "name": "Property Taxes",
+        "description": "Taxes on real estate."
+      },
+      "Utilities": {
+        "name": "Utilities",
+        "description": "Electricity, water, internet, phone."
+      },
+      "Advertising": {
+        "name": "Advertising",
+        "description": "Online and offline advertising costs."
+      },
+      "Website Costs": {
+        "name": "Website Costs",
+        "description": "Hosting, domains, themes, plugins."
+      },
+      "Promotional Materials": {
+        "name": "Promotional Materials",
+        "description": "Brochures, flyers, swag."
+      },
+      "Business Travel": {
+        "name": "Business Travel",
+        "description": "Flights, hotels, meals for business purposes."
+      },
+      "Accountant Fees": {
+        "name": "Accountant Fees",
+        "description": "Fees for accounting and bookkeeping."
+      },
+      "Legal Fees": {
+        "name": "Legal Fees",
+        "description": "Fees for legal services."
+      },
+      "Consultants": {
+        "name": "Consultants",
+        "description": "Fees for specialized consultants."
+      },
+      "Office Supplies": {
+        "name": "Office Supplies",
+        "description": "Pens, paper, ink, etc."
+      },
+      "Equipment": {
+        "name": "Equipment",
+        "description": "Computers, printers, machinery."
+      },
+      "Software Subscriptions": {
+        "name": "Software Subscriptions",
+        "description": "SaaS and software licenses."
+      },
+      "Bank Fees": {
+        "name": "Bank Fees",
+        "description": "Monthly service charges, transaction fees."
+      },
+      "Licenses & Permits": {
+        "name": "Licenses & Permits",
+        "description": "Business licenses and permits."
+      },
+      "Insurance": {
+        "name": "Insurance",
+        "description": "Business liability, property insurance."
+      },
+      "Raw Materials": {
+        "name": "Raw Materials",
+        "description": "Direct cost of materials for production."
+      },
+      "Direct Labor": {
+        "name": "Direct Labor",
+        "description": "Wages for production staff."
+      },
+      "Sales Revenue": {
+        "name": "Sales Revenue",
+        "description": "Revenue from sales of goods."
+      },
+      "Service Revenue": {
+        "name": "Service Revenue",
+        "description": "Revenue from services rendered."
+      }
+    },
+    "AccountTypes": {
+      "Income": "Income",
+      "Expense": "Expense"
+    },
+    "scaleNames": {
+      "Grams": "Grams",
+      "Gram": "Gram",
+      "Kilograms": "Kilograms",
+      "Kilogram": "Kilogram",
+      "Liters": "Liters",
+      "Meters": "Meters",
+      "Units": "Units",
+      "Fluid ounce": "Fluid ounce",
+      "Foot": "Foot",
+      "Gallon": "Gallon",
+      "Inch": "Inch",
+      "Kilo": "Kilo",
+      "Kilos": "Kilos",
+      "Liter": "Liter",
+      "Meter": "Meter",
+      "Ounce": "Ounce",
+      "Piece": "Piece",
+      "Pieces": "Pieces",
+      "Pound": "Pound",
+      "Pounds": "Pounds",
+      "Unit": "Unit",
+      "Yard": "Yard"
+    },
+    "ScaleTypes": {
+      "Weight": "Weight",
+      "Volume": "Volume",
+      "Length": "Length",
+      "Units": "Units"
+    }
+  },
+  "ProductReportsPage": {
+    "title": "Product Reports",
+    "totalProducts": "{count} Products",
+    "generateReport": {
+      "title": "Generate Product Report",
+      "description": "Select a product and date range to generate a detailed sales report.",
+      "productLabel": "Product",
+      "allOption": "All Products",
+      "selectPlaceholder": "Select a product",
+      "searchPlaceholder": "Search product...",
+      "empty": "No products found.",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date",
+      "generateButton": "Generate Report"
+    },
+    "productList": {
+      "title": "Product List",
+      "description": "A quick view of your current products.",
+      "nameHeader": "Name",
+      "categoryHeader": "Category",
+      "priceHeader": "Price",
+      "empty": "No products found."
+    },
+    "report": {
+      "reportTitle": "Product Sales Report",
+      "noSalesFound": "No sales found for the selected filters.",
+      "totalSold": "Total Sold",
+      "filterLabels": {
+        "product": "Product",
+        "from": "From",
+        "to": "To"
+      },
+      "tableHeaders": {
+        "product": "Product",
+        "date": "Date",
+        "invoice": "Invoice N°",
+        "quantity": "Qty",
+        "price": "Price"
+      }
+    },
+    "toasts": {
+      "popupBlocked": {
+        "title": "Popup Blocked",
+        "description": "Please allow popups for this site to print the report."
+      },
+      "reportError": {
+        "title": "Report Error",
+        "description": "An unknown error occurred while generating the report."
+      }
+    }
+  },
+  "InvoiceStatusPage": {
+    "title": "Invoice Status Report",
+    "loading": "Loading invoices...",
+    "unknownCustomer": "Unknown Customer",
+    
+    "filter": {
+      "title": "Filter Invoices",
+      "description": "Select a date range to filter invoices",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date",
+      "pickDate": "Pick a date",
+      "clearButton": "Clear Filters"
+    },
+    
+    "summary": {
+      "total": "Total Invoices",
+      "paid": "Paid",
+      "unpaid": "Unpaid",
+      "overdue": "Overdue",
+      "totalValue": "Total Value"
+    },
+    
+    "table": {
+      "title": "Invoices",
+      "description": "Click checkbox once to show warning, click again to mark as paid permanently",
+      "invoiceNumber": "Invoice N°", 
+      "customer": "Customer",
+      "date": "Issued on",  
+      "dueDate": "Due Date",
+      "daysOverdue": "Days Overdue",
+      "total": "Total",
+      "status": "Status",
+      "paid": "Paid",
+      "unpaid": "Unpaid",
+      "overdue": "Overdue",
+      "empty": "No invoices found"
+    },
+
+      
+    "warning": {
+      "message": "⚠️ This action cannot be undone. Click the checkbox again to permanently mark this invoice as paid."
+    },
+    
+    "toasts": {
+      "markPaidSuccess": "Invoice Marked as Paid",
+      "markPaidSuccessDesc": "The invoice has been permanently marked as paid",
+      "markPaidError": "Error",
+      "markPaidErrorDesc": "Failed to mark invoice as paid"
+    }
+  },
+
+  "PLReportPage": {
+    "title": "Profit & Loss Report",
+    "subtitle": "Generate monthly profit and loss statements",
+    "selectPeriod": {
+      "title": "Select Period",
+      "description": "Choose the date range for the report",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "pickDate": "Pick a date",
+      "generateButton": "Generate Report",
+      "generating": "Generating..."
+    },
+    "contents": {
+      "title": "Report Contents",
+      "revenue": "Revenue",
+      "revenueDesc": "All invoices for the period",
+      "cogs": "Cost of Goods Sold",
+      "cogsDesc": "Raw materials consumed in production + Direct Labor expenses",
+      "grossMargin": "Gross Margin",
+      "grossMarginDesc": "Revenue − COGS",
+      "opex": "Operating Expenses",
+      "opexDesc": "All expenses except Direct Labor",
+      "netIncome": "Net Income",
+      "netIncomeDesc": "Gross Margin − Operating Expenses"
+    },
+
+
+    "validation": {
+      "selectRange": "Select date range",
+      "selectBothDates": "Please select both start and end dates.",
+      "invalidRange": "Invalid range",
+      "startBeforeEnd": "Start date must be before end date.",
+      "popupBlocked": "Popup blocked",
+      "allowPopups": "Please allow popups for this site.",
+      "error": "Error",
+      "unknownError": "Unknown error"
+    }
+  },
+
+  "TeamPage": {
+    "title": "Team Management",
+    "subtitle": "Manage team members and their permissions",
+    "usersCount": "users",
+    "invite": {
+      "title": "Invite Team Member",
+      "emailPlaceholder": "email@company.com",
+      "button": "Invite",
+      "maxReached": "Maximum 6 users allowed",
+      "success": "Invitation sent to"
+    },
+    "permissions": {
+      "dashboard": "Dashboard",
+      "products": "Products",
+      "production": "Production",
+      "inventory": "Inventory",
+      "customers": "Customers",
+      "invoices": "Invoices",
+      "expenses": "Expenses",
+      "reports": "Reports"
+    },
+    "roles": {
+      "admin": "Admin (Full Access)",
+      "user": "Team Member"
+    },
+    "accessDenied": {
+      "title": "Access Denied",
+      "description": "Only the account owner can manage team permissions."
+    },
+    "accessPermitsLabel": "Access Permits",
+    "passwordNote": {
+      "title": "Note:",
+      "description": "Each user needs a unique password to access protected pages. Generate one for them and share it securely."
+    },
+    "toasts": {
+      "permissionsUpdated": "Permissions updated",
+      "loadError": "Error loading team members",
+      "updateError": "Failed to update permissions",
+      "inviteError": "Failed to invite user"
+    }
+  },
+  "OnboardingPage": {
+    "welcome": "Welcome to Systematic!",
+    "subtitle": "Let's get you set up",
+    "createOrg": {
+      "title": "Create Organization",
+      "description": "Start fresh with your own organization and invite team members",
+      "button": "Create New",
+      "formTitle": "Create Your Organization",
+      "formDescription": "Set up your company to start managing production",
+      "companyNameLabel": "Company Name",
+      "companyNamePlaceholder": "e.g., Acme Manufacturing",
+      "backButton": "Back",
+      "createButton": "Create Organization",
+      "successTitle": "Organization created successfully!",
+      "successDescription": "Welcome to {companyName}",
+      "errorTitle": "Failed to create organization",
+      "emptyNameError": "Please enter a company name"
+    },
+    "joinOrg": {
+      "title": "Join Organization",
+      "description": "Join an existing organization using an invite code",
+      "button": "Join Existing",
+      "formTitle": "Join Organization",
+      "formDescription": "Enter the invite code provided by your administrator",
+      "inviteCodeLabel": "Invite Code",
+      "inviteCodePlaceholder": "e.g., tenant_abc123",
+      "inviteCodeHelp": "Ask your administrator for the organization invite code",
+      "backButton": "Back",
+      "joinButton": "Join Organization",
+      "successTitle": "Joined organization!",
+      "successDescription": "Welcome to {organizationName}",
+      "errorTitle": "Failed to join organization",
+      "invalidCodeError": "Invalid invite code",
+      "maxCapacityError": "Organization is at maximum capacity",
+      "emptyCodeError": "Please enter an invite code"
+    },
+    "imageTitle": "Streamline Your Production",
+    "imageDescription": "Manage inventory, track production, and grow your business with Systematic"
+  },
+  "ExpensesMetrics": {
+    "title": "Expenses as % of Revenue",
+    "subtitle": "Calculate and track your operating expense ratio over time",
+    "calculator": {
+      "title": "Financial Metrics Calculator",
+      "description": "Enter your total expenses and revenue to calculate your expense ratio",
+      "formula": "Formula: (Total Expenses / Total Revenue) × 100 = Expenses as % of Revenue",
+      "totalExpenses": "Total Expenses",
+      "totalRevenue": "Total Revenue",
+      "calculate": "Calculate Percentage",
+      "result": "Your Result",
+      "save": "Save Result",
+      "interpretation": "This portion of your revenue is spent on operating expenses.",
+      "resultExplanation": " of the company's revenue is spent on operating expenses",
+      "resultDetail": "{expenses} out of {revenue} total revenue"
+    },
+    "history": {
+      "title": "Calculation History",
+      "description": "Your last 10 calculations",
+      "date": "Date",
+      "expenses": "Total Expenses",
+      "revenue": "Total Revenue",
+      "percentage": "Percentage",
+      "startDate": "Start Date",
+  "endDate": "End Date",
+  "pickDate": "Pick a date",
+  "noRecords": "No records found for selected date range",
+  "printReport": "Print Report",
+"reportTitle": "Expenses Metrics Report",
+"reportSubtitle": "Calculation history with expense analysis" 
+    },
+    "guide": {
+      "title": "Understanding Expenses as % of Revenue",
+      "subtitle": "A comprehensive guide to this important financial metric",
+      "explanation": {
+        "title": "How to Calculate",
+        "expensesLabel": "Total Expenses:",
+        "expensesText": "Sum up all operating expenses, including salaries, rent, utilities, and other overhead costs. It's important to ensure all relevant expenses are included to get an accurate figure.",
+        "revenueLabel": "Total Revenue:",
+        "revenueText": "Calculate the total income generated from sales and other income streams. This should include all revenue sources to provide a comprehensive view of the business's income.",
+        "calculationLabel": "Calculation:",
+        "calculationText": "Divide the total expenses by the total revenue, then multiply by 100 to get the percentage. This percentage represents the portion of revenue that is consumed by expenses."
+      },
+      "example": {
+        "title": "Example:",
+        "text": "If a company has total expenses of $500,000 and total revenue of $1,000,000, the calculation would be: ($500,000 / $1,000,000) × 100 = 50%. This means that 50% of the company's revenue is spent on operating expenses."
+      },
+      "importance": {
+        "title": "Why This Metric Matters",
+        "improvement": {
+          "title": "Identifying Improvement Areas",
+          "text": "By identifying areas where expenses are higher than the average expected, businesses can pinpoint specific costs to target for reduction, leading to better financial health."
+        },
+        "goals": {
+          "title": "Setting Realistic Goals",
+          "text": "Provides a reference point for setting achievable financial targets. This helps in creating strategic plans that are both ambitious and attainable."
+        },
+        "credibility": {
+          "title": "Enhancing Credibility",
+          "text": "Demonstrating that a company's expense management aligns with or outperforms industry standards can enhance credibility with investors, stakeholders, and clients."
+        },
+        "decisions": {
+          "title": "Informed Decision-Making",
+          "text": "Benchmarking provides data-driven insights that inform strategic decisions, from budgeting and resource allocation to pricing and cost-cutting strategies."
+        }
+      },
+      "strategies": {
+        "title": "Strategies to Improve Your Results",
+        "streamline": {
+          "title": "Streamline Operations",
+          "text": "Identify inefficiencies in your processes and implement measures to streamline operations. This might include automating routine tasks, renegotiating supplier contracts, or adopting lean management techniques."
+        },
+        "workforce": {
+          "title": "Optimize Workforce Management",
+          "text": "Effective workforce management can significantly reduce labor costs. Consider cross-training employees, implementing flexible working arrangements, and utilizing technology to enhance productivity."
+        },
+        "revenue": {
+          "title": "Enhance Revenue Streams",
+          "text": "Diversifying and enhancing revenue streams can lower the expenses-to-revenue ratio. Explore new market opportunities, develop additional products or services, and improve sales strategies."
+        },
+        "control": {
+          "title": "Implement Cost Control Measures",
+          "text": "Regularly review and control costs by setting budgets, monitoring spending, and conducting cost-benefit analyses for major expenses. Encourage a cost-conscious culture within the organization."
+        }
+      },
+      "conclusion": "By implementing these strategies, your business can improve its expenses as a % of revenue, leading to better financial health and increased profitability. Each strategy requires careful planning and execution, but the long-term benefits can significantly enhance operational efficiency and financial performance."
+    },
+    "errors": {
+      "invalidInput": "Invalid Input",
+      "invalidInputDesc": "Please enter valid numbers for both expenses and revenue",
+      "zeroRevenue": "Invalid Revenue",
+      "zeroRevenueDesc": "Revenue cannot be zero",
+      "saveFailed": "Save Failed"
+    },
+    "success": {
+      "saved": "Result Saved",
+      "savedDesc": "Your calculation has been saved to history"
+    }
+  }
+}

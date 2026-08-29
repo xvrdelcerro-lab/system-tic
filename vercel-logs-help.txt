@@ -1,0 +1,103 @@
+
+  ▲ vercel logs [url|deploymentId] [options]
+
+  Display request logs for a project.                                           
+  Source types: λ = serverless, ε = edge/middleware, ◇ = static/external        
+
+  Options:
+
+  -b,  --branch       Filter by git branch (defaults to current branch when in a 
+                      git repo)                                                  
+  -d,  --deployment   Filter logs to a specific deployment ID or URL (alternative
+                      to positional argument)                                    
+       --environment  Filter by environment: production or preview               
+  -x,  --expand       Show full log message below each request line              
+  -f,  --follow       Stream live runtime logs (implicit when deployment URL/ID  
+                      is specified)                                              
+  -j,  --json         Output logs as JSON Lines for piping to other tools        
+       --level        Filter by log level: error, warning, info, fatal           
+  -n,  --limit        Maximum number of results (default: 100)                   
+       --no-branch    Disable auto-detection of git branch                       
+       --no-follow    Disable implicit --follow for deployment arguments         
+  -p,  --project      Project ID or name (defaults to linked project)            
+  -q,  --query        Full-text search query                                     
+       --request-id   Filter by request ID                                       
+       --search       Advanced search query (supports filter syntax, e.g.        
+                      "status:500 error")                                        
+       --since        Start time (ISO format or relative: 1h, 30m)               
+       --source       Filter by source: serverless, edge-function,               
+                      edge-middleware, static                                    
+       --status-code  Filter by HTTP status code (e.g., 500, 4xx)                
+       --until        End time (ISO format or relative, default: now)            
+
+
+  Global Options:
+
+       --cwd <DIR>            Sets the current working directory for a single   
+                              run of a command                                  
+  -d,  --debug                Debug mode (default off)                          
+  -Q,  --global-config <DIR>  Path to the global `.vercel` directory            
+  -h,  --help                 Output usage information                          
+  -A,  --local-config <FILE>  Path to the local `vercel.json` file              
+       --no-color             No color mode (default off)                       
+       --non-interactive      Run without interactive prompts; when an agent is 
+                              detected this is the default                      
+  -S,  --scope                Set a custom scope                                
+  -t,  --token <TOKEN>        Login token                                       
+  -v,  --version              Output the version number                         
+
+
+  Examples:
+
+  - Stream live logs for a deployment URL
+
+    $ vercel logs https://my-app-xxxxx.vercel.app
+
+  - Stream live logs for a deployment ID
+
+    $ vercel logs dpl_xxxxx
+
+  - Display recent logs for the linked project
+
+    $ vercel logs
+
+  - Display error logs from the last hour
+
+    $ vercel logs --level error --since 1h
+
+  - Display logs for a specific deployment (historical)
+
+    $ vercel logs dpl_xxxxx --no-follow
+
+  - Filter logs by status code and output as JSON
+
+    $ vercel logs --status-code 500 --json
+
+  - Search logs and pipe to jq
+
+    $ vercel logs --query "timeout" --json | jq '.message'
+
+  - Use advanced search query with filters
+
+    $ vercel logs --search 'status:500 error' --json | jq '.message'
+
+  - Display production logs only
+
+    $ vercel logs --environment production
+
+  - Display logs for a specific request
+
+    $ vercel logs --request-id req_xxxxx
+
+  - Display logs with full message details
+
+    $ vercel logs --expand
+
+  - Display logs for a specific branch
+
+    $ vercel logs --branch feature-x
+
+  - Display logs for all branches (disable auto-detection)
+
+    $ vercel logs --no-branch
+

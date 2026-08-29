@@ -1,0 +1,117 @@
+Retrieving project…
+Deploying xvrdelcerro-6759s-projects/web
+Inspect: https://vercel.com/xvrdelcerro-6759s-projects/web/GbnrA12Nytx5aAbP1gjcy1xPVyMg [1s]
+Production: https://web-rmdo9kgkx-xvrdelcerro-6759s-projects.vercel.app [1s]
+https://web-rmdo9kgkx-xvrdelcerro-6759s-projects.vercel.appBuilding...
+Building: Running build in Washington, D.C., USA (East) – iad1
+Building: Build machine configuration: 2 cores, 8 GB
+Building: Retrieving list of deployment files...
+Building: Retrieving list of deployment files...
+Building: Downloading 522 deployment files...
+Building: Restored build cache from previous deployment (87e3gc5phMrtPYcUWZzhLsKJvdqS)
+Building: Running "vercel build"
+Building: Vercel CLI 50.38.2
+Building: Installing dependencies...
+Building: up to date in 1s
+Building: 120 packages are looking for funding
+Building: run `npm fund` for details
+Building: Detected Next.js version: 15.5.9
+Building: Running "npm run build"
+Building: > nextn@0.1.0 build
+Building: > NODE_ENV=production next build
+Building: Attention: Next.js now collects completely anonymous telemetry regarding usage.
+Building: This information is used to shape Next.js' roadmap and prioritize features.
+Building: You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+Building: https://nextjs.org/telemetry
+Building: ▲ Next.js 15.5.9
+Building: - Environments: .env.production, .env
+Building: - Experiments (use with caution):
+Building: · serverActions
+Building: Creating an optimized production build ...
+Building: ✓ Compiled successfully in 36.3s
+Building: Skipping validation of types
+Building: Skipping linting
+Building: Collecting page data ...
+Building: Generating static pages (0/6) ...
+Building: Generating static pages (1/6)
+Building: Generating static pages (2/6)
+Building: Generating static pages (4/6)
+Building: ✓ Generating static pages (6/6)
+Building: Finalizing page optimization ...
+Building: Collecting build traces ...
+Building: Route (app)                                 Size  First Load JS
+Building: ┌ ○ /_not-found                             1 kB         102 kB
+Building: ├ ƒ /[locale]                            1.85 kB         107 kB
+Building: ├ ƒ /[locale]/billing                    2.41 kB         112 kB
+Building: ├ ƒ /[locale]/catalogs/accounts          9.41 kB         323 kB
+Building: ├ ƒ /[locale]/catalogs/customers         7.26 kB         323 kB
+Building: ├ ƒ /[locale]/catalogs/material-types    7.82 kB         324 kB
+Building: ├ ƒ /[locale]/catalogs/phases            7.08 kB         323 kB
+Building: ├ ƒ /[locale]/catalogs/products          11.1 kB         342 kB
+Building: ├ ƒ /[locale]/catalogs/raw-materials     3.77 kB         341 kB
+Building: ├ ƒ /[locale]/catalogs/scales            9.52 kB         325 kB
+Building: ├ ƒ /[locale]/catalogs/vendors           13.1 kB         344 kB
+Building: ├ ƒ /[locale]/dashboard                   112 kB         379 kB
+Building: ├ ƒ /[locale]/expenses                     10 kB         371 kB
+Building: ├ ƒ /[locale]/inventories/products       7.54 kB         279 kB
+Building: ├ ƒ /[locale]/inventories/raw-materials  4.01 kB         345 kB
+Building: ├ ƒ /[locale]/inventory/arrivals         7.35 kB         348 kB
+Building: ├ ƒ /[locale]/inventory/products           172 B         102 kB
+Building: ├ ƒ /[locale]/inventory/raw-materials    5.44 kB         343 kB
+Building: ├ ƒ /[locale]/invoices                   12.2 kB         373 kB
+Building: ├ ƒ /[locale]/login                      9.32 kB         323 kB
+Building: ├ ƒ /[locale]/onboarding                 9.42 kB         299 kB
+Building: ├ ƒ /[locale]/production                 7.72 kB         335 kB
+Building: ├ ƒ /[locale]/reports/access-log         6.79 kB         278 kB
+Building: ├ ƒ /[locale]/reports/customers          4.63 kB         326 kB
+Building: ├ ƒ /[locale]/reports/expenses           4.85 kB         306 kB
+Building: ├ ƒ /[locale]/reports/expenses-metrics   13.6 kB         316 kB
+Building: ├ ƒ /[locale]/reports/intakes            5.42 kB         329 kB
+Building: ├ ƒ /[locale]/reports/invoice-status     14.7 kB         321 kB
+Building: ├ ƒ /[locale]/reports/production         4.32 kB         337 kB
+Building: ├ ƒ /[locale]/reports/products           4.97 kB         321 kB
+Building: ├ ƒ /[locale]/reports/profit-loss        12.3 kB         319 kB
+Building: ├ ƒ /[locale]/reports/raw-materials      4.94 kB         282 kB
+Building: ├ ƒ /[locale]/reports/sales              5.72 kB         323 kB
+Building: ├ ƒ /[locale]/reports/vendors            4.19 kB         320 kB
+Building: ├ ƒ /[locale]/reports/waste              2.74 kB         315 kB
+Building: ├ ƒ /[locale]/reports/waste-analytics    3.96 kB         293 kB
+Building: ├ ƒ /[locale]/signup                     8.01 kB         317 kB
+Building: ├ ƒ /[locale]/subscription               5.97 kB         244 kB
+Building: ├ ƒ /[locale]/team                       11.4 kB         256 kB
+Building: ├ ƒ /[locale]/users                      9.15 kB         306 kB
+Building: ├ ƒ /[locale]/waste                      4.18 kB         312 kB
+Building: ├ ƒ /[locale]/waste/analytics            5.77 kB         301 kB
+Building: �� ƒ /api/account-categories                172 B         102 kB
+Building: ├ ƒ /api/accounts                          172 B         102 kB
+Building: ├ ƒ /api/create-checkout-session           172 B         102 kB
+Building: ├ ƒ /api/customers                         172 B         102 kB
+Building: ├ ƒ /api/expense-categories                172 B         102 kB
+Building: ├ ƒ /api/expenses                          172 B         102 kB
+Building: ├ ƒ /api/intakes                           172 B         102 kB
+Building: ├ ƒ /api/log-access                        172 B         102 kB
+Building: ├ ƒ /api/material-types                    172 B         102 kB
+Building: ├ ƒ /api/phases                            172 B         102 kB
+Building: ├ ƒ /api/product-categories                172 B         102 kB
+Building: ├ ƒ /api/products                          172 B         102 kB
+Building: ├ ƒ /api/scales                            172 B         102 kB
+Building: └ ƒ /api/vendors                           172 B         102 kB
+Building: + First Load JS shared by all             101 kB
+Building: ├ chunks/1255-de0c1abd22c7cccd.js      45.2 kB
+Building: ├ chunks/4bd1b696-182b6b13bdad92e3.js  54.2 kB
+Building: └ other shared chunks (total)          2.08 kB
+Building: ƒ Middleware                             82.8 kB
+Building: ○  (Static)   prerendered as static content
+Building: ƒ  (Dynamic)  server-rendered on demand
+Building: Error: The file "/vercel/path0/.next/routes-manifest.json" couldn't be found. This is usually caused by one of the following:
+Building: 1. The "Output Directory" setting in your project is misconfigured. Ensure it matches your Next.js "distDir" configuration (defaults to ".next").
+Building: 2. If using Turborepo, ensure your task outputs include the Next.js build directory. Add ".next/**" (or your custom distDir) to the "outputs" array in turbo.json for the build task.
+Building: 3. The build command did not complete successfully. Check the build logs above for errors.
+Building: Learn More: https://err.sh/vercel/vercel/now-next-routes-manifest
+Error: The file "/vercel/path0/.next/routes-manifest.json" couldn't be found. This is usually caused by one of the following:
+
+1. The "Output Directory" setting in your project is misconfigured. Ensure it matches your Next.js "distDir" configuration (defaults to ".next").
+
+2. If using Turborepo, ensure your task outputs include the Next.js build directory. Add ".next/**" (or your custom distDir) to the "outputs" array in turbo.json for the build task.
+
+3. The build command did not complete successfully. Check the build logs above for errors.

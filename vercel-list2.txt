@@ -1,0 +1,17 @@
+Fetching deployments in xvrdelcerro-6759s-projects
+> Deployments for xvrdelcerro-6759s-projects/web [114ms]
+
+  Age     Project                            Deployment                                                      Status      Environment     Duration     Username             
+  1m      xvrdelcerro-6759s-projects/web     https://web-djlj85o7u-xvrdelcerro-6759s-projects.vercel.app     ● Error     Production      1m           xvrdelcerro-6759     
+  14m     xvrdelcerro-6759s-projects/web     https://web-rmdo9kgkx-xvrdelcerro-6759s-projects.vercel.app     ● Error     Production      1m           xvrdelcerro-6759     
+  32d     xvrdelcerro-6759s-projects/web     https://web-pbry5b24c-xvrdelcerro-6759s-projects.vercel.app     ● Ready     Production      1m           xvrdelcerro-6759     
+  38d     xvrdelcerro-6759s-projects/web     https://web-l5mr5tdgj-xvrdelcerro-6759s-projects.vercel.app     ● Ready     Production      2m           xvrdelcerro-6759     
+  38d     xvrdelcerro-6759s-projects/web     https://web-qb5bx1o9r-xvrdelcerro-6759s-projects.vercel.app     ● Ready     Production      2m           xvrdelcerro-6759     
+  38d     xvrdelcerro-6759s-projects/web     https://web-lbf0vu4tq-xvrdelcerro-6759s-projects.vercel.app     ● Error     Production      1m           xvrdelcerro-6759     
+
+https://web-djlj85o7u-xvrdelcerro-6759s-projects.vercel.app
+https://web-rmdo9kgkx-xvrdelcerro-6759s-projects.vercel.app
+https://web-pbry5b24c-xvrdelcerro-6759s-projects.vercel.app
+https://web-l5mr5tdgj-xvrdelcerro-6759s-projects.vercel.app
+https://web-qb5bx1o9r-xvrdelcerro-6759s-projects.vercel.app
+https://web-lbf0vu4tq-xvrdelcerro-6759s-projects.vercel.app

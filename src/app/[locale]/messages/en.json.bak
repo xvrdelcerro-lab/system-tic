@@ -1,0 +1,161 @@
+{
+  "Sidebar": {
+    "Dashboard": "Dashboard",
+    "Users": "Users",
+    "Catalogs": "Catalogs",
+    "Accounts": "Accounts",
+    "Customers": "Customers",
+    "MaterialTypes": "Material Types",
+    "Phases": "Phases",
+    "Products": "Products",
+    "RawMaterials": "Raw Materials",
+    "Scales": "Scales",
+    "Vendors": "Vendors",
+    "Intakes": "Arrivals",
+    "Inventories": "Inventories",
+    "Invoices": "Invoices",
+    "Production": "Production",
+    "Reports": "Reports",
+    "AccessLog": "Access Log",
+    "Sales": "Sales",
+    "Waste": "Waste",
+    "WasteAnalytics": "Waste Analytics",
+    "DamagedLog": "Damaged Log",
+    "Analytics": "Analytics",
+    "Expenses": "Expenses",
+    "IntakesReport": "Arrivals"
+  },
+  "SidebarTooltips": {
+    "Dashboard": "Dashboard",
+    "Users": "Users",
+    "Catalogs": "Catalogs",
+    "Accounts": "Accounts",
+    "Customers": "Customers",
+    "MaterialTypes": "Material Types",
+    "Phases": "Phases",
+    "Products": "Products",
+    "RawMaterials": "Raw Materials",
+    "Scales": "Scales",
+    "Vendors": "Vendors",
+    "Expenses": "Expenses",
+    "Intakes": "Arrivals",
+    "Inventories": "Inventories",
+    "Invoices": "Invoices",
+    "Production": "Production",
+    "Reports": "Reports",
+    "AccessLog": "Access Log",
+    "Sales": "Sales",
+    "Waste": "Waste",
+    "WasteAnalytics": "Waste Analytics",
+    "DamagedLog": "Damaged Log",
+    "Analytics": "Analytics"
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "description": "Summary of your business metrics.",
+    "timeRanges": {
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year"
+    },
+    "printButton": "Print",
+    "reportTitle": "Dashboard Report",
+    "reportSubtitle": "{currentLabel} vs. {comparisonLabel}",
+    "comparisonLabels": {
+      "day": "from previous day",
+      "week": "from last week",
+      "month": "from last month",
+      "year": "from last year"
+    },
+    "currentLabels": {
+      "day": "Today",
+      "week": "This Week",
+      "month": "This Month",
+      "year": "This Year"
+    },
+    "metrics": {
+      "piecesMade": "Pieces Made",
+      "rawMaterialsUsed": "Raw Materials Used",
+      "costOfRawMaterialsUsed": "Cost of Raw Materials",
+      "currentInventory": "Current Inventory",
+      "piecesSold": "Pieces Sold",
+      "totalRevenue": "Total Revenue"
+    },
+    "charts": {
+      "salesOverview": {
+        "title": "Sales and Expenses Overview",
+        "description": "Showing data for the last 12 months."
+      },
+      "inventory": {
+        "title": "Raw Materials Inventory",
+        "description": "Current stock levels of key materials."
+      },
+      "topProducts": {
+        "title": "Top 10 Sold Products",
+        "description": "Products with the highest sales volume."
+      }
+    }
+  },
+  "Login": {
+    "title": "Sign In",
+    "description": "Enter your email below to sign in to your account.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "emailPlaceholder": "name@example.com",
+    "passwordPlaceholder": "••••••••",
+    "signInButton": "Sign In",
+    "signupPrompt": "Don't have an account?",
+    "signupLink": "Sign up",
+    "successToast": {
+      "title": "Sign In Successful",
+      "description": "Welcome back!"
+    },
+    "errorToast": {
+      "title": "Sign In Error",
+      "unknown": "An unknown error occurred.",
+      "invalidCredentials": "Invalid email or password."
+    },
+    "validation": {
+      "emailInvalid": "Please enter a valid email address.",
+      "passwordRequired": "Password is required."
+    }
+  },
+  "Signup": {
+    "title": "Sign Up",
+    "description": "Create an account to get started.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "emailPlaceholder": "name@example.com",
+    "passwordPlaceholder": "••••••••",
+    "signUpButton": "Sign Up",
+    "loginPrompt": "Already have an account?",
+    "loginLink": "Sign in",
+    "successToast": {
+      "title": "Account Created",
+      "description": "You have successfully registered."
+    },
+    "errorToast": {
+      "title": "Sign Up Error"
+    },
+    "validation": {
+      "emailInvalid": "Please enter a valid email address.",
+      "passwordRequired": "Password must be at least 6 characters."
+    }
+  },
+  "UsersPage": {},
+  "AccountsPage": {},
+  "CustomersPage": {},
+  "MaterialTypesPage": {},
+  "PhasesPage": {},
+  "RawMaterialsPage": {},
+  "ScalesPage": {},
+  "ProductsPage": {},
+  "VendorsPage": {},
+  "ExpensesPage": {},
+  "ArrivalsPage": {},
+  "IntakesReport": {},
+  "ProductsInventoryPage": {},
+  "ProductsInventoryReport": {},
+  "RawMaterialsInventoryPage": {}
+}

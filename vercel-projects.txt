@@ -1,0 +1,6 @@
+Fetching projects in xvrdelcerro-6759s-projects
+> Projects found under xvrdelcerro-6759s-projects  [520ms]
+
+  Project Name   Latest Production URL                               Updated   Node Version   
+  web            https://web-xvrdelcerro-6759s-projects.vercel.app   1m        24.x           
+

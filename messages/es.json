@@ -1,0 +1,134 @@
+
+{
+  "Sidebar": {
+    "Dashboard": "Tablero",
+    "Users": "Usuarios",
+    "Catalogs": "Catálogos",
+    "Accounts": "Cuentas",
+    "Customers": "Clientes",
+    "MaterialTypes": "Tipos de Material",
+    "Phases": "Fases",
+    "Products": "Productos",
+    "RawMaterials": "Materias Primas",
+    "Scales": "Escalas",
+    "Vendors": "Proveedores",
+    "Intakes": "Ingresos",
+    "Inventories": "Inventarios",
+    "Invoices": "Facturas",
+    "Production": "Producción",
+    "Reports": "Reportes",
+    "AccessLog": "Registro de Acceso",
+    "Sales": "Ventas",
+    "Waste": "Desechos",
+    "WasteAnalytics": "Análisis de Desechos",
+    "DamagedLog": "Registro de Dañados",
+    "Analytics": "Análisis"
+  },
+  "Dashboard": {
+    "title": "Tablero",
+    "description": "Resumen de las métricas de su negocio.",
+    "timeRanges": {
+      "day": "Día",
+      "week": "Semana",
+      "month": "Mes",
+      "year": "Año"
+    },
+    "printButton": "Imprimir",
+    "reportTitle": "Reporte del Tablero",
+    "reportSubtitle": "{currentLabel} vs. {comparisonLabel}",
+    "comparisonLabels": {
+      "day": "del día anterior",
+      "week": "de la semana pasada",
+      "month": "del mes pasado",
+      "year": "del año pasado"
+    },
+    "currentLabels": {
+      "day": "Hoy",
+      "week": "Esta Semana",
+      "month": "Este Mes",
+      "year": "Este Año"
+    },
+    "metrics": {
+      "piecesMade": "Piezas Fabricadas",
+      "rawMaterialsUsed": "Materias Primas Usadas",
+      "costOfRawMaterialsUsed": "Costo de Materias Primas",
+      "currentInventory": "Inventario Actual",
+      "piecesSold": "Piezas Vendidas",
+      "totalRevenue": "Ingresos Totales"
+    },
+    "charts": {
+      "salesOverview": {
+        "title": "Resumen de Ventas y Gastos",
+        "description": "Mostrando datos de los últimos 12 meses."
+      },
+      "inventory": {
+        "title": "Inventario de Materias Primas",
+        "description": "Niveles de stock actuales de materiales clave."
+      },
+      "topProducts": {
+        "title": "Top 10 Productos Vendidos",
+        "description": "Productos con el mayor volumen de ventas."
+      }
+    }
+  },
+  "Login": {
+    "title": "Iniciar Sesión",
+    "description": "Ingrese su correo electrónico a continuación para iniciar sesión en su cuenta.",
+    "emailLabel": "Correo electrónico",
+    "passwordLabel": "Contraseña",
+    "signInButton": "Iniciar Sesión",
+    "signupPrompt": "¿No tienes una cuenta?",
+    "signupLink": "Regístrate",
+    "successToast": {
+      "title": "Inicio de Sesión Exitoso",
+      "description": "¡Bienvenido de nuevo!"
+    },
+    "errorToast": {
+      "title": "Error al Iniciar Sesión"
+    }
+  },
+  "Signup": {
+    "title": "Registrarse",
+    "description": "Crea una cuenta para comenzar.",
+    "emailLabel": "Correo electrónico",
+    "passwordLabel": "Contraseña",
+    "signUpButton": "Registrarse",
+    "loginPrompt": "¿Ya tienes una cuenta?",
+    "loginLink": "Iniciar sesión",
+    "successToast": {
+      "title": "Cuenta Creada",
+      "description": "Te has registrado exitosamente."
+    },
+    "errorToast": {
+      "title": "Error al Registrarse"
+    }
+  },
+  "ProductReportsPage": {
+    "report": {
+      "kpis": {
+        "salesCycle": {
+          "title": "Ciclo de Ventas",
+          "daysUnit": "días",
+          "subtitle": "Tiempo promedio hasta la venta"
+        },
+        "salesAverage": {
+          "title": "Promedio de Ventas",
+          "totalLabel": "Total Vendido",
+          "perShipmentLabel": "Por Envío",
+          "piecesUnit": "pzs"
+        },
+        "satisfaction": {
+          "title": "Satisfacción",
+          "complaintsLabel": "Quejas",
+          "noComplaintsFallback": "Sin quejas"
+        },
+        "shipments": {
+          "title": "Envíos",
+          "perWeekUnit": "por semana",
+          "periodPrefix": "en",
+          "periodDaysUnit": "días"
+        }
+      }
+    }
+  }
+}

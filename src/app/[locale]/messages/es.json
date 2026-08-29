@@ -1,0 +1,1851 @@
+
+{
+  "Sidebar": {
+    "Dashboard": "Tablero",
+    "Users": "Usuarios",
+    "Catalogs": "Catálogos",
+    "Accounts": "Cuentas",
+    "Customers": "Clientes",
+    "MaterialTypes": "Tipos de Material",
+    "Phases": "Fases",
+    "Products": "Productos",
+    "RawMaterials": "Materias Primas",
+    "Scales": "Escalas",
+    "Vendors": "Proveedores",
+    "Intakes": "Entradas",
+    "Inventories": "Inventarios",
+    "Invoices": "Facturas",
+    "Production": "Producción",
+    "Reports": "Reportes",
+    "AccessLog": "Registro de Acceso",
+    "Sales": "Ventas",
+    "Waste": "Desechos",
+    "WasteAnalytics": "Análisis de Desechos",
+    "DamagedLog": "Registro de Dañados",
+    "Analytics": "Análisis",
+    "Expenses": "Gastos",
+    "IntakesReport": "Entradas"
+  },
+  "SidebarTooltips": {
+    "Dashboard": "Tablero",
+    "Users": "Usuarios",
+    "Catalogs": "Catálogos",
+    "Accounts": "Cuentas",
+    "Customers": "Clientes",
+    "MaterialTypes": "Tipos de Material",
+    "Phases": "Fases",
+    "Products": "Productos",
+    "RawMaterials": "Materias Primas",
+    "Scales": "Escalas",
+    "Vendors": "Proveedores",
+    "Expenses": "Gastos",
+    "Intakes": "Entradas",
+    "Inventories": "Inventarios",
+    "Invoices": "Facturas",
+    "Production": "Producción",
+    "Reports": "Reportes",
+    "AccessLog": "Registro de Acceso",
+    "Sales": "Ventas",
+    "Waste": "Desechos",
+    "WasteAnalytics": "Análisis de Desechos",
+    "DamagedLog": "Registro de Dañados",
+    "Analytics": "Análisis"
+  },
+  "Dashboard": {
+    "title": "Tablero",
+    "description": "Resumen de las métricas de su negocio.",
+    "timeRanges": {
+      "day": "Día",
+      "week": "Semana",
+      "month": "Mes",
+      "year": "Año"
+    },
+    "printButton": "Imprimir",
+    "reportTitle": "Reporte del Tablero",
+    "reportSubtitle": "{currentLabel} vs. {comparisonLabel}",
+    "comparisonLabels": {
+      "day": "del día anterior",
+      "week": "de la semana pasada",
+      "month": "del mes pasado",
+      "year": "del año pasado"
+    },
+    "currentLabels": {
+      "day": "Hoy",
+      "week": "Esta Semana",
+      "month": "Este Mes",
+      "year": "Este Año"
+    },
+    "metrics": {
+      "piecesMade": "Piezas Fabricadas",
+      "rawMaterialsUsed": "Materias Primas Usadas",
+      "costOfRawMaterialsUsed": "Costo de Materias Primas",
+      "currentInventory": "Inventario Actual",
+      "piecesSold": "Piezas Vendidas",
+      "totalRevenue": "Ingresos Totales"
+    },
+    "charts": {
+      "salesOverview": {
+        "title": "Resumen de Ventas y Gastos",
+        "description": "Mostrando datos de los últimos 12 meses."
+      },
+      "inventory": {
+        "title": "Inventario de Materias Primas",
+        "description": "Niveles de stock actuales de materiales clave."
+      },
+      "topProducts": {
+        "title": "Top 10 Productos Vendidos",
+        "description": "Productos con el mayor volumen de ventas."
+      }
+    }
+  },
+  "Login": {
+    "title": "Iniciar Sesión",
+    "description": "Ingrese su correo electrónico a continuación para iniciar sesión en su cuenta.",
+    "emailLabel": "Correo electrónico",
+    "passwordLabel": "Contraseña",
+    "emailPlaceholder": "nombre@ejemplo.com",
+    "passwordPlaceholder": "••••••••",
+    "signInButton": "Iniciar Sesión",
+    "signupPrompt": "¿No tienes una cuenta?",
+    "signupLink": "Regístrate",
+    "successToast": {
+      "title": "Inicio de Sesión Exitoso",
+      "description": "¡Bienvenido de nuevo!"
+    },
+    "errorToast": {
+      "title": "Error al Iniciar Sesión",
+      "unknown": "Ocurrió un error desconocido.",
+      "invalidCredentials": "Correo electrónico o contraseña no válidos."
+    },
+    "validation": {
+      "emailInvalid": "Por favor, ingrese un correo electrónico válido.",
+      "passwordRequired": "La contraseña es requerida."
+    }
+  },
+  "Signup": {
+    "title": "Registrarse",
+    "description": "Crea una cuenta para comenzar.",
+    "emailLabel": "Correo electrónico",
+    "passwordLabel": "Contraseña",
+    "emailPlaceholder": "nombre@ejemplo.com",
+    "passwordPlaceholder": "••••••••",
+    "signUpButton": "Registrarse",
+    "loginPrompt": "¿Ya tienes una cuenta?",
+    "loginLink": "Iniciar sesión",
+    "successToast": {
+      "title": "Cuenta Creada",
+      "description": "Te has registrado exitosamente."
+    },
+    "errorToast": {
+      "title": "Error al Registrarse"
+    },
+    "validation": {
+      "emailInvalid": "Por favor, ingrese un correo electrónico válido.",
+      "passwordRequired": "La contraseña debe tener al menos 6 caracteres."
+    }
+  },
+  "UsersPage": {
+    "title": "Gestión de Usuarios",
+    "printButton": "Imprimir Usuarios",
+    "createUser": {
+      "title": "Crear Nuevo Usuario",
+      "description": "Añade un nuevo usuario al sistema. Se enviará un correo electrónico con instrucciones para iniciar sesión.",
+      "emailLabel": "Correo del Usuario",
+      "emailPlaceholder": "nuevo.usuario@ejemplo.com",
+      "createButton": "Crear Usuario",
+      "limitReached": "Límite de usuarios alcanzado. No puedes añadir más usuarios."
+    },
+    "myAccount": {
+      "title": "Mi Cuenta",
+      "description": "Gestiona la configuración de tu cuenta personal.",
+      "emailLabel": "Tu Correo Electrónico",
+      "changePasswordButton": "Enviar Correo de Restablecimiento"
+    },
+    "registeredUsers": {
+      "title": "Usuarios Registrados",
+      "description": "Una lista de todos los usuarios en el sistema.",
+      "noUsers": "No se encontraron usuarios.",
+      "table": {
+        "number": "N°",
+        "email": "Correo",
+        "created": "Fecha de Creación",
+        "actions": "Acciones"
+      }
+    },
+    "editDialog": {
+      "title": "Editar Usuario",
+      "description": "Estás editando el correo para {email}.",
+      "emailLabel": "Correo Electrónico",
+      "save": "Guardar Cambios"
+    },
+    "deleteDialog": {
+      "title": "¿Estás seguro?",
+      "description": "Esto eliminará permanentemente al usuario <strong>{email}</strong>. Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar Usuario"
+    },
+    "toasts": {
+      "loadUsersError": {
+        "title": "Error al Cargar Usuarios"
+      },
+      "updateSuccess": {
+        "title": "Usuario Actualizado"
+      },
+      "updateError": {
+        "title": "Error al Actualizar",
+        "unknownError": "Ocurrió un error desconocido."
+      },
+      "createSuccess": {
+        "title": "Usuario Creado"
+      },
+      "createError": {
+        "title": "Error en la Creación"
+      },
+      "deleteSuccess": {
+        "title": "Usuario Eliminado"
+      },
+      "deleteError": {
+        "title": "Error al Eliminar",
+        "unknownError": "Ocurrió un error desconocido."
+      },
+      "passwordResetSuccess": {
+        "title": "Correo de Restablecimiento Enviado",
+        "description": "Si existe una cuenta para {email}, se ha enviado un correo con instrucciones."
+      },
+      "passwordResetError": {
+        "title": "Error al Restablecer Contraseña",
+        "noEmail": "No se pudo determinar tu dirección de correo.",
+        "unknownError": "Ocurrió un error desconocido."
+      },
+      "popupBlocked": {
+        "title": "Ventana Emergente Bloqueada",
+        "description": "Por favor, permite las ventanas emergentes para imprimir la lista."
+      },
+      "reportGenerationFailed": {
+        "title": "Error al Generar Reporte"
+      }
+    },
+    "report": {
+        "title": "Directorio de Usuarios",
+        "generatedDate": "Generado el: {date}",
+        "table": {
+            "email": "Correo",
+            "created": "Creado"
+        }
+    },
+    "validation": {
+        "emailInvalid": "Por favor, introduce una dirección de correo válida."
+    }
+  },
+  "AccountsPage": {
+    "title": "Plan de Cuentas",
+    "generateReport": {
+      "button": "Generar Reporte",
+      "errorTitle": "Fallo en la Generación del Reporte"
+    },
+    "newCategoryButton": "Nueva Categoría",
+    "manageAccounts": {
+      "title": "Gestionar Cuentas",
+      "description": "Organiza tus cuentas financieras en categorías.",
+      "grandTotal": "Total General"
+    },
+    "category": {
+      "editDialog": {
+        "title": "Editar Categoría",
+        "saveButton": "Guardar"
+      },
+      "addDialog": {
+        "title": "Añadir Nueva Categoría",
+        "description": "Crea una nueva categoría para agrupar tus cuentas.",
+        "nameLabel": "Nombre de la Categoría",
+        "namePlaceholder": "Ej: Gastos de Oficina",
+        "saveButton": "Guardar Categoría"
+      },
+      "deleteDialog": {
+        "title": "¿Eliminar Categoría?",
+        "description": "Esta categoría será eliminada permanentemente. Esta acción no se puede deshacer si no hay cuentas asociadas.",
+        "cancel": "Cancelar",
+        "delete": "Eliminar"
+      },
+      "toasts": {
+        "updated": "Categoría actualizada.",
+        "added": "Categoría Añadida",
+        "addedDesc": "La nueva categoría ya está disponible.",
+        "updateError": "Error al Actualizar la Categoría",
+        "addError": "Error al Añadir la Categoría",
+        "deleted": "Categoría Eliminada",
+        "deletedDesc": "La categoría ha sido eliminada.",
+        "deleteError": "Error al Eliminar la Categoría"
+      }
+    },
+    "account": {
+      "addButton": "Añadir Cuenta",
+      "table": {
+        "nameHeader": "Nombre de la Cuenta",
+        "descriptionHeader": "Descripción",
+        "typeHeader": "Tipo",
+        "actionsHeader": "Acciones",
+        "noAccounts": "Aún no hay cuentas en esta categoría."
+      },
+      "addDialog": {
+        "title": "Añadir Cuenta a",
+        "nameLabel": "Nombre de la Cuenta",
+        "namePlaceholder": "Ej: Alquiler Mensual",
+        "descriptionLabel": "Descripción",
+        "descriptionPlaceholder": "Descripción opcional de la cuenta",
+        "saveButton": "Guardar Cuenta"
+      },
+      "editDialog": {
+        "title": "Editar Cuenta",
+        "categoryLabel": "Categoría",
+        "categoryPlaceholder": "Selecciona una categoría",
+        "saveButton": "Guardar Cambios"
+      },
+      "deleteDialog": {
+        "title": "¿Eliminar Cuenta?",
+        "description": "Esto eliminará permanentemente esta cuenta. Esta acción no se puede deshacer.",
+        "cancel": "Cancelar",
+        "delete": "Eliminar"
+      },
+      "toasts": {
+        "updated": "Cuenta Actualizada",
+        "updatedDesc": "Los detalles de la cuenta han sido guardados.",
+        "added": "Cuenta Añadida",
+        "addedDesc": "La nueva cuenta ha sido creada.",
+        "updateError": "Error al Actualizar la Cuenta",
+        "addError": "Error al Añadir la Cuenta",
+        "deleted": "Cuenta Eliminada",
+        "deletedDesc": "La cuenta ha sido eliminada.",
+        "deleteError": "Error al Eliminar la Cuenta"
+      }
+    },
+    "uncategorized": {
+      "title": "Sin Categoría",
+      "warningTitle": "Cuentas sin Categoría Encontradas",
+      "warningDescription": "Las siguientes cuentas no pertenecen a ninguna categoría. Por favor, edítalas para asignarles una."
+    },
+    "validation": {
+      "categoryNameRequired": "El nombre de la categoría es obligatorio.",
+      "accountNameRequired": "El nombre de la cuenta es obligatorio.",
+      "categoryRequired": "La categoría es obligatoria."
+    }
+  },
+  "CustomersPage": {
+    "title": "Clientes",
+    "printButton": "Imprimir",
+    "mobileWarning": {
+      "title": "Vista Móvil",
+      "description": "Esta página se ve mejor en una pantalla más ancha para una mejor experiencia."
+    },
+    "reportDialog": {
+      "title": "Generar Reporte de Cliente",
+      "description": "Selecciona un cliente para imprimir su perfil o elige todos para imprimir un directorio.",
+      "label": "Cliente",
+      "selectPlaceholder": "Selecciona un cliente",
+      "searchPlaceholder": "Buscar cliente...",
+      "empty": "No se encontró ningún cliente.",
+      "allOption": "Todos los Clientes",
+      "generateButton": "Generar"
+    },
+    "newCustomer": {
+      "title": "Nuevo Cliente",
+      "description": "Añade un nuevo cliente a tu base de datos.",
+      "saveButton": "Guardar Cliente"
+    },
+    "form": {
+      "nameLabel": "Nombre del Cliente",
+      "namePlaceholder": "Ej: Boutique de Jane Doe",
+      "phoneLabel": "Número de Teléfono",
+      "phonePlaceholder": "(555) 123-4567",
+      "emailLabel": "Correo de Contacto",
+      "emailPlaceholder": "pedidos@ejemplo.com",
+      "websiteLabel": "Sitio Web",
+      "websitePlaceholder": "https://ejemplo.com",
+      "addressLabel": "Dirección",
+      "addressPlaceholder": "Calle Principal 123",
+      "cityLabel": "Ciudad",
+      "cityPlaceholder": "Cualquierciudad, País"
+    },
+    "customerList": {
+      "title": "Lista de Clientes",
+      "description": "Una vista de todos tus clientes existentes.",
+      "table": {
+        "name": "Nombre",
+        "email": "Contacto",
+        "phone": "Teléfono",
+        "city": "Ciudad",
+        "actions": "Acciones"
+      },
+      "empty": "No se encontraron clientes. ¡Añade uno para empezar!"
+    },
+    "editDialog": {
+      "title": "Editar {customerName}",
+      "saveButton": "Guardar Cambios"
+    },
+    "deleteDialog": {
+      "title": "¿Estás seguro?",
+      "description": "Esto eliminará permanentemente a <strong>{customerName}</strong>. Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "toasts": {
+      "saved": {
+        "title": "Cliente Guardado",
+        "description": "{customerName} ha sido añadido a tus clientes."
+      },
+      "saveError": {
+        "title": "Error al Guardar"
+      },
+      "reportError": {
+        "title": "Error en el Reporte",
+        "description": "No se pudo generar el reporte."
+      },
+      "updated": {
+        "title": "Cliente Actualizado",
+        "description": "Los cambios en {customerName} han sido guardados."
+      },
+      "updateError": {
+        "title": "Error al Actualizar"
+      },
+      "deleted": {
+        "title": "Cliente Eliminado",
+        "description": "El cliente ha sido eliminado."
+      },
+      "deleteError": {
+        "title": "Error al Eliminar"
+      }
+    },
+    "validation": {
+      "nameRequired": "El nombre del cliente es obligatorio.",
+      "addressRequired": "La dirección es obligatoria.",
+      "phoneRequired": "El número de teléfono es obligatorio.",
+      "cityRequired": "La ciudad es obligatoria.",
+      "urlInvalid": "Por favor, introduce una URL válida.",
+      "emailInvalid": "Por favor, introduce un correo electrónico válido.",
+      "itemRequired": "Se debe seleccionar un elemento."
+    },
+    "report": {
+      "profileTitle": "Perfil del Cliente: {name}",
+      "directoryTitle": "Directorio de Clientes",
+      "generatedDateLabel": "Generado el",
+      "totalLabel": "Total de Clientes",
+      "websiteLabel": "Sitio Web",
+      "joinDateLabel": "Fecha de registro"
+    }
+  },
+  "MaterialTypesPage": {
+    "title": "Tipos de Material",
+    "printButton": "Imprimir Reporte",
+    "newMaterialType": {
+      "title": "Nuevo Tipo de Material",
+      "description": "Añade un nuevo tipo de material para categorizar tu inventario.",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Ej: Algodón, Poliéster",
+      "descriptionLabel": "Descripción",
+      "descriptionPlaceholder": "(Opcional) Breve descripción",
+      "saveButton": "Guardar Tipo"
+    },
+    "existingMaterialTypes": {
+      "title": "Tipos de Material Existentes",
+      "description": "Una lista de todos los tipos de material actualmente en el sistema.",
+      "table": {
+        "name": "Nombre",
+        "description": "Descripción",
+        "actions": "Acciones"
+      },
+      "inUseTooltip": "Este tipo está en uso y no puede ser eliminado.",
+      "empty": "No se encontraron tipos de material. Añade uno para empezar."
+    },
+    "reportDialog": {
+      "title": "Reporte de Tipos de Material",
+      "description": "Selecciona un tipo para imprimir un reporte individual, o elige todos.",
+      "label": "Tipo de Material",
+      "allOption": "Todos los Tipos",
+      "selectPlaceholder": "Selecciona un tipo",
+      "searchPlaceholder": "Buscar tipos...",
+      "empty": "No se encontraron tipos.",
+      "generateButton": "Generar"
+    },
+    "editDialog": {
+      "title": "Editar {typeName}",
+      "description": "Modifica el nombre y la descripción de este tipo de material.",
+      "saveButton": "Guardar Cambios"
+    },
+    "deleteDialog": {
+      "title": "¿Estás seguro?",
+      "description": "Esto eliminará permanentemente el tipo de material <strong>{typeName}</strong>. Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "toasts": {
+      "saved": {
+        "title": "Tipo Guardado",
+        "description": "Se ha añadido {typeName}."
+      },
+      "updated": {
+        "title": "Tipo Actualizado",
+        "description": "Los cambios en {typeName} han sido guardados."
+      },
+      "deleted": {
+        "title": "Tipo Eliminado",
+        "description": "{typeName} ha sido eliminado."
+      },
+      "saveError": "Error al guardar el tipo de material.",
+      "updateError": "Error al actualizar el tipo de material.",
+      "deleteError": "Error al eliminar el tipo de material."
+    },
+    "validation": {
+      "nameRequired": "El nombre es obligatorio.",
+      "itemRequired": "Se debe seleccionar un elemento."
+    },
+    "report": {
+        "allTitle": "Todos los Tipos de Materiales",
+        "singleTitle": "Tipo de Material: {name}"
+    }
+  },
+  "PhasesPage": {
+    "title": "Fases de Producción",
+    "printButton": "Imprimir",
+    "newPhase": {
+      "title": "Nueva Fase",
+      "description": "Añade una nueva etapa a tu flujo de producción.",
+      "nameLabel": "Nombre de la Fase",
+      "namePlaceholder": "Ej: Corte, Costura, Acabado",
+      "descriptionLabel": "Descripción",
+      "descriptionPlaceholder": "Describe lo que sucede en esta fase.",
+      "saveButton": "Guardar Fase"
+    },
+    "existingPhases": {
+      "title": "Fases Existentes",
+      "description": "Gestiona y visualiza tus fases de producción actuales.",
+      "table": {
+        "number": "Orden",
+        "name": "Nombre",
+        "description": "Descripción",
+        "actions": "Acciones"
+      },
+      "empty": "No se encontraron fases de producción."
+    },
+    "reportDialog": {
+      "title": "Reporte de Fases",
+      "description": "Selecciona una fase para imprimir, o imprime todas.",
+      "label": "Fase",
+      "selectPlaceholder": "Selecciona una fase",
+      "searchPlaceholder": "Buscar fases...",
+      "empty": "No se encontraron fases.",
+      "allOption": "Todas las Fases",
+      "generateButton": "Generar"
+    },
+    "editDialog": {
+      "title": "Editar {phaseName}",
+      "description": "Actualiza los detalles de esta fase de producción.",
+      "saveButton": "Guardar Cambios"
+    },
+    "deleteDialog": {
+      "title": "¿Estás seguro?",
+      "description": "Esto eliminará permanentemente la fase <strong>{phaseName}</strong>. Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "toasts": {
+      "saved": {
+        "title": "Fase Guardada",
+        "description": "La fase '{phaseName}' ha sido añadida."
+      },
+      "saveError": "Error al guardar la nueva fase.",
+      "editNotAllowed": {
+        "title": "Edición no Permitida",
+        "description": "La fase '{phaseName}' es una fase predeterminada y no puede ser editada."
+      },
+      "updateSuccess": {
+        "title": "Actualización Exitosa",
+        "description": "La fase '{phaseName}' ha sido actualizada."
+      },
+      "updateError": "Error al actualizar la fase.",
+      "deleteNotAllowed": {
+        "title": "Eliminación no Permitida",
+        "description": "Las fases predeterminadas no pueden ser eliminadas."
+      },
+      "deleteSuccess": {
+        "title": "Fase Eliminada",
+        "description": "La fase ha sido eliminada exitosamente."
+      },
+      "deleteError": "Error al eliminar la fase.",
+      "reportError": "Error en el Reporte",
+      "reportErrorDesc": "Fallo al generar el reporte de fases."
+    },
+    "validation": {
+      "nameRequired": "El nombre de la fase es obligatorio.",
+      "descriptionRequired": "La descripción es obligatoria.",
+      "itemRequired": "Se debe seleccionar un elemento."
+    }
+  },
+  "RawMaterialsPage": {
+    "title": "Materias Primas",
+    "reportCard": {
+      "title": "Generar Reporte",
+      "description": "Genera un reporte para una materia prima específica o para todas.",
+      "button": "Generar Reporte",
+      "label": "Materia Prima",
+      "selectPlaceholder": "Seleccionar material",
+      "allOption": "Todas las Materias Primas",
+      "searchPlaceholder": "Buscar material...",
+      "empty": "No se encontró material."
+    },
+    "listCard": {
+      "title": "Todas las Materias Primas",
+      "description": "Esta es una lista consolidada de todos los artículos individuales disponibles de tus proveedores."
+    },
+    "table": {
+      "sku": "SKU",
+      "item": "Artículo",
+      "vendor": "Proveedor",
+      "price": "Precio",
+      "scale": "Escala",
+      "inStock": "En Stock"
+    },
+    "empty": "No se encontraron materias primas. Añade artículos a tus proveedores en el catálogo de Proveedores.",
+    "toasts": {
+      "reportError": {
+        "title": "Error en el Reporte",
+        "description": "Ocurrió un error desconocido al generar el reporte.",
+        "popupBlockedTitle": "Ventana Emergente Bloqueada",
+        "popupBlockedDescription": "Por favor, permite las ventanas emergentes para ver el reporte."
+      }
+    },
+    "report": {
+        "singleTitle": "Reporte de Materia Prima: {itemName}",
+        "allTitle": "Reporte Completo de Materias Primas"
+    }
+  },
+  "ScalesPage": {
+    "title": "Escalas",
+    "reportButton": "Generar Reporte",
+    "newScale": {
+      "title": "Nueva Escala",
+      "description": "Añade una nueva unidad de medida al sistema.",
+      "nameLabel": "Nombre de la Escala",
+      "namePlaceholder": "Ej: Kilogramos, Litros",
+      "typeLabel": "Tipo",
+      "typePlaceholder": "Seleccionar tipo",
+      "saveButton": "Guardar Escala"
+    },
+    "existingScales": {
+      "title": "Escalas Existentes",
+      "description": "Una lista de todas las unidades de medida disponibles.",
+      "table": {
+        "name": "Nombre",
+        "type": "Tipo",
+        "actions": "Acciones"
+      },
+      "empty": "No se encontraron escalas. Añade una para empezar."
+    },
+    "editDialog": {
+      "title": "Editar Escala",
+      "description": "Modifica el nombre y el tipo de esta escala.",
+      "saveButton": "Guardar Cambios"
+    },
+    "deleteDialog": {
+      "title": "¿Estás seguro?",
+      "description": "Esto eliminará permanentemente la escala <strong>{scaleName}</strong>. Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "toasts": {
+      "saveSuccess": {
+        "title": "Escala Guardada",
+        "description": "Se ha añadido {scaleName}."
+      },
+      "updateSuccess": {
+        "title": "Escala Actualizada",
+        "description": "Los cambios en {scaleName} han sido guardados."
+      },
+      "deleteSuccess": {
+        "title": "Escala Eliminada",
+        "description": "{scaleName} ha sido eliminada."
+      },
+      "alreadyExists": "Ya existe una escala con este nombre.",
+      "saveError": "Error al guardar la escala.",
+      "updateError": "Error al actualizar la escala.",
+      "deleteError": "Error al eliminar la escala.",
+      "popupBlocked": {
+        "title": "Ventana Emergente Bloqueada",
+        "description": "Por favor, permite las ventanas emergentes para este sitio."
+      },
+      "reportError": "Error en el Reporte",
+      "reportErrorDesc": "Ocurrió un error desconocido al generar el reporte."
+    },
+    "validation": {
+      "nameRequired": "El nombre de la escala es obligatorio.",
+      "typeRequired": "El tipo es obligatorio."
+    },
+    "report": {
+        "title": "Catálogo de Escalas",
+        "generatedDateLabel": "Generado el"
+    }
+  },
+  "ProductsPage": {
+    "title": "Productos",
+    "mobileWarning": {
+      "title": "Escritorio Recomendado",
+      "description": "Esta sección está optimizada para su uso en escritorio. Algunas características pueden estar limitadas en pantallas más pequeñas."
+    },
+    "readonly": {
+      "title": "Modo de Solo Lectura",
+      "description": "Se requiere una suscripción para crear, editar o eliminar productos y categorías."
+    },
+    "generateReport": {
+      "title": "Generar Reporte",
+      "description": "Genera un reporte de ventas para un producto específico o para todos los productos.",
+      "allOption": "Todos los Productos",
+      "selectPlaceholder": "Seleccionar producto",
+      "searchPlaceholder": "Buscar producto...",
+      "empty": "No se encontró ningún producto.",
+      "button": "Generar",
+      "error": {
+        "title": "Error en el Reporte",
+        "description": "No se pudo generar el reporte de ventas."
+      }
+    },
+    "manageCategories": {
+      "title": "Categorías de Productos",
+      "description": "Agrupa tus productos en categorías para una mejor organización.",
+      "newCategoryButton": "Nueva Categoría",
+      "editCategoriesButton": "Gestionar Categorías",
+      "addDialog": {
+        "title": "Añadir Nueva Categoría",
+        "description": "Crea una nueva categoría para tus productos.",
+        "label": "Nombre de la Categoría",
+        "placeholder": "Ej: Camisetas, Sudaderas",
+        "existingLabel": "Categorías Existentes",
+        "saveButton": "Guardar Categoría"
+      },
+      "editDialog": {
+        "title": "Gestionar Categorías de Productos",
+        "description": "Edita o elimina categorías de productos existentes.",
+        "doneButton": "Hecho"
+      },
+      "deleteDialog": {
+        "title": "¿Eliminar Categoría?",
+        "description": "Esto eliminará permanentemente la categoría <strong>{categoryName}</strong>. Esta acción no se puede deshacer.",
+        "cancel": "Cancelar",
+        "delete": "Eliminar"
+      },
+      "toasts": {
+        "addSuccess": "Categoría Añadida",
+        "addSuccessDesc": "La categoría '{categoryName}' ya está disponible.",
+        "addError": "Error al Añadir Categoría",
+        "updateSuccess": "Categoría Renombrada",
+        "updateError": "Error al Renombrar Categoría",
+        "deleteSuccess": "Categoría Eliminada",
+        "deleteError": "Error al Eliminar Categoría"
+      }
+    },
+    "addNewProduct": {
+      "title": "Añadir Nuevo Producto",
+      "existingProductsPlaceholder": "Copiar de producto existente...",
+      "saveButton": "Guardar Producto",
+      "namePlaceholder": "Introducir Producto",
+      "itemsBadge": "{count} artículos",
+      "editSr": "Editar Detalles del Producto",
+      "viewComponentsSr": "Ver/Editar Componentes",
+      "table": {
+        "productName": "Producto",
+        "salePrice": "Precio Venta",
+        "category": "Categoría",
+        "components": "Componentes",
+        "actions": "Acciones"
+      },
+      "toasts": {
+        "saveSuccess": "Producto Guardado",
+        "saveSuccessDesc": "{productName} ha sido añadido a tu catálogo.",
+        "saveError": "Error al Guardar el Producto"
+      }
+    },
+    "availableProducts": {
+      "title": "Productos Disponibles",
+      "description": "Una lista de todos tus productos configurados y sus componentes.",
+      "loading": "Cargando productos...",
+      "empty": "No se encontraron productos. Añade uno para empezar.",
+      "bom": {
+        "title": "Lista de Materiales para {productName}",
+        "editButton": "Editar Componentes",
+        "empty": "No hay componentes definidos para este producto.",
+        "table": {
+          "rawMaterial": "Materia Prima",
+          "vendor": "Proveedor",
+          "quantity": "Cantidad"
+        }
+      },
+      "deleteDialog": {
+        "title": "¿Eliminar Producto?",
+        "description": "¿Estás seguro de que quieres eliminar {productName}? Esta acción no se puede deshacer.",
+        "cancel": "Cancelar",
+        "delete": "Eliminar"
+      },
+      "toasts": {
+        "deleteSuccess": "Producto Eliminado",
+        "deleteSuccessDesc": "El producto ha sido eliminado.",
+        "deleteError": "Error al Eliminar el Producto"
+      }
+    },
+    "editProductDialog": {
+      "title": "Editar {productName}",
+      "description": "Modifica los detalles generales de este producto.",
+      "categoryLabel": "Categoría",
+      "categoryPlaceholder": "Selecciona una categoría",
+      "salePriceLabel": "Precio Venta",
+      "saveButton": "Guardar Cambios",
+      "toasts": {
+        "updateSuccess": "Producto Actualizado",
+        "updateSuccessDesc": "Los detalles del producto han sido guardados.",
+        "updateError": "Error al Actualizar el Producto"
+      }
+    },
+    "editComponentsDialog": {
+      "title": "Editar Componentes para {productName}",
+      "materialLabel": "Material",
+      "materialPlaceholder": "Selecciona un material",
+      "quantityLabel": "Cantidad",
+      "quantityPlaceholder": "0",
+      "removeSr": "Eliminar componente",
+      "addButton": "Añadir Componente",
+      "saveButton": "Guardar Componentes",
+      "toasts": {
+        "updateSuccess": "Componentes Actualizados",
+        "updateSuccessDesc": "La lista de materiales ha sido guardada.",
+        "updateError": "Error al Actualizar Componentes"
+      }
+    },
+    "validation": {
+        "itemRequired": "Por favor, selecciona un producto."
+    },
+    "report": {
+        "productTitle": "Perfil del Producto",
+        "inventoryTitle": "Inventario de Productos",
+        "generatedDateLabel": "Generado el",
+        "nameLabel": "Producto",
+        "categoryLabel": "Categoría",
+        "priceLabel": "Precio Venta",
+        "skuLabel": "SKU",
+        "descriptionLabel": "Descripción"
+    }
+  },
+  "VendorsPage": {
+    "title": "Proveedores",
+    "addNewVendor": {
+      "title": "Añadir Nuevo Proveedor",
+      "description": "Registra un nuevo proveedor y las materias primas que suministra.",
+      "saveButton": "Guardar Proveedor"
+    },
+    "form": {
+      "vendorName": "Nombre del Proveedor",
+      "vendorNamePlaceholder": "Ej: Telas y Cía.",
+      "contactPerson": "Persona de Contacto",
+      "contactPersonPlaceholder": "Ej: Juan Pérez",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "contacto@telas.co",
+      "phone": "Teléfono",
+      "phonePlaceholder": "(555) 123-4567",
+      "address": "Dirección",
+      "addressPlaceholder": "Av. Textil 123",
+      "country": "País",
+      "countryPlaceholder": "Ej: México",
+      "itemsTitle": "Artículos proporcionados por este proveedor",
+      "sku": "SKU",
+      "item": "Nombre del Artículo",
+      "type": "Tipo de Material",
+      "typePlaceholder": "Seleccionar tipo",
+      "price": "Precio por Unidad",
+      "scale": "Escala",
+      "scalePlaceholder": "Seleccionar escala",
+      "addItemButton": "Añadir otro artículo"
+    },
+    "vendorList": {
+      "title": "Lista de Proveedores",
+      "description": "Una lista de todos tus proveedores registrados y sus artículos.",
+      "noVendors": "No se encontraron proveedores. Añade uno para empezar.",
+      "noItems": "No hay artículos para este proveedor."
+    },
+    "reportDialog": {
+      "trigger": "Imprimir Reporte",
+      "title": "Generar Reporte de Proveedor",
+      "description": "Selecciona un proveedor para imprimir su perfil o elige todos para imprimir un directorio.",
+      "label": "Proveedor",
+      "selectPlaceholder": "Selecciona un proveedor",
+      "searchPlaceholder": "Buscar proveedor...",
+      "empty": "No se encontró ningún proveedor.",
+      "allOption": "Todos los Proveedores",
+      "generateButton": "Generar"
+    },
+    "editItemDialog": {
+      "title": "Editar {itemName}",
+      "description": "Modifica los detalles de esta materia prima.",
+      "itemNameLabel": "Nombre del Artículo",
+      "saveButton": "Guardar Cambios"
+    },
+    "editVendorDialog": {
+        "title": "Editar {vendorName}",
+        "saveButton": "Guardar Cambios"
+    },
+    "deleteDialogs": {
+      "vendorTitle": "¿Eliminar Proveedor?",
+      "vendorDescription": "Esto eliminará permanentemente a <strong>{vendorName}</strong> y todos sus artículos asociados. Esta acción no se puede deshacer.",
+      "itemTitle": "¿Eliminar Artículo?",
+      "itemDescription": "Esto eliminará permanentemente <strong>{itemName}</strong>. Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "toasts": {
+      "vendorCreated": {
+        "title": "Proveedor Creado",
+        "description": "{vendorName} ha sido añadido exitosamente."
+      },
+      "error": "Error",
+      "reportError": {
+        "title": "Error en el Reporte"
+      },
+      "itemUpdated": {
+        "title": "Artículo Actualizado"
+      },
+      "itemUpdateError": "Error al Actualizar el Artículo",
+      "itemDeleted": {
+        "title": "Artículo Eliminado"
+      },
+      "vendorUpdated": {
+        "title": "Proveedor Actualizado"
+      },
+      "vendorUpdateError": "Error al Actualizar el Proveedor",
+      "vendorDeleted": {
+        "title": "Proveedor Eliminado"
+      },
+      "vendorDeleteError": "Error al Eliminar the Proveedor"
+    },
+    "validation": {
+      "skuRequired": "El SKU es obligatorio.",
+      "itemNameRequired": "El nombre del artículo es obligatorio.",
+      "pricePositive": "El precio debe ser un número positivo.",
+      "scaleRequired": "La escala es obligatoria.",
+      "typeRequired": "El tipo es obligatorio.",
+      "vendorNameRequired": "El nombre del proveedor es obligatorio.",
+      "emailInvalid": "Por favor, introduce una dirección de correo válida.",
+      "vendorRequired": "El proveedor es obligatorio."
+    },
+     "report": {
+        "singleTitle": "Perfil del Proveedor: {name}",
+        "allTitle": "Reporte de Todos los Proveedores",
+        "generatedDateLabel": "Generado el",
+        "noItems": "No hay artículos listados para este proveedor.",
+        "headers": {
+          "sku": "SKU",
+          "item": "Artículo",
+          "type": "Tipo",
+          "price": "Precio",
+          "scale": "Escala",
+          "name": "Nombre del Proveedor",
+          "contactPerson": "Contacto",
+          "email": "Correo",
+          "phone": "Teléfono"
+        }
+    }
+  },
+  "ExpensesPage": {
+    "title": "Gastos",
+    "newExpense": {
+      "title": "Registrar Nuevo Gasto",
+      "description": "Registra un gasto de negocio para mantener tus finanzas en orden.",
+      "descriptionLabel": "Descripción",
+      "descriptionPlaceholder": "Ej: Compra de material de oficina",
+      "amountLabel": "Monto",
+      "categoryLabel": "Categoría",
+      "categoryPlaceholder": "Selecciona una categoría",
+      "dateLabel": "Fecha del Gasto",
+      "datePlaceholder": "Elige una fecha",
+      "notesLabel": "Notas (Opcional)",
+      "notesPlaceholder": "Añade cualquier nota relevante aquí...",
+      "saveButton": "Guardar Gasto"
+    },
+    "filters": {
+      "title": "Filtros de Reporte",
+      "categoryLabel": "Categoría",
+      "allCategories": "Todas las Categorías",
+      "searchPlaceholder": "Buscar categoría...",
+      "empty": "No se encontraron categorías.",
+      "startDateLabel": "Fecha de Inicio",
+      "endDateLabel": "Fecha de Fin"
+    },
+    "generateButton": "Generar Reporte",
+    "log": {
+      "title": "Registro de Gastos",
+      "description": "Un historial de todos los gastos registrados.",
+      "dateHeader": "Fecha",
+      "categoryHeader": "Categoría",
+      "descriptionHeader": "Descripción",
+      "amountHeader": "Monto",
+      "actionsHeader": "Acciones",
+      "grandTotal": "Total General"
+    },
+    "empty": "Aún no hay gastos registrados.",
+    "deleteDialog": {
+      "title": "¿Eliminar Gasto?",
+      "description": "Esto eliminará permanentemente este registro de gasto. Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "toasts": {
+      "expenseAdded": "Gasto registrado exitosamente.",
+      "reportError": "Error en el Reporte",
+      "error": "Ocurrió un error."
+    },
+    "validation": {
+      "descriptionRequired": "La descripción es obligatoria.",
+      "amountPositive": "El monto debe ser mayor que 0.",
+      "categoryRequired": "La categoría es obligatoria.",
+      "dateRequired": "La fecha del gasto es obligatoria."
+    }
+  },
+  "ArrivalsPage": {
+    "title": "Entradas de Materia Prima",
+    "newIntake": {
+      "title": "Nueva Entrada de Materia Prima",
+      "description": "Registra la llegada de materias primas de tus proveedores.",
+      "dateLabel": "Fecha de Llegada",
+      "datePlaceholder": "Seleccionar fecha",
+      "materialLabel": "Material",
+      "materialPlaceholder": "Selecciona un material",
+      "materialSearchPlaceholder": "Buscar materiales...",
+      "materialEmpty": "No se encontraron materiales. Añade artículos a los proveedores primero.",
+      "quantityLabel": "Cantidad Recibida",
+      "quantityPlaceholder": "0",
+      "scaleLabel": "Escala",
+      "submitButton": "Registrar Entrada"
+    },
+    "report": {
+      "title": "Generar Reporte de Entradas",
+      "description": "Filtra e imprime un reporte de las llegadas de material.",
+      "startDateLabel": "Fecha de Inicio",
+      "endDateLabel": "Fecha de Fin",
+      "pickDatePlaceholder": "Elige una fecha",
+      "printButton": "Imprimir Reporte"
+    },
+    "history": {
+      "title": "Entradas Recientes",
+      "description": "Un registro de las llegadas de materia prima más recientes.",
+      "table": {
+        "material": "Material",
+        "vendor": "Proveedor",
+        "quantity": "Cantidad",
+        "date": "Fecha"
+      },
+      "empty": "No se encontraron registros de entrada."
+    },
+    "toasts": {
+      "success": {
+        "title": "Entrada Registrada",
+        "description": "{quantity} {scale} de {materialName} ha sido añadido al inventario."
+      },
+      "error": {
+        "title": "Error",
+        "materialNotFound": "No se pudo encontrar el material en el inventario.",
+        "vendorNotFound": "No se encontró el proveedor para este material."
+      },
+      "reportError": {
+        "title": "Error de Reporte",
+        "popupBlocked": "Tu navegador bloqueó la ventana emergente del reporte. Por favor, habilítalas e inténtalo de nuevo."
+      }
+    },
+    "validation": {
+      "materialRequired": "El material es obligatorio.",
+      "quantityRequired": "La cantidad es obligatoria.",
+      "quantityPositive": "La cantidad debe ser mayor que 0.",
+      "dateRequired": "La fecha es obligatoria."
+    }
+  },
+  "IntakesReport": {
+    "title": "Reporte de Entradas de Materia Prima",
+    "noRecords": "No se encontraron registros de entrada para los filtros seleccionados.",
+    "total": "Total",
+    "table": {
+        "material": "Material",
+        "vendor": "Proveedor",
+        "quantity": "Cantidad",
+        "date": "Fecha"
+    },
+    "itemTotal": "Total del Artículo",
+    "grandTotal": "Total General",
+    "uncategorized": "Sin categoría"
+  },
+  "ProductsInventoryPage": {
+    "title": "Inventario de Productos Terminados",
+    "card": {
+      "title": "Estado del Inventario",
+      "description": "Visualiza los niveles de stock actuales de tus productos terminados.",
+      "printButton": "Imprimir Reporte"
+    },
+    "table": {
+      "product": "Producto",
+      "category": "Categoría",
+      "packed": "Total Empacado",
+      "sold": "Total Vendido",
+      "inStock": "En Stock"
+    },
+    "empty": {
+      "title": "Sin Inventario de Productos",
+      "subtitle": "Los productos empacados desde la página de Producción aparecerán aquí."
+    },
+    "toasts": {
+      "reportError": {
+        "title": "Error de Reporte",
+        "description": "Ocurrió un error desconocido al generar el reporte."
+      },
+      "popupBlocked": {
+        "title": "Ventana Emergente Bloqueada",
+        "description": "Por favor, permite las ventanas emergentes para este sitio para ver el reporte."
+      }
+    }
+  },
+  "ProductsInventoryReport": {
+    "title": "Reporte de Inventario de Productos Terminados",
+    "subtitle": "Niveles de stock actuales de todos los productos terminados.",
+    "table": {
+        "product": "Producto",
+        "category": "Categoría",
+        "packed": "Total Empacado",
+        "sold": "Total Vendido",
+        "inStock": "En Stock"
+    },
+    "noRecords": "No se encontraron registros.",
+    "grandTotals": "Totales Generales",
+    "totalLabel": "Total de Artículos en Stock"
+  },
+  "RawMaterialsInventoryPage": {
+    "title": "Inventario de Materias Primas",
+    "reportCard": {
+      "title": "Generar Reporte",
+      "description": "Genera un reporte para una materia prima específica o para todas.",
+      "button": "Generar Reporte",
+      "label": "Materia Prima",
+      "selectPlaceholder": "Seleccionar un material",
+      "allOption": "Todas las Materias Primas",
+      "searchPlaceholder": "Buscar material...",
+      "empty": "No se encontró ningún material."
+    },
+    "listCard": {
+      "title": "Inventario Actual",
+      "description": "Una lista consolidada de todas las materias primas actualmente en stock."
+    },
+    "table": {
+      "sku": "SKU",
+      "item": "Artículo",
+      "vendor": "Proveedor",
+      "price": "Precio",
+      "scale": "Escala",
+      "inStock": "En Stock",
+      "actions": "Acciones"
+    },
+    "empty": "No se encontraron materias primas. Añade artículos a tus proveedores en el catálogo de Proveedores.",
+    "toasts": {
+      "reportError": {
+        "title": "Error en el Reporte",
+        "description": "Ocurrió un error desconocido al generar el reporte.",
+        "popupBlockedTitle": "Ventana Emergente Bloqueada",
+        "popupBlockedDescription": "Por favor, permite las ventanas emergentes para ver el reporte."
+      },
+      "updateSuccess": "Inventario actualizado exitosamente.",
+      "updateError": "Fallo al actualizar el inventario.",
+      "deleteSuccess": "Artículo eliminado del conteo de inventario.",
+      "deleteError": "Fallo al eliminar el artículo."
+    },
+    "report": {
+      "singleTitle": "Reporte de Materia Prima: {itemName}",
+      "allTitle": "Reporte Completo de Materias Primas",
+      "generatedDateLabel": "Generado el"
+    },
+    "editDialog": {
+        "title": "Editar {itemName}",
+        "description": "Actualiza los detalles y el stock actual de esta materia prima.",
+        "skuLabel": "SKU",
+        "itemNameLabel": "Nombre del Artículo",
+        "typeLabel": "Tipo",
+        "typePlaceholder": "Selecciona un tipo",
+        "priceLabel": "Precio",
+        "scaleLabel": "Escala",
+        "scalePlaceholder": "Selecciona una escala",
+        "inStockLabel": "Cantidad en Stock",
+        "saveButton": "Guardar Cambios"
+    },
+    "deleteDialog": {
+        "title": "Confirmar Eliminación",
+        "description": "Esto eliminará <strong>{itemName}</strong> del proveedor <strong>{vendorName}</strong>. Esta acción es permanente.",
+        "cancel": "Cancelar",
+        "delete": "Eliminar"
+    }
+  },
+  "InvoicesPage": {
+    "title": "Facturas",
+    "mobileWarning": {
+      "title": "Escritorio Recomendado",
+      "description": "Esta página está optimizada para su uso en escritorio. Algunas funciones pueden estar limitadas en pantallas más pequeñas."
+    },
+    "createCard": {
+      "title": "Crear Factura",
+      "description": "Crea una nueva factura proforma o final para un cliente."
+    },
+    "form": {
+      "customerLabel": "Cliente",
+      "customerPlaceholder": "Selecciona un cliente",
+      "typeLabel": "Tipo",
+      "typePlaceholder": "Seleccionar tipo",
+      "finalInvoice": "Factura Final",
+      "proforma": "Proforma",
+      "invoiceNumberLabel": "N° de Factura",
+      "invoiceNumberPlaceholder": "Ej: FAC-2024-001",
+      "invoiceDateLabel": "Fecha de Factura",
+      "dueDateLabel": "Fecha de Vencimiento"
+    },
+    "lineItemsCard": {
+      "title": "Líneas de Factura",
+      "productLabel": "Producto",
+      "productPlaceholder": "Selecciona un producto",
+      "quantityLabel": "Cantidad",
+      "priceLabel": "Precio Unitario",
+      "totalLabel": "Total",
+      "addItemButton": "Añadir Artículo"
+    },
+    "summary": {
+      "subtotal": "Subtotal",
+      "discount": "Descuento",
+      "tax": "Impuesto",
+      "total": "Total General"
+    },
+    "dialogs": {
+      "discount": {
+        "title": "Establecer Descuento",
+        "label": "Monto del Descuento",
+        "saveButton": "Establecer Descuento"
+      }
+    },
+    "notesCard": {
+      "title": "Notas",
+      "label": "Notas o términos opcionales",
+      "placeholder": "Introduce aquí cualquier nota adicional para la factura...",
+      "defaultNote": "Gracias por su compra."
+    },
+    "generateButton": "Generar e Imprimir",
+    "reportCard": {
+      "title": "Imprimir Factura Existente",
+      "description": "Selecciona un rango de fechas para encontrar y reimprimir una factura generada previamente.",
+      "label": "Factura",
+      "selectPlaceholder": "Selecciona una factura",
+      "searchPlaceholder": "Buscar por número...",
+      "empty": "No se encontraron facturas.",
+      "startDateLabel": "Fecha de Inicio",
+      "endDateLabel": "Fecha de Fin",
+      "pickDatePlaceholder": "Elige una fecha",
+      "generateButton": "Imprimir Factura"
+    },
+    "toasts": {
+      "generateError": "Fallo en la Generación",
+      "timeoutError": "La solicitud ha tardado demasiado. Por favor, inténtalo de nuevo.",
+      "generateSuccess": "Factura Generada",
+      "generateSuccessDesc": "Factura {invoiceNumber} creada con éxito.",
+      "reportSelectionError": "Selección Requerida",
+      "reportSelectionErrorDesc": "Por favor, selecciona una factura para imprimir.",
+      "reportError": "Error en el Reporte",
+      "reportTimeoutError": "La generación del reporte ha tardado demasiado. Por favor, inténtalo de nuevo."
+    },
+    "validation": {
+      "productRequired": "El producto es obligatorio.",
+      "descriptionRequired": "La descripción es obligatoria.",
+      "quantityInt": "La cantidad debe ser un número entero.",
+      "quantityMin": "La cantidad debe al menos 1.",
+      "pricePositive": "El precio debe ser un número positivo.",
+      "customerRequired": "El cliente es obligatorio.",
+      "invoiceNumberRequired": "El número de factura es obligatorio.",
+      "invoiceNumberExists": "Este número de factura ya está en uso.",
+      "invoiceDateRequired": "La fecha de la factura es obligatoria.",
+      "dueDateRequired": "La fecha de vencimiento es obligatoria.",
+      "lineItemsRequired": "Se requiere al menos una línea de factura.",
+      "discountPositive": "El descuento debe ser un número positivo.",
+      "taxPositive": "El impuesto debe ser un número positivo.",
+      "invoiceIdRequired": "Se debe seleccionar una factura."
+    }
+  },
+  "InvoiceTemplate": {
+    "invoiceNumber": "Factura N°:",
+    "issued": "Emitida:",
+    "due": "Vencimiento:",
+    "billTo": "Facturar a",
+    "description": "Descripción",
+    "quantity": "Cant.",
+    "unitPrice": "Precio Unit.",
+    "totalHeader": "Total",
+    "subtotal": "Subtotal",
+    "discount": "Descuento",
+    "tax": "Impuesto",
+    "grandTotal": "Monto Total a Pagar",
+    "notes": "Notas"
+  },
+  "ProductionPage": {
+    "title": "Tablero de Producción",
+    "desktop": {
+        "title": "Escritorio Recomendado",
+        "description": "Esta sección está optimizada para uso en escritorio. Por favor, accede desde un ordenador para la mejor experiencia."
+    },
+    "readonly": {
+      "title": "Modo de Solo Lectura",
+      "description": "Se requiere una suscripción para registrar datos de producción."
+    },
+    "loading": "Cargando fases de producción...",
+    "form": {
+      "productLabel": "Producto",
+      "selectProductPlaceholder": "Seleccionar Producto",
+      "toProduceLabel": "A Producir",
+      "producedLabel": "Producido",
+      "damagedLabel": "Dañado",
+      "recordButton": "Registrar",
+      "subscriptionRequiredTitle": "Suscripción requerida"
+    },
+    "toasts": {
+      "validationErrorTitle": "Error de Validación",
+      "selectProductError": "Por favor, selecciona un producto para la fila antes de registrar.",
+      "noPiecesToProduceError": "No hay piezas para producir en esta fase.",
+      "enterQuantityError": "Por favor, introduce una cantidad para Producido o Dañado.",
+      "totalProcessedError": "El total procesado ({totalProcessed}) no puede exceder la cantidad a producir ({totalToProcess}).",
+      "productNotFoundError": "No se pudieron encontrar los detalles del producto.",
+      "productionLoggedTitle": "Producción Registrada",
+      "productionLoggedDesc": "{totalProcessed} unidades de {productName} procesadas en {phaseName} ({goodQuantity} buenas, {damagedQuantity} dañadas).",
+      "productionCompleteTitle": "Producción Completada",
+      "productionCompleteDesc": "Todas las unidades de {productName} han finalizado el ciclo de producción.",
+      "phaseRowCompleteTitle": "Fila de Fase Completa",
+      "phaseRowCompleteDesc": "Todas las unidades en esta fila han completado la fase {phaseName}.",
+      "recordingFailedTitle": "Fallo al Registrar"
+    }
+  },
+  "AccessLogPage": {
+    "title": "Registro de Acceso",
+    "generateButton": "Generar Reporte",
+    "filterTitle": "Filtrar Registro",
+    "startDateLabel": "Fecha de Inicio",
+    "endDateLabel": "Fecha de Fin",
+    "logTitle": "Registro de Acceso",
+    "logDescription": "Una lista de los eventos de acceso de usuario más recientes.",
+    "table": {
+      "date": "Fecha",
+      "time": "Hora",
+      "userEmail": "Correo del Usuario"
+    },
+    "empty": "No se encontraron registros de acceso.",
+    "report": {
+      "title": "Registro de Acceso de Usuarios",
+      "filters": {
+        "from": "Desde",
+        "to": "Hasta"
+      },
+      "noRecords": "No se encontraron registros para el rango de fechas seleccionado.",
+      "accesses": "accesos",
+      "timeHeader": "Hora",
+      "emailHeader": "Correo del Usuario",
+      "headerNote": "Todas las horas están en su zona horaria local."
+    }
+  },
+  "CustomerReportsPage": {
+    "title": "Reportes de Clientes",
+    "totalCustomers": "{count} Clientes",
+    "generateReport": {
+      "title": "Generar Reporte de Cliente",
+      "description": "Selecciona un cliente y un rango de fechas para generar un historial detallado de facturas.",
+      "customerLabel": "Cliente",
+      "allOption": "Todos los Clientes",
+      "selectPlaceholder": "Selecciona un cliente",
+      "searchPlaceholder": "Buscar cliente...",
+      "empty": "No se encontraron clientes.",
+      "startDateLabel": "Fecha de Inicio",
+      "endDateLabel": "Fecha de Fin",
+      "generateButton": "Generar Reporte"
+    },
+    "existingCustomers": {
+      "title": "Recientes Clientes",
+      "description": "Una vista rápida de tus clientes añadidos más recientemente.",
+      "table": {
+        "name": "Nombre",
+        "email": "Contacto",
+        "phone": "Teléfono",
+        "joinDate": "Fecha de registro"
+      },
+      "empty": "No se encontraron clientes."
+    },
+    "toasts": {
+      "errorTitle": "Error en el Reporte",
+      "errorDescription": "Ocurrió un error desconocido al generar el reporte."
+    }
+  },
+  "CustomerReportsReport": {
+    "titleAll": "Reporte de Todos los Clientes",
+    "titleSingle": "Reporte del Cliente: {name}",
+    "subtitleAll": "{count} Clientes",
+    "subtitleSingle": "{count} Facturas",
+    "period": "Período: {start} a {end}",
+    "totalInvoices": "Total de Facturas",
+    "customerProfile": {
+      "customer": "Cliente",
+      "email": "Correo",
+      "phone": "Teléfono"
+    },
+    "invoiceHistory": {
+      "title": "Historial de Facturas",
+      "table": {
+        "invoiceNo": "Factura N°",
+        "date": "Fecha",
+        "dueDate": "Vencimiento",
+        "status": "Estado",
+        "amount": "Monto"
+      },
+      "items": {
+        "title": "Artículos",
+        "description": "Descripción",
+        "qty": "Cant.",
+        "price": "Precio",
+        "total": "Total"
+      },
+      "totalInvoiced": "Total Facturado",
+      "noInvoices": "No se encontraron facturas para este período."
+    }
+  },
+  "IntakesReportPage": {
+    "title": "Reportes de Entradas",
+    "generateButton": "Generar Reporte",
+    "filterTitle": "Filtros de Reporte",
+    "allMaterialsOption": "Todos los Materiales",
+    "allVendorsOption": "Todos los Proveedores",
+    "startDateLabel": "Fecha de Inicio",
+    "endDateLabel": "Fecha de Fin",
+    "pickDatePlaceholder": "Elige una fecha",
+    "materialLabel": "Material",
+    "materialPlaceholder": "Selecciona un material",
+    "searchMaterialPlaceholder": "Buscar material...",
+    "noMaterialFound": "No se encontró ningún material.",
+    "vendorLabel": "Proveedor",
+    "vendorPlaceholder": "Selecciona un proveedor",
+    "searchVendorPlaceholder": "Buscar proveedor...",
+    "noVendorFound": "No se encontró ningún proveedor.",
+    "logTitle": "Entradas Recientes",
+    "logDescription": "Una lista de las llegadas de materia prima más recientes.",
+    "table": {
+      "date": "Fecha",
+      "material": "Material",
+      "vendor": "Proveedor",
+      "quantity": "Cantidad"
+    },
+    "emptyLog": "No se encontraron registros de entrada.",
+    "toasts": {
+      "popupBlockedTitle": "Ventana Emergente Bloqueada",
+      "popupBlockedDescription": "Por favor, permite las ventanas emergentes para ver el reporte.",
+      "printErrorTitle": "Error de Impresión",
+      "printErrorDescription": "No se pudo generar el reporte."
+    }
+  },
+  "ProductionReportsPage": {
+    "title": "Reportes de Producción",
+    "generateButton": "Generar Reporte",
+    "filterTitle": "Filtros de Reporte",
+    "productLabel": "Producto",
+    "selectProductPlaceholder": "Seleccionar producto",
+    "allProductsOption": "Todos los Productos",
+    "searchProductPlaceholder": "Buscar producto...",
+    "noProductFound": "No se encontró ningún producto.",
+    "startDateLabel": "Fecha de Inicio",
+    "endDateLabel": "Fecha de Fin",
+    "logTitle": "Registro de Producción",
+    "logDescription": "Un registro de los eventos de producción más recientes.",
+    "table": {
+      "date": "Fecha",
+      "product": "Producto",
+      "phase": "Fase",
+      "produced": "Producido",
+      "damaged": "Dañado"
+    },
+    "emptyLog": "No hay registros de producción."
+  },
+  "ProductionReport": {
+    "title": "Reporte de Producción",
+    "generatedOn": "Generado el",
+    "table": {
+      "time": "Hora",
+      "product": "Producto",
+      "phase": "Fase",
+      "produced": "Producido",
+      "damaged": "Dañado"
+    },
+    "totals": {
+      "daily": "Total del Día",
+      "produced": "Total General Producido",
+      "damaged": "Total General Dañado"
+    },
+    "noRecords": "No se encontraron registros para los filtros seleccionados."
+  },
+  "SalesReportsPage": {
+    "title": "Reportes de Ventas",
+    "allProductsOption": "Todos los Productos",
+    "allCustomersOption": "Todos los Clientes",
+    "filter": {
+      "title": "Filtros del Reporte",
+      "productLabel": "Producto",
+      "productPlaceholder": "Seleccionar producto",
+      "productSearch": "Buscar producto...",
+      "productEmpty": "No se encontró producto.",
+      "customerLabel": "Cliente",
+      "customerPlaceholder": "Seleccionar cliente",
+      "customerSearch": "Buscar cliente...",
+      "customerEmpty": "No se encontró cliente.",
+      "startDateLabel": "Fecha de Inicio",
+      "endDateLabel": "Fecha de Fin",
+      "printButton": "Imprimir Reporte"
+    },
+    "log": {
+      "title": "Registro de Ventas",
+      "description": "Datos históricos de todas las actividades de venta de las facturas.",
+      "table": {
+        "date": "Fecha",
+        "product": "Producto",
+        "customer": "Cliente",
+        "quantity": "Cantidad",
+        "unitPrice": "Precio Unitario",
+        "total": "Valor Total"
+      },
+      "empty": "No se encontraron registros de ventas para los filtros seleccionados."
+    },
+    "report": {
+      "title": "Reporte de Ventas",
+      "noSales": "No se encontraron ventas para los filtros seleccionados.",
+      "grandTotal": "Totales Generales",
+      "filterLabels": {
+        "customer": "Cliente",
+        "product": "Producto",
+        "from": "Desde",
+        "to": "Hasta"
+      },
+      "tableHeaders": {
+        "date": "Fecha",
+        "product": "Producto",
+        "customer": "Cliente",
+        "quantity": "Cantidad",
+        "price": "Precio Unitario",
+        "total": "Valor Total"
+      }
+    },
+    "toasts": {
+      "popupBlocked": {
+        "title": "Ventana Emergente Bloqueada",
+        "description": "Por favor, permite las ventanas emergentes para este sitio para imprimir el reporte."
+      },
+      "printError": {
+        "title": "Error al Imprimir Reporte",
+        "description": "Ocurrió un error desconocido."
+      }
+    }
+  },
+  "WastePage": {
+    "title": "Registro de Mercancía Dañada",
+    "cardTitle": "Registro de Desechos por Fase",
+    "cardDescription": "Revisa los artículos marcados como dañados durante cada fase de producción.",
+    "printButton": "Imprimir Reporte",
+    "table": {
+      "date": "Fecha",
+      "time": "Hora",
+      "phase": "Fase",
+      "product": "Producto",
+      "damaged": "Dañado"
+    },
+    "empty": "No hay mercancía dañada registrada.",
+    "dialog": {
+      "title": "Generar Reporte de Desechos",
+      "description": "Filtra el registro de desechos por fase y rango de fechas antes de imprimir.",
+      "phaseLabel": "Fase de Producción",
+      "phasePlaceholder": "Selecciona una fase",
+      "allPhases": "Todas las Fases",
+      "dateFilterLabel": "Filtrar por Rango de Fechas",
+      "startDateLabel": "Inicio",
+      "endDateLabel": "Fin",
+      "generateButton": "Generar Reporte"
+    },
+    "report": {
+        "totalDamaged": "Total Dañado"
+    },
+    "toasts": {
+      "noRecordsTitle": "Sin Registros",
+      "noRecordsDescription": "No hay registros de desechos que coincidan con tus filtros.",
+      "errorTitle": "Error en el Reporte"
+    }
+  },
+  "WasteAnalyticsPage": {},
+  "CatalogReports": {
+    "customers": {
+      "singleTitle": "Reporte de Cliente: {name}",
+      "allTitle": "Reporte de Todos los Clientes",
+      "headers": {
+        "name": "Nombre",
+        "email": "Correo",
+        "phone": "Teléfono",
+        "address": "Dirección",
+        "city": "Ciudad",
+        "joinDate": "Fecha de registro"
+      }
+    },
+    "phases": {
+      "singleTitle": "Reporte de Fase: {name}",
+      "allTitle": "Reporte de Todas las Fases",
+      "headers": {
+        "order": "Orden",
+        "name": "Nombre",
+        "description": "Descripción"
+      }
+    },
+    "vendors": {
+      "singleTitle": "Reporte de Proveedor: {name}",
+      "allTitle": "Reporte de Todos los Proveedores",
+      "noItems": "No hay artículos para este proveedor.",
+      "headers": {
+        "name": "Nombre del Proveedor",
+        "contactPerson": "Contacto",
+        "email": "Correo",
+        "phone": "Teléfono",
+        "items": "Artículos",
+        "sku": "SKU",
+        "item": "Nombre del Artículo",
+        "type": "Tipo",
+        "price": "Precio"
+      }
+    },
+    "products": {
+      "singleTitle": "Reporte de Producto: {name}",
+      "allTitle": "Reporte de Todos los Productos",
+      "headers": {
+        "name": "Nombre del Producto",
+        "category": "Categoría",
+        "salePrice": "Precio de Venta"
+      }
+    },
+    "rawMaterials": {
+      "singleTitle": "Reporte de Materia Prima: {name}",
+      "allTitle": "Reporte de Todas las Materias Primas",
+      "headers": {
+        "sku": "SKU",
+        "item": "Artículo",
+        "vendor": "Proveedor",
+        "price": "Precio",
+        "scale": "Escala",
+        "inStock": "En Stock"
+      }
+    },
+    "scales": {
+      "title": "Reporte de Escalas",
+      "uncategorized": "Sin categoría",
+      "noScales": "No hay escalas para reportar.",
+      "headers": {
+        "name": "Nombre"
+      }
+    }
+  },
+  "DefaultData": {
+    "PhasesData": {
+      "Processing": "Procesamiento",
+      "Processing_desc": "Procesamiento inicial de materias primas.",
+      "Assembly/Fabrication": "Ensamblaje/Fabricación",
+      "Assembly/Fabrication_desc": "Ensamblaje de componentes en el producto final.",
+      "Quality Control & Testing": "Control de Calidad y Pruebas",
+      "Quality Control & Testing_desc": "Asegurar que el producto cumple los estándares de calidad.",
+      "Packaging": "Empaquetado",
+      "Packaging_desc": "Preparación del producto para el envío."
+    },
+    "MaterialTypesData": {
+      "Alloy": "Aleación",
+      "Aluminum": "Aluminio",
+      "Article": "Artículo",
+      "Biomaterial": "Biomaterial",
+      "Board": "Cartón",
+      "Carbon Fiber": "Fibra de Carbono",
+      "Ceramic": "Cerámica",
+      "Clay": "Arcilla",
+      "Combustible": "Combustible",
+      "Component": "Componente",
+      "Composite": "Compuesto",
+      "Copper": "Cobre",
+      "Fabric": "Tela",
+      "Fiber": "Fibra",
+      "Fiberglass": "Fibra de Vidrio",
+      "Flour": "Harina",
+      "Glass": "Vidrio",
+      "Grain": "Grano",
+      "Honey": "Miel",
+      "Iron": "Hierro",
+      "Item": "Elemento",
+      "Jam": "Mermelada",
+      "Jelly": "Jalea",
+      "Metal": "Metal",
+      "Natural Leather": "Cuero Natural",
+      "Natural Wood": "Madera Natural",
+      "Nylon": "Nailon",
+      "Object": "Objeto",
+      "Paper": "Papel",
+      "Plastic": "Plástico",
+      "Plastics": "Plásticos",
+      "Polyester": "Poliéster",
+      "Polymer": "Polímero",
+      "Porcelain": "Porcelana",
+      "Rubber": "Goma",
+      "Salt": "Sal",
+      "Semiconductor": "Semiconductor",
+      "Silicon": "Silicio",
+      "Steel": "Acero",
+      "Sugar": "Azúcar",
+      "Synthetic": "Sintético",
+      "Timber": "Madera",
+      "Unit": "Unidad",
+      "Yeast": "Levadura"
+    },
+    "AccountCategories": {
+      "People Costs": "Costos de Personal",
+      "Location Costs": "Costos de Ubicación",
+      "Marketing & Sales": "Marketing y Ventas",
+      "Professional Services": "Servicios Profesionales",
+      "Operations & Admin": "Operaciones y Admin",
+      "Cost of Goods Sold (COGS)": "Costo de Bienes Vendidos (COGS)",
+      "Income": "Ingresos"
+    },
+    "Accounts": {
+      "Salaries": {
+        "name": "Salarios",
+        "description": "Salarios de empleados."
+      },
+      "Wages": {
+        "name": "Sueldos",
+        "description": "Sueldos de empleados por hora."
+      },
+      "Contractor Fees": {
+        "name": "Honorarios de Contratistas",
+        "description": "Honorarios para contratistas independientes."
+      },
+      "Employee Benefits": {
+        "name": "Beneficios para Empleados",
+        "description": "Salud, jubilación, etc."
+      },
+      "Payroll Taxes": {
+        "name": "Impuestos sobre la Nómina",
+        "description": "Parte del empleador de los impuestos sobre la nómina."
+      },
+      "Rent": {
+        "name": "Alquiler",
+        "description": "Alquiler de oficina o instalación."
+      },
+      "Mortgage Interest": {
+        "name": "Intereses Hipotecarios",
+        "description": "Intereses sobre la hipoteca de la propiedad."
+      },
+      "Property Taxes": {
+        "name": "Impuestos a la Propiedad",
+        "description": "Impuestos sobre bienes inmuebles."
+      },
+      "Utilities": {
+        "name": "Servicios Públicos",
+        "description": "Electricity, water, internet, phone."
+      },
+      "Advertising": {
+        "name": "Publicidad",
+        "description": "Costos de publicidad en línea y fuera de línea."
+      },
+      "Website Costs": {
+        "name": "Costos del Sitio Web",
+        "description": "Hosting, dominios, temas, plugins."
+      },
+      "Promotional Materials": {
+        "name": "Materiales Promocionales",
+        "description": "Folletos, volantes, regalos."
+      },
+      "Business Travel": {
+        "name": "Viajes de Negocios",
+        "description": "Vuelos, hoteles, comidas para fines comerciales."
+      },
+      "Accountant Fees": {
+        "name": "Honorarios de Contador",
+        "description": "Honorarios por servicios de contabilidad."
+      },
+      "Legal Fees": {
+        "name": "Honorarios Legales",
+        "description": "Honorarios por servicios legales."
+      },
+      "Consultants": {
+        "name": "Consultores",
+        "description": "Honorarios para consultores especializados."
+      },
+      "Office Supplies": {
+        "name": "Suministros de Oficina",
+        "description": "Bolígrafos, papel, tinta, etc."
+      },
+      "Equipment": {
+        "name": "Equipo",
+        "description": "Computadoras, impresoras, maquinaria."
+      },
+      "Software Subscriptions": {
+        "name": "Suscripciones de Software",
+        "description": "SaaS y licencias de software."
+      },
+      "Bank Fees": {
+        "name": "Comisiones Bancarias",
+        "description": "Cargos por servicio mensual, comisiones por transacción."
+      },
+      "Licenses & Permits": {
+        "name": "Licencias y Permisos",
+        "description": "Licencias y permisos comerciales."
+      },
+      "Insurance": {
+        "name": "Seguros",
+        "description": "Seguro de responsabilidad civil, seguro de propiedad."
+      },
+      "Raw Materials": {
+        "name": "Materias Primas",
+        "description": "Costo directo de los materiales para la producción."
+      },
+      "Direct Labor": {
+        "name": "Mano de Obra Directa",
+        "description": "Salarios del personal de producción."
+      },
+      "Sales Revenue": {
+        "name": "Ingresos por Ventas",
+        "description": "Ingresos por la venta de bienes."
+      },
+      "Service Revenue": {
+        "name": "Ingresos por Servicios",
+        "description": "Ingresos por servicios prestados."
+      }
+    },
+    "AccountTypes": {
+      "Income": "Ingreso",
+      "Expense": "Gasto"
+    },
+    "scaleNames": {
+      "Grams": "Gramos",
+      "Kilograms": "Kilogramos",
+      "Liters": "Litros",
+      "Meters": "Metros",
+      "Units": "Unidades",
+      "Fluid ounce": "Onza líquida",
+      "Foot": "Pie",
+      "Gallon": "Galón",
+      "Inch": "Pulgada",
+      "Kilo": "Kilo",
+      "Liter": "Litro",
+      "Meter": "Metro",
+      "Ounce": "Onza",
+      "Piece": "Pieza",
+      "Pound": "Libra",
+      "Yard": "Yarda"
+    },
+    "ScaleTypes": {
+      "Weight": "Peso",
+      "Volume": "Volumen",
+      "Length": "Longitud",
+      "Units": "Unidades"
+    }
+  }
+}

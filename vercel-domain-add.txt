@@ -1,0 +1,3 @@
+Retrieving project…
+Adding domain systematic.li to project web
+Error: Your project’s latest production deployment has errored. Therefore, the domain cannot be assigned. (400)

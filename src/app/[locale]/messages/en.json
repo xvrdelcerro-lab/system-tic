@@ -1,0 +1,837 @@
+{
+{
+// The entire file will be replaced with a clean, structure-preserving English translation of es.json, with all keys present, no duplicates, and matching the structure exactly.
+}
+    "title": "Sign In",
+    "description": "Enter your email below to sign in to your account.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "emailPlaceholder": "name@example.com",
+    "passwordPlaceholder": "••••••••",
+    "signInButton": "Sign In",
+    "signupPrompt": "Don't have an account?",
+    "signupLink": "Sign up",
+    "successToast": {
+      "title": "Sign In Successful",
+      "description": "Welcome back!"
+        },
+    "errorToast": {
+      "title": "Sign In Error",
+      "unknown": "An unknown error occurred.",
+      "invalidCredentials": "Invalid email or password."
+    },
+    "validation": {
+      "emailInvalid": "Please enter a valid email address.",
+      "passwordRequired": "Password is required."
+    }
+  },
+  "Signup": {
+    "title": "Sign Up",
+    "description": "Create an account to get started.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "emailPlaceholder": "name@example.com",
+    "passwordPlaceholder": "••••••••",
+    "signUpButton": "Sign Up",
+    "loginPrompt": "Already have an account?",
+    "loginLink": "Sign in",
+    "successToast": {
+      "title": "Account Created",
+      "description": "You have successfully registered."
+    },
+    "errorToast": {
+      "title": "Sign Up Error"
+    },
+    "validation": {
+      "emailInvalid": "Please enter a valid email address.",
+      "passwordRequired": "Password must be at least 6 characters."
+    }
+  },
+  "UsersPage": {
+    "title": "User Management",
+    "printButton": "Print Users",
+    "createUser": {
+      "title": "Create New User",
+      "description": "Add a new user to the system. An email will be sent with instructions to sign in.",
+      "emailLabel": "User Email",
+      "emailPlaceholder": "new.user@example.com",
+      "createButton": "Create User",
+      "limitReached": "User limit reached. You cannot add more users."
+    },
+    "myAccount": {
+      "title": "My Account",
+      "description": "Manage your personal account settings.",
+      "emailLabel": "Your Email",
+      "changePasswordButton": "Send Reset Email"
+    },
+    "registeredUsers": {
+      "title": "Registered Users",
+      "description": "A list of all users in the system.",
+      "noUsers": "No users found.",
+      "table": {
+        "number": "No.",
+        "email": "Email",
+        "created": "Created Date",
+        "actions": "Actions"
+      }
+    },
+    "editDialog": {
+      "title": "Edit User",
+      "description": "You are editing the email for {email}.",
+      "emailLabel": "Email",
+      "save": "Save Changes"
+    }
+  },
+  "ExpensesPage": {
+    "title": "Expenses Management",
+    "addExpense": "Add Expense",
+    "editExpense": "Edit Expense",
+    "deleteExpense": "Delete Expense",
+    "expenseTable": {
+      "date": "Date",
+      "amount": "Amount",
+      "category": "Category",
+      "description": "Description",
+      "actions": "Actions"
+    },
+    "noExpenses": "No expenses found.",
+    "total": "Total Expenses"
+  },
+  "ReportsPage": {
+    "title": "Reports",
+    "description": "Generate and view business reports.",
+    "printButton": "Print Report",
+    "downloadButton": "Download PDF",
+    "filters": {
+      "dateRange": "Date Range",
+      "type": "Report Type"
+    },
+    "noReports": "No reports found."
+  },
+  "AccessLogPage": {
+    "title": "Access Log",
+    "filterTitle": "Filter Logs",
+    "logTitle": "Access Log Entries",
+    "logDescription": "List of all access events.",
+    "startDateLabel": "Start Date",
+    "endDateLabel": "End Date",
+    "generateButton": "Generate Report",
+    "empty": "No access records found.",
+    "report": {
+      "title": "Access Log Report",
+      "accesses": "Accesses",
+      "noRecords": "No records for this period.",
+      "headerNote": "Report generated for the selected period.",
+      "summaryTitle": "Accesses by Day",
+      "filters": {
+        "from": "From",
+        "to": "To"
+      }
+    },
+    "table": {
+      "date": "Date",
+      "time": "Time",
+      "userEmail": "User Email",
+      "count": "Count"
+    }
+  },
+  "Common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "confirm": "Confirm",
+    "actions": "Actions",
+    "search": "Search",
+    "reset": "Reset",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "print": "Print",
+    "download": "Download",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "Validation": {
+    "required": "This field is required.",
+    "invalidEmail": "Invalid email address.",
+    "minLength": "Minimum length not met.",
+    "maxLength": "Maximum length exceeded.",
+    "passwordMismatch": "Passwords do not match."
+  },
+  "Profile": {
+    "title": "Profile",
+    "editButton": "Edit Profile",
+    "saveButton": "Save Changes",
+    "successToast": {
+      "title": "Profile Updated",
+      "description": "Your profile has been updated."
+    }
+  },
+  "Errors": {
+    "notFound": "Page not found.",
+    "unauthorized": "You are not authorized to view this page.",
+    "server": "A server error occurred."
+  },
+  "Notifications": {
+    "success": "Operation completed successfully.",
+    "error": "An error occurred.",
+    "info": "For your information.",
+    "warning": "Warning: Please check your input."
+  },
+  "AccountsPage": {
+      },
+      "CustomersPage": {
+          },
+          "MaterialTypesPage": {
+              },
+              "PhasesPage": {
+                  },
+                  "RawMaterialsPage": {
+                      },
+                      "ScalesPage": {
+                          },
+                          "ProductsPage": {
+                            "editComponentsDialog": {
+                              "title": "Edit Components for {productName}",
+                              "materialLabel": "Material",
+                              "materialPlaceholder": "Select a material",
+                              "quantityLabel": "Quantity",
+                              "quantityPlaceholder": "0",
+                              "removeSr": "Remove component",
+                              "addButton": "Add Component",
+                              "saveButton": "Save Components",
+                              "toasts": {
+                                "updateSuccess": "Components Updated",
+                                "updateSuccessDesc": "Bill of materials has been saved.",
+                                "updateError": "Error Updating Components"
+                              },
+                              "validation": {
+                                "itemRequired": "Please select a product."
+                              },
+                              "report": {
+                                "productTitle": "Product Profile",
+                                "inventoryTitle": "Product Inventory",
+                                "generatedDateLabel": "Generated on",
+                                "nameLabel": "Product",
+                                "categoryLabel": "Category",
+                                "priceLabel": "Sale Price",
+                                "skuLabel": "SKU",
+                                "descriptionLabel": "Description"
+                              }
+                            }
+                          },
+                          "VendorsPage": {
+                            "addNewVendor": {
+                              "title": "Add New Vendor",
+                              "description": "Register a new vendor and the raw materials they supply.",
+                              "saveButton": "Save Vendor"
+                            },
+                            "form": {
+                              "vendorName": "Vendor Name",
+                              "vendorNamePlaceholder": "e.g. Fabrics & Co.",
+                              "contactPerson": "Contact Person",
+                              "contactPersonPlaceholder": "e.g. John Smith",
+                              "email": "Email",
+                              "emailPlaceholder": "contact@fabrics.co",
+                              "phone": "Phone",
+                              "phonePlaceholder": "(555) 123-4567",
+                              "address": "Address",
+                              "addressPlaceholder": "123 Textile Ave",
+                              "country": "Country",
+                              "countryPlaceholder": "e.g. USA",
+                              "itemsTitle": "Items provided by this vendor",
+                              "sku": "SKU",
+                              "item": "Item Name",
+                              "type": "Material Type",
+                              "typePlaceholder": "Select type",
+                              "price": "Unit Price",
+                              "scale": "Scale",
+                              "scalePlaceholder": "Select scale",
+                              "addItemButton": "Add another item"
+                            },
+                            "vendorList": {
+                              "title": "Vendor List",
+                              "description": "A list of all your registered vendors and their items.",
+                              "noVendors": "No vendors found. Add one to get started.",
+                              "noItems": "No items for this vendor."
+                            },
+                            "reportDialog": {
+                              "trigger": "Print Report",
+                              "title": "Generate Vendor Report",
+                              "description": "Select a vendor to print their profile or choose all to print a directory.",
+                              "label": "Vendor",
+                              "selectPlaceholder": "Select a vendor",
+                              "searchPlaceholder": "Search vendor...",
+                              "empty": "No vendor found.",
+                              "allOption": "All Vendors",
+                              "generateButton": "Generate"
+                            },
+                            "editItemDialog": {
+                              "title": "Edit {itemName}",
+                              "description": "Edit details for this raw material.",
+                              "itemNameLabel": "Item Name",
+                              "saveButton": "Save Changes"
+                            },
+                            "editVendorDialog": {
+                              "title": "Edit {vendorName}",
+                              "saveButton": "Save Changes"
+                            },
+                            "deleteDialogs": {
+                              "vendorTitle": "Delete Vendor?",
+                              "vendorDescription": "This will permanently delete <strong>{vendorName}</strong> and all associated items. This action cannot be undone.",
+                              "itemTitle": "Delete Item?",
+                              "itemDescription": "This will permanently delete <strong>{itemName}</strong>. This action cannot be undone.",
+                              "cancel": "Cancel",
+                              "delete": "Delete"
+                            },
+                            "toasts": {
+                              "vendorCreated": {
+                                "title": "Vendor Created",
+                                "description": "{vendorName} has been successfully added."
+                              },
+                              "error": "Error",
+                              "reportError": {
+                                "title": "Report Error"
+                              },
+                              "itemUpdated": {
+                                "title": "Item Updated"
+                              },
+                              "itemUpdateError": "Error Updating Item",
+                              "itemDeleted": {
+                                "title": "Item Deleted"
+                              },
+                              "vendorUpdated": {
+                                "title": "Vendor Updated"
+                              },
+                              "vendorUpdateError": "Error Updating Vendor",
+                              "vendorDeleted": {
+                                "title": "Vendor Deleted"
+                              },
+                              "vendorDeleteError": "Error Deleting Vendor"
+                            },
+                            "validation": {
+                              "skuRequired": "SKU is required.",
+                              "itemNameRequired": "Item name is required.",
+                              "pricePositive": "Price must be a positive number.",
+                              "scaleRequired": "Scale is required.",
+                              "typeRequired": "Type is required.",
+                              "vendorNameRequired": "Vendor name is required.",
+                              "emailInvalid": "Please enter a valid email address.",
+                              "vendorRequired": "Vendor is required."
+                            },
+                            "report": {
+                              "singleTitle": "Vendor Profile: {name}",
+                              "allTitle": "All Vendors Report",
+                              "generatedDateLabel": "Generated on",
+                              "noItems": "No items listed for this vendor.",
+                              "headers": {
+                                "sku": "SKU",
+                                "item": "Item",
+                                "type": "Type",
+                                "price": "Price",
+                                "scale": "Scale",
+                                "name": "Vendor Name",
+                                "contactPerson": "Contact",
+                                "email": "Email",
+                                "phone": "Phone"
+                              }
+                            }
+                          },
+                          "ArrivalsPage": {
+                            "title": "Raw Material Arrivals",
+                            "newIntake": {
+                              "title": "New Raw Material Arrival",
+                              "description": "Record the arrival of raw materials from your vendors.",
+                              "dateLabel": "Arrival Date",
+                              "datePlaceholder": "Select date",
+                              "materialLabel": "Material",
+                              "materialPlaceholder": "Select a material",
+                              "materialSearchPlaceholder": "Search materials...",
+                              "materialEmpty": "No materials found. Add items to vendors first.",
+                              "quantityLabel": "Quantity Received",
+                              "quantityPlaceholder": "0",
+                              "scaleLabel": "Scale",
+                              "submitButton": "Record Arrival"
+                            },
+                            "report": {
+                              "title": "Generate Arrivals Report",
+                              "description": "Filter and print a report of material arrivals.",
+                              "startDateLabel": "Start Date",
+                              "endDateLabel": "End Date",
+                                    "pickDatePlaceholder": "Choose a date",
+                                    "printButton": "Print Report"
+                                  },
+                                  "history": {
+                                    "title": "Recent Arrivals",
+                                    "description": "A log of the most recent raw material arrivals.",
+                                    "table": {
+                                      "material": "Material",
+                                      "vendor": "Vendor",
+                                      "quantity": "Quantity",
+                                      "date": "Date"
+                                    },
+                                    "empty": "No arrival records found."
+                                  },
+                                  "toasts": {
+                                    "success": {
+                                      "title": "Arrival Recorded",
+                                      "description": "{quantity} {scale} of {materialName} has been added to inventory."
+                                    },
+                                    "error": {
+                                      "title": "Error",
+                                      "materialNotFound": "Could not find material in inventory.",
+                                      "vendorNotFound": "No vendor found for this material."
+                                    },
+                                    "reportError": {
+                                      "title": "Report Error",
+                                      "popupBlocked": "Your browser blocked the report popup. Please enable popups and try again."
+                                    }
+                                  },
+                                  "validation": {
+                                    "materialRequired": "Material is required.",
+                                    "quantityRequired": "Quantity is required.",
+                                    "quantityPositive": "Quantity must be greater than 0.",
+                                    "dateRequired": "Date is required."
+                                  }
+                                },
+                                "IntakesReport": {
+                                  "title": "Raw Material Arrivals Report",
+                                  "noRecords": "No arrival records found for the selected filters.",
+                                  "total": "Total",
+                                  "table": {
+                                    "material": "Material",
+                                    "vendor": "Vendor",
+                                    "quantity": "Quantity",
+                                    "date": "Date"
+                                  },
+                                  "itemTotal": "Item Total",
+                                  "grandTotal": "Grand Total",
+                                  "uncategorized": "Uncategorized"
+                                },
+                                "ProductsInventoryPage": {
+                                  "title": "Finished Products Inventory",
+                                  "card": {
+                                    "title": "Inventory Status",
+                                    "description": "View current stock levels of your finished products.",
+                                    "printButton": "Print Report"
+                                  },
+                                  "table": {
+                                    "product": "Product",
+                                    "category": "Category",
+                                    "packed": "Total Packed",
+                                    "sold": "Total Sold",
+                                    "inStock": "In Stock"
+                                  },
+                                  "empty": {
+                                    "title": "No Product Inventory",
+                                    "subtitle": "Products packed from the Production page will appear here."
+                                  },
+                                  "toasts": {
+                                    "reportError": {
+                                      "title": "Report Error",
+                                      "description": "An unknown error occurred while generating the report."
+                                    },
+                                    "popupBlocked": {
+                                      "title": "Popup Blocked",
+                                      "description": "Please allow popups for this site to view the report."
+                                    }
+                                  }
+                                },
+                                "ProductsInventoryReport": {
+                                  "title": "Finished Products Inventory Report",
+                                  "subtitle": "Current stock levels of all finished products.",
+                                  "table": {
+                                    "product": "Product",
+                                    "category": "Category",
+                                    "packed": "Total Packed",
+                                    "sold": "Total Sold",
+                                    "inStock": "In Stock"
+                                  },
+                                  "noRecords": "No records found.",
+                                  "grandTotals": "Grand Totals",
+                                  "totalLabel": "Total Items in Stock"
+                                },
+                                "RawMaterialsInventoryPage": {
+                                    },
+                                    "IntakesReportPage": {
+                                      "title": "Arrivals Reports",
+                                      "generateButton": "Generate Report",
+                                      "filterTitle": "Report Filters",
+                                      "allMaterialsOption": "All Materials",
+                                      "allVendorsOption": "All Vendors",
+                                      "startDateLabel": "Start Date",
+                                      "endDateLabel": "End Date",
+                                      "pickDatePlaceholder": "Choose a date",
+                                      "materialLabel": "Material",
+                                      "materialPlaceholder": "Select a material",
+                                      "searchMaterialPlaceholder": "Search material...",
+                                      "noMaterialFound": "No material found.",
+                                      "vendorLabel": "Vendor",
+                                      "vendorPlaceholder": "Select a vendor",
+                                      "searchVendorPlaceholder": "Search vendor...",
+                                      "noVendorFound": "No vendor found.",
+                                      "logTitle": "Recent Arrivals",
+                                      "logDescription": "A list of the most recent raw material arrivals.",
+                                       "table": {
+                                         "date": "Date",
+                                         "material": "Material",
+                                         "vendor": "Vendor",
+                                         "quantity": "Quantity"
+                                       },
+                                      "emptyLog": "No arrival records found.",
+                                       "toasts": {
+                                         "popupBlockedTitle": "Popup Blocked",
+                                         "popupBlockedDescription": "Please allow popups to view the report.",
+                                         "printErrorTitle": "Print Error",
+                                         "printErrorDescription": "Could not generate the report."
+                                       }
+                                    },
+                                    "ProductionReportsPage": {
+                                      "title": "Production Reports",
+                                      "generateButton": "Generate Report",
+                                      "filterTitle": "Report Filters",
+                                      "productLabel": "Product",
+                                      "selectProductPlaceholder": "Select product",
+                                      "allProductsOption": "All Products",
+                                      "searchProductPlaceholder": "Search product...",
+                                      "noProductFound": "No product found.",
+                                      "startDateLabel": "Start Date",
+                                      "endDateLabel": "End Date",
+                                      "logTitle": "Production Log",
+                                      "logDescription": "A log of the most recent production events.",
+                                      "table": {
+                                        "date": "Date",
+                                        "product": "Product",
+                                        "phase": "Phase",
+                                        "produced": "Produced",
+                                        "damaged": "Damaged"
+                                      },
+                                      "emptyLog": "No production records found."
+                                    },
+                                    "ProductionReport": {
+                                      "title": "Production Report",
+                                      "generatedOn": "Generated on",
+                                      "table": {
+                                        "time": "Time",
+                                        "product": "Product",
+                                        "phase": "Phase",
+                                        "produced": "Produced",
+                                        "damaged": "Damaged"
+                                      },
+                                      "totals": {
+                                        "daily": "Daily Total",
+                                        "produced": "Total Produced",
+                                        "damaged": "Total Damaged"
+                                      },
+                                      "noRecords": "No records found for the selected filters."
+                                    },
+                                    "SalesReportsPage": {
+                                    },
+                                    "WastePage": {
+                                      "cardTitle": "Waste Log by Phase",
+                                      "cardDescription": "Review items marked as damaged during each production phase.",
+                                      "table": {
+                                        "date": "Date",
+                                        "time": "Time",
+                                        "phase": "Phase",
+                                        "product": "Product",
+                                        "damaged": "Damaged"
+                                      },
+                                      "empty": "No damaged goods recorded.",
+                                      "dialog": {
+                                        "title": "Generate Waste Report",
+                                        "description": "Filter the waste log by phase and date range before printing.",
+                                        "phaseLabel": "Production Phase",
+                                        "phasePlaceholder": "Select a phase",
+                                        "allPhases": "All Phases",
+                                        "dateFilterLabel": "Filter by Date Range",
+                                        "startDateLabel": "Start",
+                                        "endDateLabel": "End",
+                                        "generateButton": "Generate Report"
+                                      },
+                                      "report": {
+                                        "totalDamaged": "Total Damaged"
+                                      },
+                                      "toasts": {
+                                        "noRecordsTitle": "No Records",
+                                        "noRecordsDescription": "No waste records match your filters.",
+                                        "errorTitle": "Report Error"
+                                      }
+                                    },
+                                    "CatalogReports": {
+                                      "customers": {
+                                        "singleTitle": "Customer Report: {name}",
+                                        "allTitle": "All Customers Report",
+                                        "headers": {
+                                          "name": "Name",
+                                          "email": "Email",
+                                          "phone": "Phone",
+                                          "address": "Address",
+                                          "city": "City",
+                                          "joinDate": "Join Date"
+                                        }
+                                      },
+                                      "phases": {
+                                        "singleTitle": "Phase Report: {name}",
+                                        "allTitle": "All Phases Report",
+                                        "headers": {
+                                          "order": "Order",
+                                          "name": "Name",
+                                          "description": "Description"
+                                        }
+                                      },
+                                      "vendors": {
+                                        "singleTitle": "Vendor Report: {name}",
+                                        "allTitle": "All Vendors Report",
+                                        "noItems": "No items for this vendor.",
+                                        "headers": {
+                                          "name": "Vendor Name",
+                                          "contactPerson": "Contact",
+                                          "email": "Email",
+                                          "phone": "Phone",
+                                          "items": "Items",
+                                          "sku": "SKU",
+                                          "item": "Item Name",
+                                          "type": "Type",
+                                          "price": "Price"
+                                        }
+                                      },
+                                      "products": {
+                                        "singleTitle": "Product Report: {name}",
+                                        "allTitle": "All Products Report",
+                                        "headers": {
+                                          "name": "Product Name",
+                                          "category": "Category",
+                                          "salePrice": "Sale Price"
+                                        }
+                                      },
+                                      "rawMaterials": {
+                                        "singleTitle": "Raw Material Report: {name}",
+                                        "allTitle": "All Raw Materials Report",
+                                        "headers": {
+                                          "sku": "SKU",
+                                          "item": "Item",
+                                          "vendor": "Vendor",
+                                          "price": "Price",
+                                          "scale": "Scale",
+                                          "inStock": "In Stock"
+                                        }
+                                      },
+                                      "scales": {
+                                        "title": "Scales Report",
+                                        "uncategorized": "Uncategorized",
+                                        "noScales": "No scales to report.",
+                                        "headers": {
+                                          "name": "Name"
+                                        }
+                                      }
+                                    },
+                                    "DefaultData": {
+                                          "Accounts": {
+                                            "Salaries": {
+                                              "name": "Salaries",
+                                              "description": "Employee salaries."
+                                            },
+                                            "Wages": {
+                                              "name": "Wages",
+                                              "description": "Hourly employee wages."
+                                            },
+                                            "Contractor Fees": {
+                                              "name": "Contractor Fees",
+                                              "description": "Fees for independent contractors."
+                                            },
+                                            "Employee Benefits": {
+                                              "name": "Employee Benefits",
+                                              "description": "Health, retirement, etc."
+                                            },
+                                            "Payroll Taxes": {
+                                              "name": "Payroll Taxes",
+                                              "description": "Employer portion of payroll taxes."
+                                            },
+                                            "Rent": {
+                                              "name": "Rent",
+                                              "description": "Office or facility rent."
+                                            },
+                                            "Mortgage Interest": {
+                                              "name": "Mortgage Interest",
+                                              "description": "Interest on property mortgage."
+                                            },
+                                            "Property Taxes": {
+                                              "name": "Property Taxes",
+                                              "description": "Real estate property taxes."
+                                            },
+                                            "Utilities": {
+                                              "name": "Utilities",
+                                              "description": "Electricity, water, internet, phone."
+                                            },
+                                            "Advertising": {
+                                              "name": "Advertising",
+                                              "description": "Online and offline advertising costs."
+                                            },
+                                            "Website Costs": {
+                                              "name": "Website Costs",
+                                              "description": "Hosting, domains, themes, plugins."
+                                            },
+                                            "Promotional Materials": {
+                                              "name": "Promotional Materials",
+                                              "description": "Brochures, flyers, giveaways."
+                                            },
+                                            "Business Travel": {
+                                              "name": "Business Travel",
+                                              "description": "Flights, hotels, meals for business purposes."
+                                            },
+                                            "Accountant Fees": {
+                                              "name": "Accountant Fees",
+                                              "description": "Fees for accounting services."
+                                            },
+                                            "Legal Fees": {
+                                              "name": "Legal Fees",
+                                              "description": "Fees for legal services."
+                                            },
+                                            "Consultants": {
+                                              "name": "Consultants",
+                                              "description": "Fees for specialized consultants."
+                                            },
+                                            "Office Supplies": {
+                                              "name": "Office Supplies",
+                                              "description": "Pens, paper, ink, etc."
+                                            },
+                                            "Equipment": {
+                                              "name": "Equipment",
+                                              "description": "Computers, printers, machinery."
+                                            },
+                                            "Software Subscriptions": {
+                                              "name": "Software Subscriptions",
+                                              "description": "SaaS and software licenses."
+                                            },
+                                            "Bank Fees": {
+                                              "name": "Bank Fees",
+                                              "description": "Monthly service charges, transaction fees."
+                                            },
+                                            "Licenses & Permits": {
+                                              "name": "Licenses & Permits",
+                                              "description": "Business licenses and permits."
+                                            },
+                                            "Insurance": {
+                                              "name": "Insurance",
+                                              "description": "Liability, property insurance."
+                                            },
+                                            "Raw Materials": {
+                                              "name": "Raw Materials",
+                                              "description": "Direct cost of materials for production."
+                                            },
+                                            "Direct Labor": {
+                                              "name": "Direct Labor",
+                                              "description": "Production staff wages."
+                                            },
+                                            "Sales Revenue": {
+                                              "name": "Sales Revenue",
+                                              "description": "Revenue from goods sales."
+                                            },
+                                            "Service Revenue": {
+                                              "name": "Service Revenue",
+                                              "description": "Revenue from services provided."
+                                            }
+                                          },
+                                          "AccountTypes": {
+                                            "Income": "Income",
+                                            "Expense": "Expense"
+                                          },
+                                          "scaleNames": {
+                                            "Grams": "Grams",
+                                            "Kilograms": "Kilograms",
+                                            "Liters": "Liters",
+                                            "Meters": "Meters",
+                                            "Units": "Units",
+                                            "Fluid ounce": "Fluid ounce",
+                                            "Foot": "Foot",
+                                            "Gallon": "Gallon",
+                                            "Inch": "Inch",
+                                            "Kilo": "Kilo",
+                                            "Liter": "Liter",
+                                            "Meter": "Meter",
+                                            "Ounce": "Ounce",
+                                            "Piece": "Piece",
+                                            "Pound": "Pound",
+                                            "Yard": "Yard"
+                                          },
+                                          "ScaleTypes": {
+                                            "Weight": "Weight",
+                                            "Volume": "Volume",
+                                            "Length": "Length",
+                                            "Units": "Units"
+                                          },
+                                      "PhasesData": {
+                                        "Processing": "Processing",
+                                        "Processing_desc": "Initial processing of raw materials.",
+                                        "Assembly/Fabrication": "Assembly/Fabrication",
+                                        "Assembly/Fabrication_desc": "Assembly of components into the final product.",
+                                        "Quality Control & Testing": "Quality Control & Testing",
+                                        "Quality Control & Testing_desc": "Ensure the product meets quality standards.",
+                                        "Packaging": "Packaging",
+                                        "Packaging_desc": "Preparing the product for shipment."
+                                      },
+                                      "MaterialTypesData": {
+                                        "Alloy": "Alloy",
+                                        "Aluminum": "Aluminum",
+                                        "Article": "Article",
+                                        "Biomaterial": "Biomaterial",
+                                        "Board": "Board",
+                                        "Carbon Fiber": "Carbon Fiber",
+                                        "Ceramic": "Ceramic",
+                                        "Clay": "Clay",
+                                        "Combustible": "Combustible",
+                                        "Component": "Component",
+                                        "Composite": "Composite",
+                                        "Copper": "Copper",
+                                        "Fabric": "Fabric",
+                                        "Fiber": "Fiber",
+                                        "Fiberglass": "Fiberglass",
+                                        "Flour": "Flour",
+                                        "Glass": "Glass",
+                                        "Grain": "Grain",
+                                        "Honey": "Honey",
+                                        "Iron": "Iron",
+                                        "Item": "Item",
+                                        "Jam": "Jam",
+                                        "Jelly": "Jelly",
+                                        "Metal": "Metal",
+                                        "Natural Leather": "Natural Leather",
+                                        "Natural Wood": "Natural Wood",
+                                        "Nylon": "Nylon",
+                                        "Object": "Object",
+                                        "Paper": "Paper",
+                                        "Plastic": "Plastic",
+                                        "Plastics": "Plastics",
+                                        "Polyester": "Polyester",
+                                        "Polymer": "Polymer",
+                                        "Porcelain": "Porcelain",
+                                        "Rubber": "Rubber",
+                                        "Salt": "Salt",
+                                        "Semiconductor": "Semiconductor",
+                                        "Silicon": "Silicon",
+                                        "Steel": "Steel",
+                                        "Sugar": "Sugar",
+                                        "Synthetic": "Synthetic",
+                                        "Timber": "Timber",
+                                        "Unit": "Unit",
+                                        "Yeast": "Yeast"
+                                      },
+                                      "AccountCategories": {
+                                        "People Costs": "People Costs",
+                                        "Location Costs": "Location Costs",
+                                        "Marketing & Sales": "Marketing & Sales",
+                                        "Professional Services": "Professional Services",
+                                        "Operations & Admin": "Operations & Admin",
+                                        "Cost of Goods Sold (COGS)": "Cost of Goods Sold (COGS)",
+                                        "Income": "Income"
+                                      }
+                                    }
+          }
+        }
+      }
+    }
+  }
+}

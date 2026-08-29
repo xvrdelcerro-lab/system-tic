@@ -1,0 +1,11 @@
+Usage: firebase apphosting:rollouts:create [options] <backendId>
+
+create a rollout using a build for an App Hosting backend
+
+Options:
+  -b, --git-branch <gitBranch>  repository branch to deploy (mutually exclusive
+                                with -g)
+  -g, --git-commit <gitCommit>  git commit to deploy (mutually exclusive with
+                                -b)
+  -f, --force                   Skip confirmation before creating rollout
+  -h, --help                    display help for command

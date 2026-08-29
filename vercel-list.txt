@@ -1,0 +1,32 @@
+> [debug] [2026-04-04T23:15:23.345Z] Vercel CLI 50.39.0
+> [debug] [2026-04-04T23:15:23.349Z] Agent/TTY/nonInteractive: isAgent=false agentName=none stdin.isTTY=true --non-interactive=false explicitFalse=false => nonInteractive=false
+> [debug] [2026-04-04T23:15:23.350Z] user supplied known subcommand: "list"
+> [debug] [2026-04-04T23:15:23.364Z] Valid access token, skipping token refresh.
+> [debug] [2026-04-04T23:15:23.384Z] #1 → GET https://api.vercel.com/v2/user
+> [debug] [2026-04-04T23:15:23.386Z] #2 → GET https://api.vercel.com/v9/projects/web?teamId=team_gtnlEal4FuAiqHPAahOoADvj
+> [debug] [2026-04-04T23:15:23.622Z] #1 ← 200 OK: sfo1::bccnc-1775344522844-bebae98ed37d [238ms]
+> [debug] [2026-04-04T23:15:23.720Z] #2 ← 200 OK: sfo1::jnvx9-1775344522908-eac895df8cdc [334ms]
+> [debug] [2026-04-04T23:15:23.728Z] #3 → GET https://api.vercel.com/v2/user
+> [debug] [2026-04-04T23:15:23.823Z] #3 ← 200 OK: sfo1::jg8xb-1775344523036-3166218cb7e9 [95ms]
+> [debug] [2026-04-04T23:15:23.824Z] #4 → GET https://api.vercel.com/teams/team_gtnlEal4FuAiqHPAahOoADvj?teamId=team_gtnlEal4FuAiqHPAahOoADvj
+> [debug] [2026-04-04T23:15:23.969Z] #4 ← 200 OK: sfo1::bjdtt-1775344523132-e7f3b095c3a1 [145ms]
+> [debug] [2026-04-04T23:15:23.970Z] Spinner invoked (Fetching deployments in xvrdelcerro-6759s-projects) with a 300ms delay
+> [debug] [2026-04-04T23:15:23.970Z] Fetching deployments
+> [debug] [2026-04-04T23:15:23.971Z] #5 → GET https://api.vercel.com/v6/deployments?limit=20&projectId=prj_mEIIA1oXFIYicHWcq6EvCd3L11ir&teamId=team_gtnlEal4FuAiqHPAahOoADvj
+> [debug] [2026-04-04T23:15:24.114Z] #5 ← 200 OK: sfo1::ncd8f-1775344523279-4befbcfe49dc [143ms]
+> Deployments for xvrdelcerro-6759s-projects/web [145ms]
+
+  Age     Project                            Deployment                                                      Status      Environment     Duration     Username             
+  11m     xvrdelcerro-6759s-projects/web     https://web-rmdo9kgkx-xvrdelcerro-6759s-projects.vercel.app     ● Error     Production      1m           xvrdelcerro-6759     
+  32d     xvrdelcerro-6759s-projects/web     https://web-pbry5b24c-xvrdelcerro-6759s-projects.vercel.app     ● Ready     Production      1m           xvrdelcerro-6759     
+  38d     xvrdelcerro-6759s-projects/web     https://web-l5mr5tdgj-xvrdelcerro-6759s-projects.vercel.app     ● Ready     Production      2m           xvrdelcerro-6759     
+  38d     xvrdelcerro-6759s-projects/web     https://web-qb5bx1o9r-xvrdelcerro-6759s-projects.vercel.app     ● Ready     Production      2m           xvrdelcerro-6759     
+  38d     xvrdelcerro-6759s-projects/web     https://web-lbf0vu4tq-xvrdelcerro-6759s-projects.vercel.app     ● Error     Production      1m           xvrdelcerro-6759     
+
+https://web-rmdo9kgkx-xvrdelcerro-6759s-projects.vercel.app
+https://web-pbry5b24c-xvrdelcerro-6759s-projects.vercel.app
+https://web-l5mr5tdgj-xvrdelcerro-6759s-projects.vercel.app
+https://web-qb5bx1o9r-xvrdelcerro-6759s-projects.vercel.app
+https://web-lbf0vu4tq-xvrdelcerro-6759s-projects.vercel.app
+> [debug] [2026-04-04T23:15:25.401Z] Telemetry event tracked
+> [debug] [2026-04-04T23:15:25.432Z] Telemetry subprocess exited with code 0

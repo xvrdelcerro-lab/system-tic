@@ -1,0 +1,24 @@
+Fetching deployment "dpl_2N4sYziTZMmw9X63gCyBq7wixddg" in xvrdelcerro-6759s-projects
+> Fetched deployment "web-djlj85o7u-xvrdelcerro-6759s-projects.vercel.app" in xvrdelcerro-6759s-projects [343ms]
+
+  General
+
+    id		dpl_2N4sYziTZMmw9X63gCyBq7wixddg
+    name	web
+    target	production
+    status	● Error
+    url		https://web-djlj85o7u-xvrdelcerro-6759s-projects.vercel.app
+    created	Sat Apr 04 2026 17:16:50 GMT-0600 (Central Standard Time) [1m ago]
+
+
+  Aliases
+
+    ╶ https://web-xvrdelcerro-6759s-projects.vercel.app
+    ╶ https://web-xvrdelcerro-6759-xvrdelcerro-6759s-projects.vercel.app
+    
+
+  Builds
+
+    ╶ .        [0ms]
+    
+

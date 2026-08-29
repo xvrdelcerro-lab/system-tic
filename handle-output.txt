@@ -1,0 +1,6 @@
+
+Nthandle v5.0 - Handle viewer
+Copyright (C) 1997-2022 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+^C

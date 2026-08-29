@@ -1,0 +1,134 @@
+
+{
+  "Sidebar": {
+    "Dashboard": "Dashboard",
+    "Users": "Users",
+    "Catalogs": "Catalogs",
+    "Accounts": "Accounts",
+    "Customers": "Customers",
+    "MaterialTypes": "Material Types",
+    "Phases": "Phases",
+    "Products": "Products",
+    "RawMaterials": "Raw Materials",
+    "Scales": "Scales",
+    "Vendors": "Vendors",
+    "Intakes": "Intakes",
+    "Inventories": "Inventories",
+    "Invoices": "Invoices",
+    "Production": "Production",
+    "Reports": "Reports",
+    "AccessLog": "Access Log",
+    "Sales": "Sales",
+    "Waste": "Waste",
+    "WasteAnalytics": "Waste Analytics",
+    "DamagedLog": "Damaged Log",
+    "Analytics": "Analytics"
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "description": "Overview of your business metrics.",
+    "timeRanges": {
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year"
+    },
+    "printButton": "Print",
+    "reportTitle": "Dashboard Report",
+    "reportSubtitle": "{currentLabel} vs. {comparisonLabel}",
+    "comparisonLabels": {
+      "day": "from yesterday",
+      "week": "from last week",
+      "month": "from last month",
+      "year": "from last year"
+    },
+    "currentLabels": {
+      "day": "Today",
+      "week": "This Week",
+      "month": "This Month",
+      "year": "This Year"
+    },
+    "metrics": {
+      "piecesMade": "Pieces Made",
+      "rawMaterialsUsed": "Raw Materials Used",
+      "costOfRawMaterialsUsed": "Cost of Raw Materials Used",
+      "currentInventory": "Current Inventory",
+      "piecesSold": "Pieces Sold",
+      "totalRevenue": "Total Revenue"
+    },
+    "charts": {
+      "salesOverview": {
+        "title": "Sales & Expenses Overview",
+        "description": "Showing data for the last 12 months."
+      },
+      "inventory": {
+        "title": "Raw Material Inventory",
+        "description": "Current stock levels of key materials."
+      },
+      "topProducts": {
+        "title": "Top 10 Sold Products",
+        "description": "Products with the highest sales volume."
+      }
+    }
+  },
+  "Login": {
+    "title": "Login",
+    "description": "Enter your email below to login to your account.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "signInButton": "Sign In",
+    "signupPrompt": "Don't have an account?",
+    "signupLink": "Sign up",
+    "successToast": {
+      "title": "Login Successful",
+      "description": "Welcome back!"
+    },
+    "errorToast": {
+      "title": "Login Failed"
+    }
+  },
+  "Signup": {
+    "title": "Sign Up",
+    "description": "Create an account to get started.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "signUpButton": "Sign Up",
+    "loginPrompt": "Already have an account?",
+    "loginLink": "Sign in",
+    "successToast": {
+      "title": "Account Created",
+      "description": "You have been successfully signed up."
+    },
+    "errorToast": {
+      "title": "Signup Failed"
+    }
+  },
+  "ProductReportsPage": {
+    "report": {
+      "kpis": {
+        "salesCycle": {
+          "title": "Sales Cycle",
+          "daysUnit": "days",
+          "subtitle": "Average time to sale"
+        },
+        "salesAverage": {
+          "title": "Sales Average",
+          "totalLabel": "Total Sold",
+          "perShipmentLabel": "Per Shipment",
+          "piecesUnit": "pcs"
+        },
+        "satisfaction": {
+          "title": "Satisfaction",
+          "complaintsLabel": "Complaints",
+          "noComplaintsFallback": "No complaints"
+        },
+        "shipments": {
+          "title": "Shipments",
+          "perWeekUnit": "per week",
+          "periodPrefix": "in",
+          "periodDaysUnit": "days"
+        }
+      }
+    }
+  }
+}

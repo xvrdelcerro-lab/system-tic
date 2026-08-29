@@ -1,0 +1,7 @@
+Fetching Domains under xvrdelcerro-6759s-projects
+> 1 Domain found under xvrdelcerro-6759s-projects [124ms]
+ 
+  Domain             Registrar           Nameservers         Expiration Date    Creator             Age    
+  systematic.li      Third Party         Third Party         -                  xvrdelcerro-6759    2d     
+ 
+

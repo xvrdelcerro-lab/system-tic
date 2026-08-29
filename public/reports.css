@@ -1,0 +1,37 @@
+.report-legend {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .kpi {
+    font-weight: 600;
+  }
+  
+  .kpi.positive {
+    color: #16a34a;
+  }
+  
+  .kpi.negative {
+    color: #dc2626;
+  }
+  
+  .kpi.neutral {
+    color: #6b7280;
+  }
+  
+  .report-legend {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .report-footnote {
+    margin-top: 16px;
+    font-size: 11px;
+    color: #777;
+  }
+
+  
