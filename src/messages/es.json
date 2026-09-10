@@ -108,7 +108,7 @@
     "emailLabel": "Correo Electrónico",
     "passwordLabel": "Contraseña",
     "emailPlaceholder": "nombre@ejemplo.com",
-    "passwordPlaceholder": "••••••••",
+    "passwordPlaceholder": "",
     "signInButton": "Iniciar Sesión",
     "signupPrompt": "¿No tienes una cuenta?",
     "signupLink": "Regístrate",
