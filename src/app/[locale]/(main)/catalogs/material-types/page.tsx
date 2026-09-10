@@ -160,6 +160,14 @@ export default function MaterialTypesPage() {
     }
 };
 
+  const sortedMaterialTypes = useMemo(() => {
+    return [...materialTypes].sort((a, b) => {
+      const nameA = tData(`MaterialTypesData.${a.name}`, {}, { default: a.name });
+      const nameB = tData(`MaterialTypesData.${b.name}`, {}, { default: b.name });
+      return nameA.localeCompare(nameB, locale);
+    });
+  }, [materialTypes, tData, locale]);
+
   const reportSelectOptions = useMemo(() => ([
     { value: 'all', label: t('reportDialog.allOption') },
     ...materialTypes.map(item => ({
@@ -278,11 +286,11 @@ export default function MaterialTypesPage() {
                                 <Loader2 className="mx-auto h-6 w-6 animate-spin" />
                             </TableCell>
                         </TableRow>
-                    ) : materialTypes.length > 0 ? (
-                        materialTypes.map((item) => (
+                    ) : sortedMaterialTypes.length > 0 ? (
+                        sortedMaterialTypes.map((item) => (
                         <TableRow key={item.id}>
                             <TableCell className="font-semibold">{tData(`MaterialTypesData.${item.name}`, {}, {default: item.name})}</TableCell>
-                            <TableCell className="text-muted-foreground">{item.description || '—'}</TableCell>
+                            <TableCell className="text-muted-foreground">{tData(`MaterialTypesData.${item.name}_desc`, {}, { default: item.description || '—' })}</TableCell>
                             <TableCell className="text-right">
                                 <div className="flex justify-end gap-1">
                                     <Button variant="ghost" size="icon" onClick={() => handleOpenAddOrEditDialog(item)}>

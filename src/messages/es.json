@@ -19,7 +19,7 @@
     "ProfitLoss": "Pérdidas y Ganancias",
     "AccessLog": "Registro de Acceso",
     "Sales": "Ventas",
-    "ExpensesMetrics":"Métricas Financieras",
+    "ExpensesMetrics": "Métricas Financieras",
     "Team": "Equipo",
     "Waste": "Merma",
     "WasteAnalytics": "Análisis de Merma",
@@ -28,7 +28,6 @@
     "Expenses": "Gastos",
     "IntakesReport": "Entradas"
   },
-
   "SidebarTooltips": {
     "Dashboard": "Panel",
     "Users": "Usuarios",
@@ -133,7 +132,7 @@
     "emailLabel": "Correo Electrónico",
     "passwordLabel": "Contraseña",
     "emailPlaceholder": "nombre@ejemplo.com",
-    "passwordPlaceholder": "••••••••",
+    "passwordPlaceholder": " ",
     "signUpButton": "Registrarse",
     "loginPrompt": "¿Ya tienes una cuenta?",
     "loginLink": "Iniciar sesión",
@@ -764,7 +763,6 @@
         "components": "Componentes",
         "actions": "Acciones"
       },
-
       "toasts": {
         "saveSuccess": "Producto Guardado",
         "saveSuccessDesc": "{productName} ha sido agregado a tu catálogo.",
@@ -790,7 +788,7 @@
         "empty": "No hay componentes definidos para este producto.",
         "table": {
           "rawMaterial": "Materia Prima",
-          "material":"Material",
+          "material": "Material",
           "vendor": "Proveedor",
           "quantity": "Cantidad"
         }
@@ -858,38 +856,55 @@
       }
     }
   },
-
   "VendorsPage": {
     "totalVendors": "Total de Proveedores: {count}",
-  "title": "Proveedores",
-
-  "addItemButton": "Agregar Artículo",
-
-  "addItemDialog": {
-    "title": "Agregar Artículo a {vendorName}",
-    "description": "Agrega un nuevo artículo de materia prima para este proveedor.",
-    "saveButton": "Guardar Artículo"
-  },
-
-  "addNewVendor": {
-    "title": "Agregar Nuevo Proveedor",
-    "description": "Registra un nuevo proveedor y las materias primas que proporciona.",
-    "saveButton": "Guardar Proveedor"
-  },
-
-  "toasts": {
-    "itemAdded": {
-      "title": "Artículo Agregado",
-      "description": "{itemName} ha sido agregado al proveedor."
+    "title": "Proveedores",
+    "addItemButton": "Agregar Artículo",
+    "addItemDialog": {
+      "title": "Agregar Artículo a {vendorName}",
+      "description": "Agrega un nuevo artículo de materia prima para este proveedor.",
+      "saveButton": "Guardar Artículo"
     },
-    "itemAddError": "Error al Agregar Artículo"
-  },
-
-  "validation": {
-    "skuExists": "Este SKU ya existe para este proveedor."
-  },
-
-
+    "addNewVendor": {
+      "title": "Agregar Nuevo Proveedor",
+      "description": "Registra un nuevo proveedor y las materias primas que proporciona.",
+      "saveButton": "Guardar Proveedor"
+    },
+    "toasts": {
+      "vendorCreated": {
+        "title": "Proveedor Creado",
+        "description": "{vendorName} ha sido agregado exitosamente."
+      },
+      "error": "Error",
+      "reportError": {
+        "title": "Error en Reporte"
+      },
+      "itemUpdated": {
+        "title": "Artículo Actualizado"
+      },
+      "itemUpdateError": "Error al Actualizar Artículo",
+      "itemDeleted": {
+        "title": "Artículo Eliminado"
+      },
+      "vendorUpdated": {
+        "title": "Proveedor Actualizado"
+      },
+      "vendorUpdateError": "Error al Actualizar Proveedor",
+      "vendorDeleted": {
+        "title": "Proveedor Eliminado"
+      },
+      "vendorDeleteError": "Error al Eliminar Proveedor"
+    },
+    "validation": {
+      "skuRequired": "El SKU es obligatorio.",
+      "itemNameRequired": "El nombre del artículo es obligatorio.",
+      "pricePositive": "El precio debe ser un número positivo.",
+      "scaleRequired": "La escala es obligatoria.",
+      "typeRequired": "El tipo es obligatorio.",
+      "vendorNameRequired": "El nombre del proveedor es obligatorio.",
+      "emailInvalid": "Por favor ingresa un correo válido.",
+      "vendorRequired": "El proveedor es obligatorio."
+    },
     "form": {
       "vendorName": "Nombre del Proveedor",
       "vendorNamePlaceholder": "ej., Telas y Cía.",
@@ -948,41 +963,6 @@
       "cancel": "Cancelar",
       "delete": "Eliminar"
     },
-    "toasts": {
-      "vendorCreated": {
-        "title": "Proveedor Creado",
-        "description": "{vendorName} ha sido agregado exitosamente."
-      },
-      "error": "Error",
-      "reportError": {
-        "title": "Error en Reporte"
-      },
-      "itemUpdated": {
-        "title": "Artículo Actualizado"
-      },
-      "itemUpdateError": "Error al Actualizar Artículo",
-      "itemDeleted": {
-        "title": "Artículo Eliminado"
-      },
-      "vendorUpdated": {
-        "title": "Proveedor Actualizado"
-      },
-      "vendorUpdateError": "Error al Actualizar Proveedor",
-      "vendorDeleted": {
-        "title": "Proveedor Eliminado"
-      },
-      "vendorDeleteError": "Error al Eliminar Proveedor"
-    },
-    "validation": {
-      "skuRequired": "El SKU es obligatorio.",
-      "itemNameRequired": "El nombre del artículo es obligatorio.",
-      "pricePositive": "El precio debe ser un número positivo.",
-      "scaleRequired": "La escala es obligatoria.",
-      "typeRequired": "El tipo es obligatorio.",
-      "vendorNameRequired": "El nombre del proveedor es obligatorio.",
-      "emailInvalid": "Por favor ingresa un correo válido.",
-      "vendorRequired": "El proveedor es obligatorio."
-    },
     "report": {
       "singleTitle": "Perfil de Proveedor: {name}",
       "allTitle": "Reporte de Todos los Proveedores",
@@ -1004,61 +984,61 @@
     }
   },
   "ExpensesPage": {
-  "title": "Gastos",
-  "newExpense": {
-    "title": "Registrar Nuevo Gasto",
-    "description": "Registra un gasto empresarial para mantener tus finanzas en orden.",
-    "descriptionLabel": "Descripción",
-    "descriptionPlaceholder": "ej., Compra de suministros de oficina",
-    "amountLabel": "Monto",
-    "categoryLabel": "Categoría",
-    "categoryPlaceholder": "Selecciona una categoría",
-    "dateLabel": "Fecha del Gasto",
-    "datePlaceholder": "Elige una fecha",
-    "notesLabel": "Notas (Opcional)",
-    "notesPlaceholder": "Agrega notas relevantes aquí...",
-    "saveButton": "Guardar Gasto"
+    "title": "Gastos",
+    "newExpense": {
+      "title": "Registrar Nuevo Gasto",
+      "description": "Registra un gasto empresarial para mantener tus finanzas en orden.",
+      "descriptionLabel": "Descripción",
+      "descriptionPlaceholder": "ej., Compra de suministros de oficina",
+      "amountLabel": "Monto",
+      "categoryLabel": "Categoría",
+      "categoryPlaceholder": "Selecciona una categoría",
+      "dateLabel": "Fecha del Gasto",
+      "datePlaceholder": "Elige una fecha",
+      "notesLabel": "Notas (Opcional)",
+      "notesPlaceholder": "Agrega notas relevantes aquí...",
+      "saveButton": "Guardar Gasto"
+    },
+    "filters": {
+      "title": "Filtros de Reporte",
+      "categoryLabel": "Categoría",
+      "allCategories": "Todas las Categorías",
+      "allProducts": "Todos los Productos",
+      "searchPlaceholder": "Buscar categoría...",
+      "empty": "No se encontraron categorías.",
+      "startDateLabel": "Fecha de Inicio",
+      "endDateLabel": "Fecha de Fin"
+    },
+    "generateButton": "Generar Reporte",
+    "log": {
+      "title": "Registro de Gastos",
+      "description": "Un historial de todos los gastos registrados.",
+      "dateHeader": "Fecha",
+      "categoryHeader": "Categoría",
+      "descriptionHeader": "Descripción",
+      "amountHeader": "Monto",
+      "actionsHeader": "Acciones",
+      "grandTotal": "Total General"
+    },
+    "empty": "No hay gastos registrados aún.",
+    "deleteDialog": {
+      "title": "¿Eliminar Gasto?",
+      "description": "Esto eliminará permanentemente este registro de gasto. Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "toasts": {
+      "expenseAdded": "Gasto registrado exitosamente.",
+      "reportError": "Error en Reporte",
+      "error": "Ocurrió un error."
+    },
+    "validation": {
+      "descriptionRequired": "La descripción es obligatoria.",
+      "amountPositive": "El monto debe ser mayor a 0.",
+      "categoryRequired": "La categoría es obligatoria.",
+      "dateRequired": "Se requiere una fecha para el gasto."
+    }
   },
-  "filters": {
-    "title": "Filtros de Reporte",
-    "categoryLabel": "Categoría",
-    "allCategories": "Todas las Categorías",
-    "allProducts": "Todos los Productos",
-    "searchPlaceholder": "Buscar categoría...",
-    "empty": "No se encontraron categorías.",
-    "startDateLabel": "Fecha de Inicio",
-    "endDateLabel": "Fecha de Fin"
-  },
-  "generateButton": "Generar Reporte",
-  "log": {
-    "title": "Registro de Gastos",
-    "description": "Un historial de todos los gastos registrados.",
-    "dateHeader": "Fecha",
-    "categoryHeader": "Categoría",
-    "descriptionHeader": "Descripción",
-    "amountHeader": "Monto",
-    "actionsHeader": "Acciones",
-    "grandTotal": "Total General"
-  },
-  "empty": "No hay gastos registrados aún.",
-  "deleteDialog": {
-    "title": "¿Eliminar Gasto?",
-    "description": "Esto eliminará permanentemente este registro de gasto. Esta acción no se puede deshacer.",
-    "cancel": "Cancelar",
-    "delete": "Eliminar"
-  },
-  "toasts": {
-    "expenseAdded": "Gasto registrado exitosamente.",
-    "reportError": "Error en Reporte",
-    "error": "Ocurrió un error."
-  },
-  "validation": {
-    "descriptionRequired": "La descripción es obligatoria.",
-    "amountPositive": "El monto debe ser mayor a 0.",
-    "categoryRequired": "La categoría es obligatoria.",
-    "dateRequired": "Se requiere una fecha para el gasto."
-  }
-},
   "ArrivalsPage": {
     "title": "Entradas de Materias Primas",
     "newIntake": {
@@ -1599,18 +1579,17 @@
         "title": "Error al Imprimir Reporte",
         "description": "Ocurrió un error desconocido."
       }
+    },
+    "salesTrend": {
+      "title": "Tendencia de Ventas",
+      "startDateLabel": "Fecha de Inicio",
+      "endDateLabel": "Fecha de Fin",
+      "sales": "Ventas",
+      "workedDays": "Días Trabajados",
+      "remaining": "Días Restantes",
+      "projection": "Proyección",
+      "datePlaceholder": "dd/mm/aaaa"
     }
-      ,
-      "salesTrend": {
-        "title": "Tendencia de Ventas",
-        "startDateLabel": "Fecha de Inicio",
-        "endDateLabel": "Fecha de Fin",
-        "sales": "Ventas",
-        "workedDays": "Días Trabajados",
-        "remaining": "Días Restantes",
-        "projection": "Proyección",
-        "datePlaceholder": "dd/mm/aaaa"
-      }
   },
   "WastePage": {
     "title": "Registro de Productos Dañados",
@@ -1727,49 +1706,93 @@
     },
     "MaterialTypesData": {
       "Alloy": "Aleación",
+      "Alloy_desc": "Una mezcla de dos o más metales combinados para mejorar sus propiedades.",
       "Aluminum": "Aluminio",
+      "Aluminum_desc": "Un metal ligero y resistente a la corrosión.",
       "Article": "Artículo",
+      "Article_desc": "Un artículo manufacturado terminado o semiterminado.",
       "Biomaterial": "Biomaterial",
+      "Biomaterial_desc": "Un material derivado de tejido vivo o compatible con él.",
       "Board": "Tablero",
+      "Board_desc": "Una lámina plana y rígida, generalmente a base de madera.",
       "Carbon Fiber": "Fibra de Carbono",
+      "Carbon Fiber_desc": "Un material fuerte y ligero hecho de finos hilos de carbono.",
       "Ceramic": "Cerámica",
+      "Ceramic_desc": "Un material duro y quebradizo hecho al cocer arcilla o minerales.",
       "Clay": "Arcilla",
+      "Clay_desc": "Un material de tierra natural de grano fino usado para moldear.",
       "Combustible": "Combustible",
+      "Combustible_desc": "Un material que puede incendiarse o arder con facilidad.",
       "Component": "Componente",
+      "Component_desc": "Una pieza individual utilizada para ensamblar un producto más grande.",
       "Composite": "Compuesto",
+      "Composite_desc": "Un material hecho a partir de dos o más materiales combinados.",
       "Copper": "Cobre",
+      "Copper_desc": "Un metal rojizo altamente conductor.",
       "Fabric": "Tela",
+      "Fabric_desc": "Un textil tejido o de punto.",
       "Fiber": "Fibra",
+      "Fiber_desc": "Un hilo delgado usado en textiles o compuestos.",
       "Fiberglass": "Fibra de Vidrio",
+      "Fiberglass_desc": "Un material compuesto hecho de finas fibras de vidrio.",
       "Flour": "Harina",
+      "Flour_desc": "Un polvo fino obtenido al moler granos, usado en la producción de alimentos.",
       "Glass": "Vidrio",
+      "Glass_desc": "Un material duro y transparente hecho de sílice fundida.",
       "Grain": "Grano",
+      "Grain_desc": "Semillas pequeñas y duras usadas como alimento o materia prima.",
       "Honey": "Miel",
+      "Honey_desc": "Una sustancia dulce natural producida por las abejas.",
       "Iron": "Hierro",
+      "Iron_desc": "Un metal fuerte y magnético usado en construcción y manufactura.",
       "Item": "Artículo",
+      "Item_desc": "Un tipo general y no especificado de material o bien.",
       "Jam": "Mermelada",
+      "Jam_desc": "Una conserva dulce hecha de fruta cocida y azúcar.",
       "Jelly": "Jalea",
+      "Jelly_desc": "Una conserva suave y semisólida hecha de jugo de fruta.",
       "Metal": "Metal",
+      "Metal_desc": "Una categoría general de elementos o aleaciones fuertes y conductoras.",
       "Natural Leather": "Cuero Natural",
+      "Natural Leather_desc": "Cuero genuino hecho de piel animal.",
       "Natural Wood": "Madera Natural",
+      "Natural Wood_desc": "Madera sin procesar obtenida directamente de los árboles.",
       "Nylon": "Nailon",
+      "Nylon_desc": "Una fibra sintética resistente.",
       "Object": "Objeto",
+      "Object_desc": "Un artículo físico general no especificado.",
       "Paper": "Papel",
+      "Paper_desc": "Un material delgado hecho de pulpa de madera o fibras procesadas.",
       "Plastic": "Plástico",
+      "Plastic_desc": "Un material sintético que puede moldearse en diversas formas.",
       "Plastics": "Plásticos",
+      "Plastics_desc": "Una categoría general que abarca varios tipos de plástico sintético.",
       "Polyester": "Poliéster",
+      "Polyester_desc": "Una fibra sintética comúnmente usada en textiles y empaques.",
       "Polymer": "Polímero",
+      "Polymer_desc": "Una molécula grande formada por unidades químicas repetidas.",
       "Porcelain": "Porcelana",
+      "Porcelain_desc": "Un material cerámico duro y blanco cocido a altas temperaturas.",
       "Rubber": "Caucho",
+      "Rubber_desc": "Un material flexible y elástico, natural o sintético.",
       "Salt": "Sal",
+      "Salt_desc": "Un mineral cristalino usado para sazonar o conservar alimentos.",
       "Semiconductor": "Semiconductor",
+      "Semiconductor_desc": "Un material con conductividad eléctrica entre conductores y aislantes.",
       "Silicon": "Silicio",
+      "Silicon_desc": "Un elemento duro y quebradizo usado en electrónica y vidrio.",
       "Steel": "Acero",
+      "Steel_desc": "Una aleación de hierro y carbono conocida por su resistencia.",
       "Sugar": "Azúcar",
+      "Sugar_desc": "Una sustancia cristalina dulce usada en la producción de alimentos.",
       "Synthetic": "Sintético",
+      "Synthetic_desc": "Un material fabricado artificialmente en lugar de ocurrir de forma natural.",
       "Timber": "Madera",
+      "Timber_desc": "Madera preparada para uso en construcción o manufactura.",
       "Unit": "Unidad",
-      "Yeast": "Levadura"
+      "Unit_desc": "Un artículo individual contable, usado como categoría general de medida.",
+      "Yeast": "Levadura",
+      "Yeast_desc": "Un microorganismo usado en fermentación y panificación."
     },
     "AccountCategories": {
       "People Costs": "Costos de Personal",
@@ -1976,7 +1999,6 @@
     "title": "Reporte de Estado de Facturas",
     "loading": "Cargando facturas...",
     "unknownCustomer": "Cliente Desconocido",
-    
     "filter": {
       "title": "Filtrar Facturas",
       "description": "Selecciona un rango de fechas para filtrar facturas",
@@ -1985,7 +2007,6 @@
       "pickDate": "Elige una fecha",
       "clearButton": "Limpiar Filtros"
     },
-    
     "summary": {
       "total": "Total de Facturas",
       "paid": "Pagadas",
@@ -1993,13 +2014,12 @@
       "overdue": "Vencidas",
       "totalValue": "Valor Total"
     },
-    
     "table": {
       "title": "Facturas",
       "description": "Haz clic en la casilla una vez para mostrar advertencia, haz clic nuevamente para marcar como pagada permanentemente",
-      "invoiceNumber": "Factura N°", 
+      "invoiceNumber": "Factura N°",
       "customer": "Cliente",
-      "date": "Emitida el",  
+      "date": "Emitida el",
       "dueDate": "Fecha de Vencimiento",
       "daysOverdue": "Días de Retraso",
       "total": "Total",
@@ -2009,12 +2029,9 @@
       "overdue": "Vencida",
       "empty": "No se encontraron facturas"
     },
-
-      
     "warning": {
       "message": "⚠️ Esta acción no se puede deshacer. Haz clic en la casilla nuevamente para marcar permanentemente esta factura como pagada."
     },
-    
     "toasts": {
       "markPaidSuccess": "Factura Marcada como Pagada",
       "markPaidSuccessDesc": "La factura ha sido marcada permanentemente como pagada",
@@ -2022,7 +2039,6 @@
       "markPaidErrorDesc": "Error al marcar factura como pagada"
     }
   },
-
   "PLReportPage": {
     "title": "Reporte de Pérdidas y Ganancias",
     "subtitle": "Genera estados de pérdidas y ganancias mensuales",
@@ -2059,49 +2075,48 @@
       "unknownError": "Error desconocido"
     }
   },
-
   "TeamPage": {
-  "title": "Gestión de Equipo",
-  "subtitle": "Administra miembros y sus permisos",
-  "usersCount": "usuarios",
-  "invite": {
-    "title": "Invitar Miembro",
-    "emailPlaceholder": "email@empresa.com",
-    "button": "Invitar",
-    "maxReached": "Máximo 6 usuarios permitidos",
-    "success": "Invitación enviada a"
-  },
-  "permissions": {
-    "dashboard": "Tablero",
-    "products": "Productos",
-    "production": "Producción",
-    "inventory": "Inventario",
-    "customers": "Clientes",
-    "invoices": "Facturas",
-    "expenses": "Gastos",
-    "reports": "Reportes"
-  },
-  "roles": {
-    "admin": "Administrador (Acceso Total)",
-    "user": "Miembro del Equipo"
-  },
-  "accessDenied": {
-    "title": "Acceso Denegado",
-    "description": "Solo el propietario de la cuenta puede administrar permisos."
-  },
-  "accessPermitsLabel": "Permisos de Acceso",
-  "passwordNote": {
+    "title": "Gestión de Equipo",
+    "subtitle": "Administra miembros y sus permisos",
+    "usersCount": "usuarios",
+    "invite": {
+      "title": "Invitar Miembro",
+      "emailPlaceholder": "email@empresa.com",
+      "button": "Invitar",
+      "maxReached": "Máximo 6 usuarios permitidos",
+      "success": "Invitación enviada a"
+    },
+    "permissions": {
+      "dashboard": "Tablero",
+      "products": "Productos",
+      "production": "Producción",
+      "inventory": "Inventario",
+      "customers": "Clientes",
+      "invoices": "Facturas",
+      "expenses": "Gastos",
+      "reports": "Reportes"
+    },
+    "roles": {
+      "admin": "Administrador (Acceso Total)",
+      "user": "Miembro del Equipo"
+    },
+    "accessDenied": {
+      "title": "Acceso Denegado",
+      "description": "Solo el propietario de la cuenta puede administrar permisos."
+    },
+    "accessPermitsLabel": "Permisos de Acceso",
+    "passwordNote": {
       "title": "Nota:",
       "description": "Cada usuario necesita una contraseña única para acceder a las páginas protegidas. Genera una para ellos y compártela de forma segura."
     },
-  "toasts": {
-    "permissionsUpdated": "Permisos actualizados",
-    "loadError": "Error al cargar miembros",
-    "updateError": "Error al actualizar permisos",
-    "inviteError": "Error al invitar usuario"
-  }
-},
-"OnboardingPage": {
+    "toasts": {
+      "permissionsUpdated": "Permisos actualizados",
+      "loadError": "Error al cargar miembros",
+      "updateError": "Error al actualizar permisos",
+      "inviteError": "Error al invitar usuario"
+    }
+  },
+  "OnboardingPage": {
     "welcome": "¡Bienvenido a Systematic!",
     "subtitle": "Vamos a configurar tu cuenta",
     "createOrg": {
@@ -2164,12 +2179,12 @@
       "revenue": "Ingresos Totales",
       "percentage": "Porcentaje",
       "startDate": "Fecha Inicio",
-  "endDate": "Fecha Fin",
-  "pickDate": "Elegir fecha",
-  "noRecords": "No se encontraron registros para el rango de fechas seleccionado",
-  "printReport": "Imprimir Reporte",
-"reportTitle": "Reporte de Métricas de Gastos",
-"reportSubtitle": "Historial de cálculos con análisis de gastos"
+      "endDate": "Fecha Fin",
+      "pickDate": "Elegir fecha",
+      "noRecords": "No se encontraron registros para el rango de fechas seleccionado",
+      "printReport": "Imprimir Reporte",
+      "reportTitle": "Reporte de Métricas de Gastos",
+      "reportSubtitle": "Historial de cálculos con análisis de gastos"
     },
     "guide": {
       "title": "Comprender los Gastos como % de Ingresos",
@@ -2237,6 +2252,12 @@
     "success": {
       "saved": "Resultado Guardado",
       "savedDesc": "Su cálculo ha sido guardado en el historial"
+    }
+  },
+  "ProtectedPage": {
+    "accessDenied": {
+      "title": "Acceso Denegado",
+      "description": "No tienes permiso para ver esta página."
     }
   }
 }

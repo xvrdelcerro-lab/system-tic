@@ -1,62 +1,122 @@
 {
   "SalesReportsPage": {
+    "title": "Sales Reports",
+    "allProductsOption": "All Products",
+    "allCustomersOption": "All Customers",
+    "filter": {
+      "title": "Filter Report",
+      "productLabel": "Product",
+      "productPlaceholder": "Select a product",
+      "productSearch": "Search product...",
+      "productEmpty": "No product found.",
+      "customerLabel": "Customer",
+      "customerPlaceholder": "Select a customer",
+      "customerSearch": "Search customer...",
+      "customerEmpty": "No customer found.",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date",
+      "printButton": "Print Report"
+    },
+    "log": {
+      "title": "Sales Log",
+      "description": "Historical data of all sales activities from invoices.",
+      "table": {
+        "date": "Date",
+        "product": "Product",
+        "customer": "Customer",
+        "quantity": "Quantity",
+        "unitPrice": "Unit Price",
+        "total": "Total Value"
+      },
+      "empty": "No sales records found for the selected filters."
+    },
+    "report": {
+      "title": "Sales Report",
+      "noSales": "No sales found for the selected filters.",
+      "grandTotal": "Grand Totals",
+      "filterLabels": {
+        "customer": "Customer",
+        "product": "Product",
+        "from": "From",
+        "to": "To"
+      },
+      "tableHeaders": {
+        "date": "Date",
+        "product": "Product",
+        "customer": "Customer",
+        "quantity": "Quantity",
+        "price": "Unit Price",
+        "total": "Total Value"
+      }
+    },
+    "toasts": {
+      "popupBlocked": {
+        "title": "Popup Blocked",
+        "description": "Please allow popups for this site to print the report."
+      },
+      "printError": {
+        "title": "Error Printing Report",
+        "description": "An unknown error occurred."
+      }
+    },
     "salesTrend": {
-      "title": "A",
-      "startDateLabel": "B",
-      "endDateLabel": "C",
-      "sales": "D",
-      "workedDays": "E",
-      "remaining": "F",
-      "projection": "G"
+      "title": "Sales Trend",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date",
+      "sales": "Sales",
+      "workedDays": "Worked Days",
+      "remaining": "Remaining Days",
+      "projection": "Projection",
+      "datePlaceholder": "mm/dd/yyyy"
     }
   },
   "Dashboard": {
-      "title": "Dashboard",
-      "description": "Overview of your business metrics.",
-      "timeRanges": {
-        "day": "Day",
-        "week": "Week",
-        "month": "Month",
-        "year": "Year"
-      },
-      "printButton": "Print",
-      "reportTitle": "Dashboard Report",
-      "reportSubtitle": "{currentLabel} vs. {comparisonLabel}",
-      "comparisonLabels": {
-        "day": "from yesterday",
-        "week": "from last week",
-        "month": "from last month",
-        "year": "from last year"
-      },
-      "currentLabels": {
-        "day": "Today",
-        "week": "This Week",
-        "month": "This Month",
-        "year": "This Year"
-      },
-      "metrics": {
-        "piecesMade": "Pieces Made",
-        "rawMaterialsUsed": "Raw Materials Used",
-        "costOfRawMaterialsUsed": "Cost of Raw Materials Used",
-        "currentInventory": "Current Inventory",
-        "piecesSold": "Pieces Sold",
-        "totalRevenue": "Total Revenue"
-      },
-      "charts": {
-        "salesOverview": {
-          "title": "Sales & Expenses Overview",
-          "description": "Showing data for the last 12 months."
-        },
-        "inventory": {
-          "title": "Raw Material Inventory",
-          "description": "Current stock levels of key materials."
-        },
-        "topProducts": {
-          "title": "Top 10 Sold Products",
-          "description": "Products with the highest sales volume."
-        }
-      }
+    "title": "Dashboard",
+    "description": "Overview of your business metrics.",
+    "timeRanges": {
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year"
     },
+    "printButton": "Print",
+    "reportTitle": "Dashboard Report",
+    "reportSubtitle": "{currentLabel} vs. {comparisonLabel}",
+    "comparisonLabels": {
+      "day": "from yesterday",
+      "week": "from last week",
+      "month": "from last month",
+      "year": "from last year"
+    },
+    "currentLabels": {
+      "day": "Today",
+      "week": "This Week",
+      "month": "This Month",
+      "year": "This Year"
+    },
+    "metrics": {
+      "piecesMade": "Pieces Made",
+      "rawMaterialsUsed": "Raw Materials Used",
+      "costOfRawMaterialsUsed": "Cost of Raw Materials Used",
+      "currentInventory": "Current Inventory",
+      "piecesSold": "Pieces Sold",
+      "totalRevenue": "Total Revenue"
+    },
+    "charts": {
+      "salesOverview": {
+        "title": "Sales & Expenses Overview",
+        "description": "Showing data for the last 12 months."
+      },
+      "inventory": {
+        "title": "Raw Material Inventory",
+        "description": "Current stock levels of key materials."
+      },
+      "topProducts": {
+        "title": "Top 10 Sold Products",
+        "description": "Products with the highest sales volume."
+      }
+    }
+  },
   "Sidebar": {
     "Dashboard": "Dashboard",
     "Users": "Users",
@@ -119,7 +179,7 @@
     "emailLabel": "Email",
     "passwordLabel": "Password",
     "emailPlaceholder": "name@example.com",
-    "passwordPlaceholder": "••••••••",
+    "passwordPlaceholder": " ",
     "signInButton": "Sign In",
     "signupPrompt": "Don't have an account?",
     "signupLink": "Sign up",
@@ -774,7 +834,6 @@
         "components": "Components",
         "actions": "Actions"
       },
-
       "toasts": {
         "saveSuccess": "Product Saved",
         "saveSuccessDesc": "{productName} has been added to your catalog.",
@@ -800,7 +859,7 @@
         "empty": "No components defined for this product.",
         "table": {
           "rawMaterial": "Raw Material",
-          "material":"Material",
+          "material": "Material",
           "vendor": "Vendor",
           "quantity": "Quantity"
         }
@@ -868,38 +927,55 @@
       }
     }
   },
-
   "VendorsPage": {
     "totalVendors": "Total Vendors: {count}",
-  "title": "Vendors",
-
-  "addItemButton": "Add Item",
-
-  "addItemDialog": {
-    "title": "Add Item to {vendorName}",
-    "description": "Add a new raw material item for this vendor.",
-    "saveButton": "Save Item"
-  },
-
-  "addNewVendor": {
-    "title": "Add New Vendor",
-    "description": "Register a new supplier and the raw materials they provide.",
-    "saveButton": "Save Vendor"
-  },
-
-  "toasts": {
-    "itemAdded": {
-      "title": "Item Added",
-      "description": "{itemName} has been added to the vendor."
+    "title": "Vendors",
+    "addItemButton": "Add Item",
+    "addItemDialog": {
+      "title": "Add Item to {vendorName}",
+      "description": "Add a new raw material item for this vendor.",
+      "saveButton": "Save Item"
     },
-    "itemAddError": "Error Adding Item"
-  },
-
-  "validation": {
-    "skuExists": "This SKU already exists for this vendor."
-  },
-
-
+    "addNewVendor": {
+      "title": "Add New Vendor",
+      "description": "Register a new supplier and the raw materials they provide.",
+      "saveButton": "Save Vendor"
+    },
+    "toasts": {
+      "vendorCreated": {
+        "title": "Vendor Created",
+        "description": "{vendorName} has been successfully added."
+      },
+      "error": "Error",
+      "reportError": {
+        "title": "Report Error"
+      },
+      "itemUpdated": {
+        "title": "Item Updated"
+      },
+      "itemUpdateError": "Error Updating Item",
+      "itemDeleted": {
+        "title": "Item Deleted"
+      },
+      "vendorUpdated": {
+        "title": "Vendor Updated"
+      },
+      "vendorUpdateError": "Error Updating Vendor",
+      "vendorDeleted": {
+        "title": "Vendor Deleted"
+      },
+      "vendorDeleteError": "Error Deleting Vendor"
+    },
+    "validation": {
+      "skuRequired": "SKU is required.",
+      "itemNameRequired": "Item name is required.",
+      "pricePositive": "Price must be a positive number.",
+      "scaleRequired": "Scale is required.",
+      "typeRequired": "Type is required.",
+      "vendorNameRequired": "Vendor name is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "vendorRequired": "Vendor is required."
+    },
     "form": {
       "vendorName": "Vendor Name",
       "vendorNamePlaceholder": "e.g., Fabric & Co.",
@@ -958,41 +1034,6 @@
       "cancel": "Cancel",
       "delete": "Delete"
     },
-    "toasts": {
-      "vendorCreated": {
-        "title": "Vendor Created",
-        "description": "{vendorName} has been successfully added."
-      },
-      "error": "Error",
-      "reportError": {
-        "title": "Report Error"
-      },
-      "itemUpdated": {
-        "title": "Item Updated"
-      },
-      "itemUpdateError": "Error Updating Item",
-      "itemDeleted": {
-        "title": "Item Deleted"
-      },
-      "vendorUpdated": {
-        "title": "Vendor Updated"
-      },
-      "vendorUpdateError": "Error Updating Vendor",
-      "vendorDeleted": {
-        "title": "Vendor Deleted"
-      },
-      "vendorDeleteError": "Error Deleting Vendor"
-    },
-    "validation": {
-      "skuRequired": "SKU is required.",
-      "itemNameRequired": "Item name is required.",
-      "pricePositive": "Price must be a positive number.",
-      "scaleRequired": "Scale is required.",
-      "typeRequired": "Type is required.",
-      "vendorNameRequired": "Vendor name is required.",
-      "emailInvalid": "Please enter a valid email address.",
-      "vendorRequired": "Vendor is required."
-    },
     "report": {
       "singleTitle": "Vendor Profile: {name}",
       "allTitle": "All Vendors Report",
@@ -1014,61 +1055,61 @@
     }
   },
   "ExpensesPage": {
-  "title": "Expenses",
-  "newExpense": {
-    "title": "Log New Expense",
-    "description": "Record a business expense to keep your finances in order.",
-    "descriptionLabel": "Description",
-    "descriptionPlaceholder": "e.g., Office supply purchase",
-    "amountLabel": "Amount",
-    "categoryLabel": "Category",
-    "categoryPlaceholder": "Select a category",
-    "dateLabel": "Date of Expense",
-    "datePlaceholder": "Pick a date",
-    "notesLabel": "Notes (Optional)",
-    "notesPlaceholder": "Add any relevant notes here...",
-    "saveButton": "Save Expense"
+    "title": "Expenses",
+    "newExpense": {
+      "title": "Log New Expense",
+      "description": "Record a business expense to keep your finances in order.",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "e.g., Office supply purchase",
+      "amountLabel": "Amount",
+      "categoryLabel": "Category",
+      "categoryPlaceholder": "Select a category",
+      "dateLabel": "Date of Expense",
+      "datePlaceholder": "Pick a date",
+      "notesLabel": "Notes (Optional)",
+      "notesPlaceholder": "Add any relevant notes here...",
+      "saveButton": "Save Expense"
+    },
+    "filters": {
+      "title": "Report Filters",
+      "categoryLabel": "Category",
+      "allCategories": "All Categories",
+      "allProducts": "All Products",
+      "searchPlaceholder": "Search category...",
+      "empty": "No categories found.",
+      "startDateLabel": "Start Date",
+      "endDateLabel": "End Date"
+    },
+    "generateButton": "Generate Report",
+    "log": {
+      "title": "Expense Log",
+      "description": "A history of all recorded expenses.",
+      "dateHeader": "Date",
+      "categoryHeader": "Category",
+      "descriptionHeader": "Description",
+      "amountHeader": "Amount",
+      "actionsHeader": "Actions",
+      "grandTotal": "Grand Total"
+    },
+    "empty": "No expenses recorded yet.",
+    "deleteDialog": {
+      "title": "Delete Expense?",
+      "description": "This will permanently delete this expense record. This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "toasts": {
+      "expenseAdded": "Expense successfully logged.",
+      "reportError": "Report Error",
+      "error": "An error occurred."
+    },
+    "validation": {
+      "descriptionRequired": "Description is required.",
+      "amountPositive": "Amount must be greater than 0.",
+      "categoryRequired": "Category is required.",
+      "dateRequired": "A date for the expense is required."
+    }
   },
-  "filters": {
-    "title": "Report Filters",
-    "categoryLabel": "Category",
-    "allCategories": "All Categories",
-    "allProducts": "All Products",
-    "searchPlaceholder": "Search category...",
-    "empty": "No categories found.",
-    "startDateLabel": "Start Date",
-    "endDateLabel": "End Date"
-  },
-  "generateButton": "Generate Report",
-  "log": {
-    "title": "Expense Log",
-    "description": "A history of all recorded expenses.",
-    "dateHeader": "Date",
-    "categoryHeader": "Category",
-    "descriptionHeader": "Description",
-    "amountHeader": "Amount",
-    "actionsHeader": "Actions",
-    "grandTotal": "Grand Total"
-  },
-  "empty": "No expenses recorded yet.",
-  "deleteDialog": {
-    "title": "Delete Expense?",
-    "description": "This will permanently delete this expense record. This action cannot be undone.",
-    "cancel": "Cancel",
-    "delete": "Delete"
-  },
-  "toasts": {
-    "expenseAdded": "Expense successfully logged.",
-    "reportError": "Report Error",
-    "error": "An error occurred."
-  },
-  "validation": {
-    "descriptionRequired": "Description is required.",
-    "amountPositive": "Amount must be greater than 0.",
-    "categoryRequired": "Category is required.",
-    "dateRequired": "A date for the expense is required."
-  }
-},
   "ArrivalsPage": {
     "title": "Raw Material Intakes",
     "newIntake": {
@@ -1550,78 +1591,6 @@
     },
     "noRecords": "No records found for the selected filters."
   },
-  "SalesReportsPage": {
-    "title": "Sales Reports",
-    "allProductsOption": "All Products",
-    "allCustomersOption": "All Customers",
-    "filter": {
-      "title": "Filter Report",
-      "productLabel": "Product",
-      "productPlaceholder": "Select a product",
-      "productSearch": "Search product...",
-      "productEmpty": "No product found.",
-      "customerLabel": "Customer",
-      "customerPlaceholder": "Select a customer",
-      "customerSearch": "Search customer...",
-      "customerEmpty": "No customer found.",
-      "startDateLabel": "Start Date",
-      "endDateLabel": "End Date",
-      "printButton": "Print Report"
-    },
-    "log": {
-      "title": "Sales Log",
-      "description": "Historical data of all sales activities from invoices.",
-      "table": {
-        "date": "Date",
-        "product": "Product",
-        "customer": "Customer",
-        "quantity": "Quantity",
-        "unitPrice": "Unit Price",
-        "total": "Total Value"
-      },
-      "empty": "No sales records found for the selected filters."
-    },
-    "report": {
-      "title": "Sales Report",
-      "noSales": "No sales found for the selected filters.",
-      "grandTotal": "Grand Totals",
-      "filterLabels": {
-        "customer": "Customer",
-        "product": "Product",
-        "from": "From",
-        "to": "To"
-      },
-      "tableHeaders": {
-        "date": "Date",
-        "product": "Product",
-        "customer": "Customer",
-        "quantity": "Quantity",
-        "price": "Unit Price",
-        "total": "Total Value"
-      }
-    },
-    "toasts": {
-      "popupBlocked": {
-        "title": "Popup Blocked",
-        "description": "Please allow popups for this site to print the report."
-      },
-      "printError": {
-        "title": "Error Printing Report",
-        "description": "An unknown error occurred."
-      }
-    }
-      ,
-      "salesTrend": {
-        "title": "Sales Trend",
-        "startDateLabel": "Start Date",
-        "endDateLabel": "End Date",
-        "sales": "Sales",
-        "workedDays": "Worked Days",
-        "remaining": "Remaining Days",
-        "projection": "Projection",
-        "datePlaceholder": "mm/dd/yyyy"
-      }
-  },
   "WastePage": {
     "title": "Damaged Goods Log",
     "cardTitle": "Waste Log by Phase",
@@ -1737,49 +1706,93 @@
     },
     "MaterialTypesData": {
       "Alloy": "Alloy",
+      "Alloy_desc": "A mixture of two or more metals combined for improved properties.",
       "Aluminum": "Aluminum",
+      "Aluminum_desc": "A lightweight, corrosion-resistant metal.",
       "Article": "Article",
+      "Article_desc": "A finished or semi-finished manufactured item.",
       "Biomaterial": "Biomaterial",
+      "Biomaterial_desc": "A material derived from or compatible with living tissue.",
       "Board": "Board",
+      "Board_desc": "A flat, rigid sheet material, often wood-based.",
       "Carbon Fiber": "Carbon Fiber",
+      "Carbon Fiber_desc": "A strong, lightweight material made of thin carbon strands.",
       "Ceramic": "Ceramic",
+      "Ceramic_desc": "A hard, brittle material made by firing clay or minerals.",
       "Clay": "Clay",
+      "Clay_desc": "A fine-grained natural earth material used in molding.",
       "Combustible": "Combustible",
+      "Combustible_desc": "A material that can easily catch fire or burn.",
       "Component": "Component",
+      "Component_desc": "An individual part used in assembling a larger product.",
       "Composite": "Composite",
+      "Composite_desc": "A material made from two or more combined materials.",
       "Copper": "Copper",
+      "Copper_desc": "A reddish, highly conductive metal.",
       "Fabric": "Fabric",
+      "Fabric_desc": "A woven or knitted textile material.",
       "Fiber": "Fiber",
+      "Fiber_desc": "A thin, thread-like strand used in textiles or composites.",
       "Fiberglass": "Fiberglass",
+      "Fiberglass_desc": "A composite material made of fine glass fibers.",
       "Flour": "Flour",
+      "Flour_desc": "A fine powder made by grinding grains, used in food production.",
       "Glass": "Glass",
+      "Glass_desc": "A hard, transparent material made from melted silica.",
       "Grain": "Grain",
+      "Grain_desc": "Small, hard seeds used as raw food or feed material.",
       "Honey": "Honey",
+      "Honey_desc": "A natural sweet substance produced by bees.",
       "Iron": "Iron",
+      "Iron_desc": "A strong, magnetic metal used in construction and manufacturing.",
       "Item": "Item",
+      "Item_desc": "A general, unspecified type of material or good.",
       "Jam": "Jam",
+      "Jam_desc": "A sweet spread made from cooked fruit and sugar.",
       "Jelly": "Jelly",
+      "Jelly_desc": "A soft, semi-solid preserve made from fruit juice.",
       "Metal": "Metal",
+      "Metal_desc": "A general category of strong, conductive elements or alloys.",
       "Natural Leather": "Natural Leather",
+      "Natural Leather_desc": "Genuine leather made from animal hide.",
       "Natural Wood": "Natural Wood",
+      "Natural Wood_desc": "Unprocessed wood sourced directly from trees.",
       "Nylon": "Nylon",
+      "Nylon_desc": "A strong, synthetic polymer fiber.",
       "Object": "Object",
+      "Object_desc": "A general, unspecified physical item.",
       "Paper": "Paper",
+      "Paper_desc": "A thin material made from processed wood pulp or fibers.",
       "Plastic": "Plastic",
+      "Plastic_desc": "A synthetic material that can be molded into various shapes.",
       "Plastics": "Plastics",
+      "Plastics_desc": "A general category covering multiple types of synthetic plastic.",
       "Polyester": "Polyester",
+      "Polyester_desc": "A synthetic fiber commonly used in textiles and packaging.",
       "Polymer": "Polymer",
+      "Polymer_desc": "A large molecule made of repeating chemical units.",
       "Porcelain": "Porcelain",
+      "Porcelain_desc": "A hard, white ceramic material fired at high temperatures.",
       "Rubber": "Rubber",
+      "Rubber_desc": "A flexible, elastic material, natural or synthetic.",
       "Salt": "Salt",
+      "Salt_desc": "A crystalline mineral used for seasoning or preservation.",
       "Semiconductor": "Semiconductor",
+      "Semiconductor_desc": "A material with electrical conductivity between conductors and insulators.",
       "Silicon": "Silicon",
+      "Silicon_desc": "A hard, brittle element used in electronics and glass.",
       "Steel": "Steel",
+      "Steel_desc": "An alloy of iron and carbon known for strength.",
       "Sugar": "Sugar",
+      "Sugar_desc": "A sweet crystalline substance used in food production.",
       "Synthetic": "Synthetic",
+      "Synthetic_desc": "A material manufactured artificially rather than occurring naturally.",
       "Timber": "Timber",
+      "Timber_desc": "Wood prepared for construction or manufacturing use.",
       "Unit": "Unit",
-      "Yeast": "Yeast"
+      "Unit_desc": "A single countable item, used as a general measurement category.",
+      "Yeast": "Yeast",
+      "Yeast_desc": "A microorganism used in fermentation and baking."
     },
     "AccountCategories": {
       "People Costs": "People Costs",
@@ -1986,7 +1999,6 @@
     "title": "Invoice Status Report",
     "loading": "Loading invoices...",
     "unknownCustomer": "Unknown Customer",
-    
     "filter": {
       "title": "Filter Invoices",
       "description": "Select a date range to filter invoices",
@@ -1995,7 +2007,6 @@
       "pickDate": "Pick a date",
       "clearButton": "Clear Filters"
     },
-    
     "summary": {
       "total": "Total Invoices",
       "paid": "Paid",
@@ -2003,13 +2014,12 @@
       "overdue": "Overdue",
       "totalValue": "Total Value"
     },
-    
     "table": {
       "title": "Invoices",
       "description": "Click checkbox once to show warning, click again to mark as paid permanently",
-      "invoiceNumber": "Invoice N°", 
+      "invoiceNumber": "Invoice N°",
       "customer": "Customer",
-      "date": "Issued on",  
+      "date": "Issued on",
       "dueDate": "Due Date",
       "daysOverdue": "Days Overdue",
       "total": "Total",
@@ -2019,12 +2029,9 @@
       "overdue": "Overdue",
       "empty": "No invoices found"
     },
-
-      
     "warning": {
       "message": "⚠️ This action cannot be undone. Click the checkbox again to permanently mark this invoice as paid."
     },
-    
     "toasts": {
       "markPaidSuccess": "Invoice Marked as Paid",
       "markPaidSuccessDesc": "The invoice has been permanently marked as paid",
@@ -2032,7 +2039,6 @@
       "markPaidErrorDesc": "Failed to mark invoice as paid"
     }
   },
-
   "PLReportPage": {
     "title": "Profit & Loss Report",
     "subtitle": "Generate monthly profit and loss statements",
@@ -2058,8 +2064,6 @@
       "netIncome": "Net Income",
       "netIncomeDesc": "Gross Margin − Operating Expenses"
     },
-
-
     "validation": {
       "selectRange": "Select date range",
       "selectBothDates": "Please select both start and end dates.",
@@ -2071,7 +2075,6 @@
       "unknownError": "Unknown error"
     }
   },
-
   "TeamPage": {
     "title": "Team Management",
     "subtitle": "Manage team members and their permissions",
@@ -2176,12 +2179,12 @@
       "revenue": "Total Revenue",
       "percentage": "Percentage",
       "startDate": "Start Date",
-  "endDate": "End Date",
-  "pickDate": "Pick a date",
-  "noRecords": "No records found for selected date range",
-  "printReport": "Print Report",
-"reportTitle": "Expenses Metrics Report",
-"reportSubtitle": "Calculation history with expense analysis" 
+      "endDate": "End Date",
+      "pickDate": "Pick a date",
+      "noRecords": "No records found for selected date range",
+      "printReport": "Print Report",
+      "reportTitle": "Expenses Metrics Report",
+      "reportSubtitle": "Calculation history with expense analysis"
     },
     "guide": {
       "title": "Understanding Expenses as % of Revenue",
@@ -2249,6 +2252,12 @@
     "success": {
       "saved": "Result Saved",
       "savedDesc": "Your calculation has been saved to history"
+    }
+  },
+  "ProtectedPage": {
+    "accessDenied": {
+      "title": "Access Denied",
+      "description": "You do not have permission to view this page."
     }
   }
 }

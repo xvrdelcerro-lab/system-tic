@@ -50,41 +50,54 @@ const defaultMaterialTypes = [
   { name: 'Timber', description: '' },
   { name: 'Unit', description: '' },
   { name: 'Yeast', description: '' },
-  
 ];
 
-async function seedDefaultData() {
-    const collectionRef = adminDb.collection('material_types');
-    const batch = adminDb.batch();
-    let hasChanges = false;
-    
-    const existingSnap = await collectionRef.get();
-    
-    // Safely get existing names, filtering out any invalid entries
-    const existingNames = new Set(
-        existingSnap.docs.map(doc => {
-            const data = doc.data();
-            return typeof data.name === 'string' ? data.name.toLowerCase() : null;
-        }).filter(name => name !== null) as string[]
-    );
+// One-time seed guard: once this flag document exists, seeding never runs again,
+// so manually deleted defaults stay deleted.
+async function seedDefaultDataOnce() {
+  const seedFlagRef = adminDb.collection('_meta').doc('material_types_seed');
+  const seedFlagSnap = await seedFlagRef.get();
 
-    for (const materialType of defaultMaterialTypes) {
-        if (!existingNames.has(materialType.name.toLowerCase())) {
-            const docRef = collectionRef.doc();
-            batch.set(docRef, materialType);
-            hasChanges = true;
-        }
+  if (seedFlagSnap.exists) {
+    return; // Already seeded in the past - never touch existing data again
+  }
+
+  const collectionRef = adminDb.collection('material_types');
+  const existingSnap = await collectionRef.get();
+
+  const existingNames = new Set(
+    existingSnap.docs
+      .map(doc => {
+        const data = doc.data();
+        return typeof data.name === 'string' ? data.name.toLowerCase() : null;
+      })
+      .filter((name): name is string => name !== null)
+  );
+
+  const batch = adminDb.batch();
+  let hasChanges = false;
+
+  for (const materialType of defaultMaterialTypes) {
+    if (!existingNames.has(materialType.name.toLowerCase())) {
+      const docRef = collectionRef.doc();
+      batch.set(docRef, materialType);
+      hasChanges = true;
     }
-    if (hasChanges) {
-        await batch.commit();
-    }
+  }
+
+  if (hasChanges) {
+    await batch.commit();
+  }
+
+  // Mark seeding as done, regardless of whether anything was inserted,
+  // so this function is a true one-time operation.
+  await seedFlagRef.set({ seededAt: new Date() });
 }
-
 
 // GET all material types
 export async function GET() {
   try {
-    await seedDefaultData(); // Ensure defaults are seeded
+    await seedDefaultDataOnce(); // Only ever seeds once - won't resurrect deleted items
     const snapshot = await adminDb.collection('material_types').orderBy('name').get();
     const materialTypes = snapshot.docs.map(doc => {
         const data = doc.data();

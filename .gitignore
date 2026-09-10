@@ -54,3 +54,10 @@ recovery/
 secrets/
 backups/
 recovery/
+
+   old-service-account.json
+   new-service-account.json
+
+
+*-service-account*.json
+*-firebase-adminsdk-*.json
