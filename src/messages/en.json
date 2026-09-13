@@ -983,7 +983,12 @@
       "vendorDeleted": {
         "title": "Vendor Deleted"
       },
-      "vendorDeleteError": "Error Deleting Vendor"
+      "vendorDeleteError": "Error Deleting Vendor",
+      "itemAdded": {
+        "title": "Item Added",
+        "description": "\"{itemName}\" was added successfully."
+      },
+      "itemAddError": "Failed to add item"
     },
     "validation": {
       "skuRequired": "SKU is required.",
@@ -993,7 +998,8 @@
       "typeRequired": "Type is required.",
       "vendorNameRequired": "Vendor name is required.",
       "emailInvalid": "Please enter a valid email address.",
-      "vendorRequired": "Vendor is required."
+      "vendorRequired": "Vendor is required.",
+      "skuExists": "This SKU already exists."
     },
     "form": {
       "vendorName": "Vendor Name",
@@ -1016,7 +1022,8 @@
       "price": "Price per Unit",
       "scale": "Scale",
       "scalePlaceholder": "Select a scale",
-      "addItemButton": "Add another item"
+      "addItemButton": "Add another item",
+      "nameTooltip": "This name will be shown exactly as typed, in both English and Spanish."
     },
     "vendorList": {
       "title": "Vendor List",
@@ -1071,6 +1078,9 @@
         "email": "Email",
         "phone": "Phone"
       }
+    },
+    "ReportErrors": {
+      "failedToGenerate": "Failed to generate report."
     }
   },
   "ExpensesPage": {
@@ -1298,13 +1308,17 @@
       "scaleLabel": "Scale",
       "scalePlaceholder": "Select a scale",
       "inStockLabel": "Quantity In Stock",
-      "saveButton": "Save Changes"
+      "saveButton": "Save Changes",
+      "nameTooltip": "This name will be shown exactly as typed, in both English and Spanish."
     },
     "deleteDialog": {
       "title": "Confirm Deletion",
       "description": "This will remove <strong>{itemName}</strong> from vendor <strong>{vendorName}</strong>. This action is permanent.",
       "cancel": "Cancel",
       "delete": "Delete"
+    },
+    "ReportErrors": {
+      "failedToGenerate": "Failed to generate report."
     }
   },
   "InvoicesPage": {

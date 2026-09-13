@@ -912,7 +912,12 @@
       "vendorDeleted": {
         "title": "Proveedor Eliminado"
       },
-      "vendorDeleteError": "Error al Eliminar Proveedor"
+      "vendorDeleteError": "Error al Eliminar Proveedor",
+      "itemAdded": {
+        "title": "Artículo Agregado",
+        "description": "\"{itemName}\" se agregó correctamente."
+      },
+      "itemAddError": "Error al agregar el artículo"
     },
     "validation": {
       "skuRequired": "El SKU es obligatorio.",
@@ -922,7 +927,8 @@
       "typeRequired": "El tipo es obligatorio.",
       "vendorNameRequired": "El nombre del proveedor es obligatorio.",
       "emailInvalid": "Por favor ingresa un correo válido.",
-      "vendorRequired": "El proveedor es obligatorio."
+      "vendorRequired": "El proveedor es obligatorio.",
+      "skuExists": "Este SKU ya existe."
     },
     "form": {
       "vendorName": "Nombre del Proveedor",
@@ -945,7 +951,8 @@
       "price": "Precio por Unidad",
       "scale": "Escala",
       "scalePlaceholder": "Selecciona escala",
-      "addItemButton": "Agregar otro artículo"
+      "addItemButton": "Agregar otro artículo",
+      "nameTooltip": "Este nombre se mostrará tal como lo escribas, tanto en inglés como en español."
     },
     "vendorList": {
       "title": "Lista de Proveedores",
@@ -1000,6 +1007,9 @@
         "email": "Correo",
         "phone": "Teléfono"
       }
+    },
+    "ReportErrors": {
+      "failedToGenerate": "Error al generar el reporte."
     }
   },
   "ExpensesPage": {
@@ -1227,13 +1237,17 @@
       "scaleLabel": "Escala",
       "scalePlaceholder": "Selecciona una escala",
       "inStockLabel": "Cantidad en Stock",
-      "saveButton": "Guardar Cambios"
+      "saveButton": "Guardar Cambios",
+      "nameTooltip": "Este nombre se mostrará tal como lo escribas, tanto en inglés como en español."
     },
     "deleteDialog": {
       "title": "Confirmar Eliminación",
       "description": "Esto removerá <strong>{itemName}</strong> del proveedor <strong>{vendorName}</strong>. Esta acción es permanente.",
       "cancel": "Cancelar",
       "delete": "Eliminar"
+    },
+    "ReportErrors": {
+      "failedToGenerate": "Error al generar el reporte."
     }
   },
   "InvoicesPage": {
