@@ -7,6 +7,7 @@
     "Customers": "Clientes",
     "MaterialTypes": "Tipos de Material",
     "Phases": "Fases",
+    "ProductCategories": "Categorías",
     "Products": "Productos",
     "RawMaterials": "Materias Primas",
     "Scales": "Escalas",
@@ -108,7 +109,7 @@
     "emailLabel": "Correo Electrónico",
     "passwordLabel": "Contraseña",
     "emailPlaceholder": "nombre@ejemplo.com",
-    "passwordPlaceholder": "",
+    "passwordPlaceholder": "••••••••",
     "signInButton": "Iniciar Sesión",
     "signupPrompt": "¿No tienes una cuenta?",
     "signupLink": "Regístrate",
@@ -711,7 +712,8 @@
         "title": "Error en Reporte",
         "description": "No se pudo generar el catálogo de productos.",
         "noProducts": "No hay productos que coincidan con los criterios para generar un reporte."
-      }
+      },
+      "productLabel": "Producto"
     },
     "manageCategories": {
       "title": "Categorías de Productos",
@@ -766,8 +768,13 @@
       "toasts": {
         "saveSuccess": "Producto Guardado",
         "saveSuccessDesc": "{productName} ha sido agregado a tu catálogo.",
-        "saveError": "Error al Guardar Producto"
-      }
+        "saveError": "Error al Guardar Producto",
+        "validationError": "Error de Validación",
+        "validationErrorDesc": "Por favor revisa todos los campos requeridos."
+      },
+      "nameLabel": "Nombre del Producto",
+      "ldmButton": "LDM",
+      "nameTooltip": "Este nombre se mostrará tal como lo escribas, tanto en inglés como en español."
     },
     "availableProducts": {
       "title": "Productos Disponibles",
@@ -790,8 +797,14 @@
           "rawMaterial": "Materia Prima",
           "material": "Material",
           "vendor": "Proveedor",
-          "quantity": "Cantidad"
-        }
+          "quantity": "Cantidad",
+          "unitPrice": "Precio Unitario",
+          "lineCost": "Costo",
+          "percentOfTotal": "% del Total"
+        },
+        "unknownMaterial": "Desconocido",
+        "noVendor": "N/D",
+        "profitAmount": "Ganancia $"
       },
       "deleteDialog": {
         "title": "¿Eliminar Producto?",
@@ -803,7 +816,8 @@
         "deleteSuccess": "Producto Eliminado",
         "deleteSuccessDesc": "El producto ha sido removido.",
         "deleteError": "Error al Eliminar Producto"
-      }
+      },
+      "editButton": "Editar"
     },
     "editProductDialog": {
       "title": "Editar {productName}",
@@ -833,7 +847,12 @@
         "updateSuccess": "Componentes Actualizados",
         "updateSuccessDesc": "La lista de materiales ha sido guardada.",
         "updateError": "Error al Actualizar Componentes"
-      }
+      },
+      "materialsUsed": "Materiales Usados",
+      "totalCost": "Costo Total",
+      "profitPercent": "Ganancia %",
+      "unitPrice": "Precio Unitario",
+      "lineCost": "Costo"
     },
     "validation": {
       "itemRequired": "Por favor selecciona un producto."
@@ -1942,6 +1961,25 @@
       "Volume": "Volumen",
       "Length": "Longitud",
       "Units": "Unidades"
+    },
+    "ProductCategoriesData": {
+      "Apparel & Fashion": "Ropa y moda",
+      "Automotive & Accessories": "Automoción y accesorios",
+      "Baby & Kids": "Bebés y niños",
+      "Beauty & Personal Care": "Belleza y cuidado personal",
+      "Books & Stationery": "Libros y papelería",
+      "Electronics & Gadgets": "Electrónica y dispositivos",
+      "Food & Groceries": "Alimentos y comestibles",
+      "Furniture & Home Decor": "Muebles y decoración",
+      "Health & Wellness": "Salud y bienestar",
+      "Home Appliances": "Electrodomésticos",
+      "Jewelry & Accessories": "Joyas y accesorios",
+      "Pet Supplies": "Artículos para mascotas",
+      "Sports & Outdoors": "Deportes y aire libre",
+      "Tools & Hardware": "Herramientas y ferretería",
+      "Toys & Games": "Juguetes y juegos",
+      "Beverages & Ice": "Bebidas y hielo",
+      "Others": "Otros"
     }
   },
   "ProductReportsPage": {
@@ -2258,6 +2296,57 @@
     "accessDenied": {
       "title": "Acceso Denegado",
       "description": "No tienes permiso para ver esta página."
+    }
+  },
+  "ProductCategoriesPage": {
+    "title": "Categorías de Productos",
+    "newCategory": {
+      "title": "Nueva Categoría",
+      "description": "Agrega una nueva categoría para organizar tus productos.",
+      "nameLabel": "Nombre de la Categoría",
+      "namePlaceholder": "ej. Electrónica y dispositivos",
+      "saveButton": "Guardar"
+    },
+    "existingCategories": {
+      "title": "Categorías Existentes",
+      "description": "Administra las categorías disponibles al agregar un producto.",
+      "table": {
+        "name": "Nombre",
+        "actions": "Acciones"
+      },
+      "empty": "Aún no hay categorías."
+    },
+    "editDialog": {
+      "title": "Editar Categoría",
+      "description": "Actualiza el nombre de la categoría abajo.",
+      "saveButton": "Guardar Cambios"
+    },
+    "deleteDialog": {
+      "title": "Eliminar Categoría",
+      "description": "¿Estás seguro de que deseas eliminar <strong>{categoryName}</strong>? Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    },
+    "validation": {
+      "nameRequired": "El nombre de la categoría es obligatorio."
+    },
+    "toasts": {
+      "alreadyExists": "Ya existe una categoría con este nombre.",
+      "saveSuccess": {
+        "title": "Categoría creada",
+        "description": "\"{categoryName}\" se agregó correctamente."
+      },
+      "saveError": "Error al crear la categoría",
+      "updateSuccess": {
+        "title": "Categoría actualizada",
+        "description": "\"{categoryName}\" se actualizó correctamente."
+      },
+      "updateError": "Error al actualizar la categoría",
+      "deleteSuccess": {
+        "title": "Categoría eliminada",
+        "description": "\"{categoryName}\" se eliminó correctamente."
+      },
+      "deleteError": "Error al eliminar la categoría"
     }
   }
 }

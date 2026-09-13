@@ -125,6 +125,7 @@
     "Customers": "Customers",
     "MaterialTypes": "Material Types",
     "Phases": "Phases",
+    "ProductCategories": "Categories",
     "Products": "Products",
     "RawMaterials": "Raw Materials",
     "Scales": "Scales",
@@ -179,7 +180,7 @@
     "emailLabel": "Email",
     "passwordLabel": "Password",
     "emailPlaceholder": "name@example.com",
-    "passwordPlaceholder": " ",
+    "passwordPlaceholder": "",
     "signInButton": "Sign In",
     "signupPrompt": "Don't have an account?",
     "signupLink": "Sign up",
@@ -782,7 +783,8 @@
         "title": "Report Error",
         "description": "Could not generate the product catalog.",
         "noProducts": "There are no products matching the criteria to generate a report."
-      }
+      },
+      "productLabel": "Product"
     },
     "manageCategories": {
       "title": "Product Categories",
@@ -837,8 +839,13 @@
       "toasts": {
         "saveSuccess": "Product Saved",
         "saveSuccessDesc": "{productName} has been added to your catalog.",
-        "saveError": "Error Saving Product"
-      }
+        "saveError": "Error Saving Product",
+        "validationError": "Validation Error",
+        "validationErrorDesc": "Please check all required fields."
+      },
+      "nameLabel": "Product Name",
+      "ldmButton": "BOM",
+      "nameTooltip": "This name will be shown exactly as typed, in both English and Spanish."
     },
     "availableProducts": {
       "title": "Available Products",
@@ -861,8 +868,14 @@
           "rawMaterial": "Raw Material",
           "material": "Material",
           "vendor": "Vendor",
-          "quantity": "Quantity"
-        }
+          "quantity": "Quantity",
+          "unitPrice": "Unit Price",
+          "lineCost": "Cost",
+          "percentOfTotal": "% of Total"
+        },
+        "unknownMaterial": "Unknown",
+        "noVendor": "N/A",
+        "profitAmount": "Profit $"
       },
       "deleteDialog": {
         "title": "Delete Product?",
@@ -874,7 +887,8 @@
         "deleteSuccess": "Product Deleted",
         "deleteSuccessDesc": "The product has been removed.",
         "deleteError": "Error Deleting Product"
-      }
+      },
+      "editButton": "Edit"
     },
     "editProductDialog": {
       "title": "Edit {productName}",
@@ -904,7 +918,12 @@
         "updateSuccess": "Components Updated",
         "updateSuccessDesc": "The bill of materials has been saved.",
         "updateError": "Error Updating Components"
-      }
+      },
+      "materialsUsed": "Materials Used",
+      "totalCost": "Total Cost",
+      "profitPercent": "Profit %",
+      "unitPrice": "Unit Price",
+      "lineCost": "Cost"
     },
     "validation": {
       "itemRequired": "Please select a product."
@@ -1942,6 +1961,25 @@
       "Volume": "Volume",
       "Length": "Length",
       "Units": "Units"
+    },
+    "ProductCategoriesData": {
+      "Apparel & Fashion": "Apparel & Fashion",
+      "Automotive & Accessories": "Automotive & Accessories",
+      "Baby & Kids": "Baby & Kids",
+      "Beauty & Personal Care": "Beauty & Personal Care",
+      "Books & Stationery": "Books & Stationery",
+      "Electronics & Gadgets": "Electronics & Gadgets",
+      "Food & Groceries": "Food & Groceries",
+      "Furniture & Home Decor": "Furniture & Home Decor",
+      "Health & Wellness": "Health & Wellness",
+      "Home Appliances": "Home Appliances",
+      "Jewelry & Accessories": "Jewelry & Accessories",
+      "Pet Supplies": "Pet Supplies",
+      "Sports & Outdoors": "Sports & Outdoors",
+      "Tools & Hardware": "Tools & Hardware",
+      "Toys & Games": "Toys & Games",
+      "Beverages & Ice": "Beverages & Ice",
+      "Others": "Others"
     }
   },
   "ProductReportsPage": {
@@ -2258,6 +2296,57 @@
     "accessDenied": {
       "title": "Access Denied",
       "description": "You do not have permission to view this page."
+    }
+  },
+  "ProductCategoriesPage": {
+    "title": "Product Categories",
+    "newCategory": {
+      "title": "New Category",
+      "description": "Add a new category to organize your products.",
+      "nameLabel": "Category Name",
+      "namePlaceholder": "e.g. Electronics & Gadgets",
+      "saveButton": "Save"
+    },
+    "existingCategories": {
+      "title": "Existing Categories",
+      "description": "Manage the categories available when adding a product.",
+      "table": {
+        "name": "Name",
+        "actions": "Actions"
+      },
+      "empty": "No categories yet."
+    },
+    "editDialog": {
+      "title": "Edit Category",
+      "description": "Update the category name below.",
+      "saveButton": "Save Changes"
+    },
+    "deleteDialog": {
+      "title": "Delete Category",
+      "description": "Are you sure you want to delete <strong>{categoryName}</strong>? This cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "validation": {
+      "nameRequired": "Category name is required."
+    },
+    "toasts": {
+      "alreadyExists": "A category with this name already exists.",
+      "saveSuccess": {
+        "title": "Category created",
+        "description": "\"{categoryName}\" was added successfully."
+      },
+      "saveError": "Failed to create category",
+      "updateSuccess": {
+        "title": "Category updated",
+        "description": "\"{categoryName}\" was updated successfully."
+      },
+      "updateError": "Failed to update category",
+      "deleteSuccess": {
+        "title": "Category deleted",
+        "description": "\"{categoryName}\" was deleted successfully."
+      },
+      "deleteError": "Failed to delete category"
     }
   }
 }

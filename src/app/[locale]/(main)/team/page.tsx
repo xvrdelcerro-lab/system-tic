@@ -292,7 +292,7 @@ export default function TeamPage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Users className="h-5 w-5" />
-            How to Add Team Members
+            {t('howToInvite.title')}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -302,12 +302,12 @@ export default function TeamPage() {
                 1
               </div>
               <div>
-                <p className="font-medium">Get your organization invite code</p>
+                <p className="font-medium">{t('howToInvite.step1.title')}</p>
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <p className="text-sm text-muted-foreground">Share this code with new team members so they can join your organization.</p>
+                  <p className="text-sm text-muted-foreground">{t('howToInvite.step1.description')}</p>
                   <Button variant="secondary" size="sm" onClick={copyInviteCode} disabled={!tenantId} className="whitespace-nowrap">
                     <Copy className="h-4 w-4 mr-2" />
-                    Copy Code
+                    {t('howToInvite.copyCode')}
                   </Button>
                 </div>
               </div>
@@ -318,8 +318,8 @@ export default function TeamPage() {
                 2
               </div>
               <div>
-                <p className="font-medium">Send the code to your team member</p>
-                <p className="text-sm text-muted-foreground">Share via email, Slack, WhatsApp, or any messaging platform</p>
+                <p className="font-medium">{t('howToInvite.step2.title')}</p>
+                <p className="text-sm text-muted-foreground">{t('howToInvite.step2.description')}</p>
               </div>
             </div>
             
@@ -328,8 +328,8 @@ export default function TeamPage() {
                 3
               </div>
               <div>
-                <p className="font-medium">They sign up and join</p>
-                <p className="text-sm text-muted-foreground">New member creates an account, selects "Join Organization", and enters your invite code</p>
+                <p className="font-medium">{t('howToInvite.step3.title')}</p>
+                <p className="text-sm text-muted-foreground">{t('howToInvite.step3.description')}</p>
               </div>
             </div>
             
@@ -338,8 +338,8 @@ export default function TeamPage() {
                 4
               </div>
               <div>
-                <p className="font-medium">Set their password and permissions below</p>
-                <p className="text-sm text-muted-foreground">Once they join, assign them a password and adjust their access permissions</p>
+                <p className="font-medium">{t('howToInvite.step4.title')}</p>
+                <p className="text-sm text-muted-foreground">{t('howToInvite.step4.description')}</p>
               </div>
             </div>
           </div>
@@ -354,7 +354,7 @@ export default function TeamPage() {
 
       {/* Team Members List */}
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">Team Members ({members.length}/6)</h2>
+        <h2 className="text-xl font-semibold">{t('teamMembersCount', { count: members.length })}</h2>
         {members.map((member) => (
           <Card key={member.id}>
             <CardHeader>

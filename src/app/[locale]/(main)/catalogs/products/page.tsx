@@ -1,7 +1,6 @@
 'use client';
 import { usePermissions } from '@/hooks/use-permissions';
 
-
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { useState, useEffect, useMemo, Fragment } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
@@ -27,7 +26,8 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { Loader2, PlusCircle, Printer, Check, ChevronsUpDown, Pencil, ChevronDown, ShoppingBag, Trash2, AlertCircle } from 'lucide-react';
+import { Loader2, PlusCircle, Printer, Check, ChevronsUpDown, Pencil, ChevronDown, ShoppingBag, Trash2, AlertCircle, ClipboardList, Info } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import {
   Table,
@@ -61,16 +61,16 @@ import { Badge } from '@/components/ui/badge';
 import { cn, formatCurrency } from '@/lib/utils';
 import { generateCatalogReport } from './actions';
 import type { Product } from '@/lib/types';
-import { 
-  AlertDialog, 
-  AlertDialogAction, 
-  AlertDialogCancel, 
-  AlertDialogContent, 
-  AlertDialogDescription, 
-  AlertDialogFooter, 
-  AlertDialogHeader, 
-  AlertDialogTitle, 
-  AlertDialogTrigger 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger
 } from '@/components/ui/alert-dialog';
 import { useProducts } from '@/hooks/use-products';
 import { useInventory } from '@/hooks/use-inventory';
@@ -101,7 +101,6 @@ const componentSchema = z.object({
 const productEditSchema = z.object({
     id: z.string(),
     category: z.string().min(1, 'Category is required.'),
-    salePrice: z.number().min(0, 'Sale price must be a positive number.'),
     unitAmount: z.coerce.number().min(0.01, 'Amount must be greater than 0.'),
     unitScale: z.enum(scaleOptions),
 });
@@ -109,6 +108,7 @@ const productEditSchema = z.object({
 const componentsFormSchema = z.object({
     productId: z.string(),
     components: z.array(componentSchema).min(1, "At least one component is required."),
+    salePrice: z.coerce.number().min(0, "Sale price must be a positive number."),
 });
 
 const newProductFormSchema = z.object({
@@ -125,7 +125,7 @@ const newProductInitialState = {
   id: 'new_product',
   name: '',
   salePrice: 0,
-  category: 'Apparel',
+  category: '',
   components: [],
   unitAmount: 1,
   unitScale: 'Piece' as const
@@ -133,14 +133,15 @@ const newProductInitialState = {
 
 export default function ProductsPage() {
   const { hasAccess, loading: permissionLoading } = usePermissions();
-    const t = useTranslations('ProductsPage');
+  const t = useTranslations('ProductsPage');
+  const tCommon = useTranslations('ProtectedPage');
   const tData = useTranslations('DefaultData');
   const locale = useLocale();
   const { toast } = useToast();
   const { products, loading: productsLoading, createProduct, updateProduct, deleteProduct } = useProducts();
   const { allItems: allRawMaterials } = useInventory();
   const { categories: categoryOptions } = useProductCategories();
-  
+
   const [isGenerating, setIsGenerating] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
@@ -153,16 +154,16 @@ export default function ProductsPage() {
     setIsClient(true);
     setClientTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone);
   }, []);
-  
+
   const reportForm = useForm<z.infer<typeof reportFormSchema>>({
     resolver: zodResolver(reportFormSchema),
     defaultValues: { itemId: 'all' },
   });
-  
+
   const editForm = useForm<z.infer<typeof productEditSchema>>({
     resolver: zodResolver(productEditSchema),
   });
-  
+
   const newProductForm = useForm<z.infer<typeof newProductFormSchema>>({
     resolver: zodResolver(newProductFormSchema),
     defaultValues: newProductInitialState,
@@ -173,12 +174,31 @@ export default function ProductsPage() {
   });
 
   const watchedComponents = componentsForm.watch("components");
+  const watchedSalePrice = componentsForm.watch("salePrice");
   const { fields, append, remove } = useFieldArray({
     control: componentsForm.control,
     name: "components"
   });
 
   const newProduct = newProductForm.watch();
+
+  // Live cost calculation for the LDM dialog: sum of quantity x unit price across all selected materials
+  const componentsCost = useMemo(() => {
+    return (watchedComponents || []).reduce((sum, c) => {
+      const material = allRawMaterials.find(rm => rm.id === c.rawMaterialId);
+      const unitPrice = material?.price || 0;
+      const qty = Number(c.quantity) || 0;
+      return sum + (unitPrice * qty);
+    }, 0);
+  }, [watchedComponents, allRawMaterials]);
+
+  const profitPercent = useMemo(() => {
+    const sale = Number(watchedSalePrice) || 0;
+    if (sale <= 0) return 0;
+    return ((sale - componentsCost) / sale) * 100;
+  }, [watchedSalePrice, componentsCost]);
+
+  const materialsUsedCount = (watchedComponents || []).filter(c => c.rawMaterialId).length;
 
   const handleGenerateReport = async () => {
     setIsGenerating(true);
@@ -192,7 +212,7 @@ export default function ProductsPage() {
         setIsGenerating(false);
         return;
       }
-      
+
       const result = await generateCatalogReport({
         products: productsToReport,
         clientTimezone,
@@ -235,12 +255,11 @@ export default function ProductsPage() {
       setIsGenerating(false);
     }
   };
-  
+
   const handleOpenEditDialog = (product: any) => {
     editForm.reset({
       id: product.id,
       category: product.category,
-      salePrice: product.salePrice,
       unitAmount: product.unitAmount || 1,
       unitScale: (product.unitScale as any) || 'Piece',
     });
@@ -251,6 +270,7 @@ export default function ProductsPage() {
     componentsForm.reset({
       productId: product.id,
       components: product.components.length > 0 ? product.components : [{ rawMaterialId: '', quantity: 1 }],
+      salePrice: product.salePrice || 0,
     });
     setIsComponentsDialogOpen(true);
   };
@@ -259,13 +279,11 @@ export default function ProductsPage() {
     try {
         if (data.id === 'new_product') {
             newProductForm.setValue('category', data.category);
-            newProductForm.setValue('salePrice', data.salePrice);
             newProductForm.setValue('unitAmount', data.unitAmount);
             newProductForm.setValue('unitScale', data.unitScale);
         } else {
-            await updateProduct(data.id, { 
-              category: data.category, 
-              salePrice: Number(data.salePrice),
+            await updateProduct(data.id, {
+              category: data.category,
               unitAmount: Number(data.unitAmount),
               unitScale: data.unitScale,
             });
@@ -281,8 +299,9 @@ export default function ProductsPage() {
     try {
         if (data.productId === 'new_product') {
             newProductForm.setValue('components', data.components);
+            newProductForm.setValue('salePrice', data.salePrice);
         } else {
-            await updateProduct(data.productId, { components: data.components });
+            await updateProduct(data.productId, { components: data.components, salePrice: Number(data.salePrice) });
             toast({ title: t('editComponentsDialog.toasts.updateSuccess'), description: t('editComponentsDialog.toasts.updateSuccessDesc') });
         }
         setIsComponentsDialogOpen(false);
@@ -294,7 +313,7 @@ export default function ProductsPage() {
   const handleSaveProduct = async () => {
     const isValid = await newProductForm.trigger();
     if (!isValid) {
-      toast({ variant: 'destructive', title: 'Validation Error', description: 'Please check all required fields.' });
+      toast({ variant: 'destructive', title: t('addNewProduct.toasts.validationError'), description: t('addNewProduct.toasts.validationErrorDesc') });
       return;
     }
     try {
@@ -328,7 +347,7 @@ export default function ProductsPage() {
     { value: 'all', label: t('generateReport.allOption') },
     ...(products || []).map(item => ({ value: item.id, label: `${item.name} (${item.category})` })),
   ];
-  
+
   const getEditingProduct = (id: string) => {
       if (id === 'new_product') return newProductForm.getValues();
       return products.find(p => p.id === id);
@@ -338,14 +357,27 @@ export default function ProductsPage() {
     return null;
   }
 
+  if (!hasAccess('catalogs.products')) {
+    return (
+      <div className="space-y-6">
+        <h1 className="text-3xl font-bold">{tCommon('accessDenied.title')}</h1>
+        <Alert variant="destructive">
+          <AlertTitle>{tCommon('accessDenied.title')}</AlertTitle>
+          <AlertDescription>{tCommon('accessDenied.description')}</AlertDescription>
+        </Alert>
+      </div>
+    );
+  }
+
   return (
+    <ProtectedPage pageName="catalogs.products" pageTitle="Products">
     <div className="space-y-8">
       <Alert variant="default" className="block md:hidden">
         <AlertCircle className="h-4 w-4" />
         <AlertTitle>{t('mobileWarning.title')}</AlertTitle>
         <AlertDescription>{t('mobileWarning.description')}</AlertDescription>
       </Alert>
-      
+
       <div className="flex items-center justify-between">
         <div className="flex items-baseline gap-4">
           <h1 className="text-3xl font-bold tracking-tight font-headline">{t('title')}</h1>
@@ -368,7 +400,7 @@ export default function ProductsPage() {
                                 name="itemId"
                                 render={({ field }) => (
                                 <FormItem className="flex flex-col">
-                                    <FormLabel>Product</FormLabel>
+                                    <FormLabel>{t('generateReport.productLabel')}</FormLabel>
                                     <Popover>
                                         <PopoverTrigger asChild>
                                         <FormControl>
@@ -413,77 +445,96 @@ export default function ProductsPage() {
             </DialogContent>
         </Dialog>
       </div>
-      
+
       <Form {...newProductForm}>
         <form onSubmit={(e) => { e.preventDefault(); handleSaveProduct(); }}>
-          <Card className="border bg-background max-w-[740px]">
+          <Card className="border bg-background max-w-[900px]">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
               <CardTitle>{t('addNewProduct.title')}</CardTitle>
-              <div className="flex items-center gap-2">
-                <Select onValueChange={(value) => {
-                  const product = products.find(p => p.id === value);
-                  if (product) {
-                      newProductForm.reset({
-                          id: 'new_product',
-                          name: product.name,
-                          category: product.category,
-                          salePrice: product.salePrice,
-                          unitAmount: product.unitAmount || 1,
-                          unitScale: (product.unitScale as any) || 'Piece',
-                          components: product.components
-                      });
-                  }
-                }}>
-                    <SelectTrigger className="w-[200px]"><SelectValue placeholder={t('addNewProduct.existingProductsPlaceholder')} /></SelectTrigger>
-                    <SelectContent>{products.map(item => (<SelectItem key={item.id} value={item.id}>{`${item.name} (${item.category})`}</SelectItem>))}</SelectContent>
-                </Select>
+              <Select onValueChange={(value) => {
+                const product = products.find(p => p.id === value);
+                if (product) {
+                    newProductForm.reset({
+                        id: 'new_product',
+                        name: product.name,
+                        category: product.category,
+                        salePrice: product.salePrice,
+                        unitAmount: product.unitAmount || 1,
+                        unitScale: (product.unitScale as any) || 'Piece',
+                        components: product.components
+                    });
+                }
+              }}>
+                  <SelectTrigger className="w-[220px]"><SelectValue placeholder={t('addNewProduct.existingProductsPlaceholder')} /></SelectTrigger>
+                  <SelectContent>{products.map(item => (<SelectItem key={item.id} value={item.id}>{`${item.name} (${item.category})`}</SelectItem>))}</SelectContent>
+              </Select>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {/* Row 1: Name (wide) + Category + Scale */}
+              <div className="flex items-end gap-3">
+                <FormField control={newProductForm.control} name="name" render={({ field }) => (
+                    <FormItem className="flex-[2.5]">
+                        <FormLabel className="flex items-center gap-1">
+                            {t('addNewProduct.nameLabel')}
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Info className="h-3 w-3 text-muted-foreground cursor-help" />
+                                </TooltipTrigger>
+                                <TooltipContent className="max-w-[220px] text-xs">
+                                    {t('addNewProduct.nameTooltip')}
+                                </TooltipContent>
+                            </Tooltip>
+                        </FormLabel>
+                        <FormControl><Input placeholder={t('addNewProduct.namePlaceholder')} {...field} /></FormControl>
+                        <FormMessage />
+                    </FormItem>
+                )} />
+                <FormField control={newProductForm.control} name="category" render={({ field }) => (
+                    <FormItem className="flex-1">
+                        <FormLabel>{t('addNewProduct.table.category')}</FormLabel>
+                        <Select onValueChange={field.onChange} value={field.value}>
+                            <FormControl><SelectTrigger><SelectValue placeholder={t('editProductDialog.categoryPlaceholder')} /></SelectTrigger></FormControl>
+                            <SelectContent>{categoryOptions.map(cat => (<SelectItem key={cat.id} value={cat.name}>{tData(`ProductCategoriesData.${cat.name}`, {}, { default: cat.name })}</SelectItem>))}</SelectContent>
+                        </Select>
+                        <FormMessage />
+                    </FormItem>
+                )} />
+                <FormField control={newProductForm.control} name="unitAmount" render={({ field }) => (
+                    <FormItem className="w-24">
+                        <FormLabel>{t('editProductDialog.scaleAmountLabel')}</FormLabel>
+                        <FormControl><Input type="number" step="0.01" {...field} /></FormControl>
+                        <FormMessage />
+                    </FormItem>
+                )} />
+                <FormField control={newProductForm.control} name="unitScale" render={({ field }) => (
+                    <FormItem className="w-32">
+                        <FormLabel>{t('editProductDialog.scaleUnitLabel')}</FormLabel>
+                        <Select onValueChange={field.onChange} value={field.value}>
+                            <FormControl><SelectTrigger><SelectValue /></SelectTrigger></FormControl>
+                            <SelectContent>{scaleOptions.map(opt => (<SelectItem key={opt} value={opt}>{scaleTranslations[opt]}</SelectItem>))}</SelectContent>
+                        </Select>
+                        <FormMessage />
+                    </FormItem>
+                )} />
+              </div>
+
+              {/* Row 2: LDM button + live summary + save */}
+              <div className="flex items-center justify-between pt-2 border-t">
+                <div className="flex items-center gap-3">
+                    <Button type="button" variant="outline" onClick={() => handleOpenComponentsDialog({ ...newProduct, id: 'new_product' })}>
+                        <ClipboardList className="h-4 w-4 mr-2" /> {t('addNewProduct.ldmButton')}
+                    </Button>
+                    <Badge variant="secondary">{t('addNewProduct.table.components')}: {newProduct.components.length}</Badge>
+                    <Badge variant="outline" className="font-semibold">{t('editProductDialog.salePriceLabel')}: {formatCurrency(newProduct.salePrice)}</Badge>
+                </div>
                 <Button type="submit" className="bg-[#3560A0] hover:bg-[#3560A0]/90">{t('addNewProduct.saveButton')}</Button>
               </div>
-            </CardHeader>
-            <CardContent>
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead className="w-[180px] p-2 text-left">Producto</TableHead>
-                            <TableHead className="w-[70px] p-2 text-left">Medida</TableHead>
-                            <TableHead className="w-[90px] p-2 text-left">Precio Venta</TableHead>
-                            <TableHead className="w-[90px] p-2 text-left">Categoría</TableHead>
-                            <TableHead className="w-[70px] p-2 text-center">Comp.</TableHead>
-                            <TableHead className="w-[240px] p-2 text-right">Acciones</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        <TableRow>
-                            <TableCell className="p-2 text-left">
-                                <FormField control={newProductForm.control} name="name" render={({ field }) => (
-                                    <FormItem><FormControl><Input placeholder={t('addNewProduct.namePlaceholder')} className="h-8 text-xs" {...field} /></FormControl></FormItem>
-                                )} />
-                            </TableCell>
-                            <TableCell className="p-2 text-left">
-                                <Badge variant="outline" className="text-[10px] py-0">{newProduct.unitAmount !== 1 ? `${newProduct.unitAmount} ` : ''}{tData(`scaleNames.${newProduct.unitScale}`, {}, { default: newProduct.unitScale })}</Badge>
-                            </TableCell>
-                            <TableCell className="p-2 text-left text-xs font-semibold">{formatCurrency(newProduct.salePrice)}</TableCell>
-                            <TableCell className="p-2 text-left"><Badge variant="outline" className="text-[10px] py-0">{newProduct.category}</Badge></TableCell>
-                            <TableCell className="p-2 text-center"><Badge variant="secondary" className="text-[10px] py-0">{newProduct.components.length}</Badge></TableCell>
-                            <TableCell className="p-2 text-right">
-                                <div className="flex items-center justify-end gap-1">
-                                    <Button variant="ghost" size="sm" type="button" onClick={() => handleOpenEditDialog({ ...newProduct, id: 'new_product' })} className="h-7 text-xs px-2">
-                                        <Pencil className="h-3 w-3 mr-1" /> Edit
-                                    </Button>
-                                    <Button variant="ghost" size="sm" type="button" onClick={() => handleOpenComponentsDialog({ ...newProduct, id: 'new_product' })} className="h-7 text-xs px-2">
-                                        <ShoppingBag className="h-3 w-3 mr-1" /> BOM
-                                    </Button>
-                                </div>
-                            </TableCell>
-                        </TableRow>
-                    </TableBody>
-                </Table>
             </CardContent>
           </Card>
         </form>
       </Form>
-      
-      <Card className="border bg-background max-w-[740px]">
+
+      <Card className="border bg-background max-w-[900px]">
         <CardHeader>
           <CardTitle>{t('availableProducts.title')}</CardTitle>
           <CardDescription>{t('availableProducts.description')}</CardDescription>
@@ -492,12 +543,12 @@ export default function ProductsPage() {
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="w-[180px] p-2 text-left">Producto</TableHead>
-                        <TableHead className="w-[70px] p-2 text-left">Medida</TableHead>
-                        <TableHead className="w-[90px] p-2 text-left">Precio Venta</TableHead>
-                        <TableHead className="w-[90px] p-2 text-left">Categoría</TableHead>
-                        <TableHead className="w-[70px] p-2 text-center">Comp.</TableHead>
-                        <TableHead className="w-[240px] p-2 text-right">Acciones</TableHead>
+                        <TableHead className="w-[180px] p-2 text-left">{t('availableProducts.table.productName')}</TableHead>
+                        <TableHead className="w-[70px] p-2 text-left">{t('availableProducts.table.scale')}</TableHead>
+                        <TableHead className="w-[90px] p-2 text-left">{t('availableProducts.table.salePrice')}</TableHead>
+                        <TableHead className="w-[90px] p-2 text-left">{t('availableProducts.table.category')}</TableHead>
+                        <TableHead className="w-[70px] p-2 text-center">{t('availableProducts.table.components')}</TableHead>
+                        <TableHead className="w-[240px] p-2 text-right">{t('availableProducts.table.actions')}</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -514,12 +565,12 @@ export default function ProductsPage() {
                                     </Badge>
                                 </TableCell>
                                 <TableCell className="p-2 text-left text-xs font-semibold">{formatCurrency(product.salePrice)}</TableCell>
-                                <TableCell className="p-2 text-left"><Badge variant="outline" className="text-[10px] py-0">{product.category}</Badge></TableCell>
+                                <TableCell className="p-2 text-left"><Badge variant="outline" className="text-[10px] py-0">{tData(`ProductCategoriesData.${product.category}`, {}, { default: product.category })}</Badge></TableCell>
                                 <TableCell className="p-2 text-center"><Badge variant="secondary" className="text-[10px] py-0">{product.components.length}</Badge></TableCell>
                                 <TableCell className="p-2 text-right">
                                     <div className="flex items-center justify-end gap-1">
                                         <Button variant="ghost" size="sm" onClick={() => handleOpenEditDialog(product)} className="h-7 text-xs px-2">
-                                            <Pencil className="h-3 w-3 mr-1" /> Edit
+                                            <Pencil className="h-3 w-3 mr-1" /> {t('availableProducts.editButton')}
                                         </Button>
                                         <AlertDialog>
                                             <AlertDialogTrigger asChild>
@@ -554,6 +605,7 @@ export default function ProductsPage() {
                                           </Button>
                                         </div>
                                         {product.components.length > 0 ? (
+                                            <>
                                             <div className="border rounded-md">
                                                 <Table>
                                                     <TableHeader className="bg-muted/50">
@@ -561,22 +613,62 @@ export default function ProductsPage() {
                                                             <TableHead className="text-[10px] h-7">{t('availableProducts.bom.table.material')}</TableHead>
                                                             <TableHead className="text-[10px] h-7">{t('availableProducts.bom.table.vendor')}</TableHead>
                                                             <TableHead className="text-[10px] h-7 text-right">{t('availableProducts.bom.table.quantity')}</TableHead>
+                                                            <TableHead className="text-[10px] h-7 text-right">{t('availableProducts.bom.table.unitPrice')}</TableHead>
+                                                            <TableHead className="text-[10px] h-7 text-right">{t('availableProducts.bom.table.lineCost')}</TableHead>
+                                                            <TableHead className="text-[10px] h-7 text-right">{t('availableProducts.bom.table.percentOfTotal')}</TableHead>
                                                         </TableRow>
                                                     </TableHeader>
                                                     <TableBody>
-                                                        {product.components.map((c, i) => {
+                                                        {(() => {
+                                                            const totalQty = product.components.reduce((sum, c) => sum + c.quantity, 0);
+                                                            return product.components.map((c, i) => {
                                                             const m = allRawMaterials.find(rm => rm.id === c.rawMaterialId);
+                                                            const unitPrice = m?.price || 0;
+                                                            const pctOfTotal = totalQty > 0 ? (c.quantity / totalQty) * 100 : 0;
                                                             return (
                                                                 <TableRow key={i}>
-                                                                    <TableCell className="text-[10px] py-1">{m?.item || 'Unknown'}</TableCell>
-                                                                    <TableCell className="text-[10px] py-1">{m?.vendorName || 'N/A'}</TableCell>
-                                                                    <TableCell className="text-[10px] py-1 text-right">{c.quantity} {tData(`scaleNames.${m?.scale}`, {}, { default: m?.scale })}</TableCell>
+                                                                    <TableCell className="text-[10px] py-1">{m?.item || t('availableProducts.bom.unknownMaterial')}</TableCell>
+                                                                    <TableCell className="text-[10px] py-1">{m?.vendorName || t('availableProducts.bom.noVendor')}</TableCell>
+                                                                    <TableCell className="text-[10px] py-1 text-right">{c.quantity} {m ? tData(`scaleNames.${m.scale}`, {}, { default: m.scale }) : ''}</TableCell>
+                                                                    <TableCell className="text-[10px] py-1 text-right">{formatCurrency(unitPrice)}</TableCell>
+                                                                    <TableCell className="text-[10px] py-1 text-right font-semibold">{formatCurrency(unitPrice * c.quantity)}</TableCell>
+                                                                    <TableCell className="text-[10px] py-1 text-right text-muted-foreground">{pctOfTotal.toFixed(1)}%</TableCell>
                                                                 </TableRow>
                                                             )
-                                                        })}
+                                                            });
+                                                        })()}
                                                     </TableBody>
                                                 </Table>
                                             </div>
+                                            {(() => {
+                                                const totalCost = product.components.reduce((sum, c) => {
+                                                    const m = allRawMaterials.find(rm => rm.id === c.rawMaterialId);
+                                                    return sum + ((m?.price || 0) * c.quantity);
+                                                }, 0);
+                                                const profitAmount = product.salePrice - totalCost;
+                                                const profitPct = product.salePrice > 0 ? (profitAmount / product.salePrice) * 100 : 0;
+                                                return (
+                                                    <div className="grid grid-cols-4 gap-2 mt-2 p-2 border rounded-md bg-background">
+                                                        <div className="text-center">
+                                                            <p className="text-[9px] text-muted-foreground">{t('editComponentsDialog.totalCost')}</p>
+                                                            <p className="text-xs font-semibold">{formatCurrency(totalCost)}</p>
+                                                        </div>
+                                                        <div className="text-center">
+                                                            <p className="text-[9px] text-muted-foreground">{t('editProductDialog.salePriceLabel')}</p>
+                                                            <p className="text-xs font-semibold">{formatCurrency(product.salePrice)}</p>
+                                                        </div>
+                                                        <div className="text-center">
+                                                            <p className="text-[9px] text-muted-foreground">{t('availableProducts.bom.profitAmount')}</p>
+                                                            <p className={cn("text-xs font-semibold", profitAmount < 0 ? "text-destructive" : "text-green-600")}>{formatCurrency(profitAmount)}</p>
+                                                        </div>
+                                                        <div className="text-center">
+                                                            <p className="text-[9px] text-muted-foreground">{t('editComponentsDialog.profitPercent')}</p>
+                                                            <p className={cn("text-xs font-semibold", profitPct < 0 ? "text-destructive" : "text-green-600")}>{profitPct.toFixed(1)}%</p>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })()}
+                                            </>
                                         ) : (
                                             <p className="text-[10px] text-muted-foreground text-center py-2 border rounded-md bg-muted/30">{t('availableProducts.bom.empty')}</p>
                                         )}
@@ -590,19 +682,19 @@ export default function ProductsPage() {
             </Table>
         </CardContent>
       </Card>
-      
-      {/* Edit Product Dialog */}
+
+      {/* Edit Product Dialog: Category + Scale only (sale price now lives in the LDM dialog) */}
         <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
             <DialogContent className="sm:max-w-[425px]">
                 <Form {...editForm}>
                     <form onSubmit={editForm.handleSubmit(handleEditProduct)}>
                         <DialogHeader>
-                            <DialogTitle>{t('editProductDialog.title', { productName: getEditingProduct(editForm.getValues('id'))?.name || 'Product' })}</DialogTitle>
+                            <DialogTitle>{t('editProductDialog.title', { productName: getEditingProduct(editForm.getValues('id'))?.name || t('availableProducts.bom.unknownMaterial') })}</DialogTitle>
                             <DialogDescription>{t('editProductDialog.description')}</DialogDescription>
                         </DialogHeader>
                         <div className="space-y-4 py-4">
                             <FormField control={editForm.control} name="category" render={({ field }) => (
-                                <FormItem><FormLabel>{t('editProductDialog.categoryLabel')}</FormLabel><Select onValueChange={field.onChange} value={field.value}><FormControl><SelectTrigger><SelectValue /></SelectTrigger></FormControl><SelectContent>{categoryOptions.map(cat => (<SelectItem key={cat.id} value={cat.name}>{cat.name}</SelectItem>))}</SelectContent></Select><FormMessage /></FormItem>
+                                <FormItem><FormLabel>{t('editProductDialog.categoryLabel')}</FormLabel><Select onValueChange={field.onChange} value={field.value}><FormControl><SelectTrigger><SelectValue /></SelectTrigger></FormControl><SelectContent>{categoryOptions.map(cat => (<SelectItem key={cat.id} value={cat.name}>{tData(`ProductCategoriesData.${cat.name}`, {}, { default: cat.name })}</SelectItem>))}</SelectContent></Select><FormMessage /></FormItem>
                             )} />
                             <div className="grid grid-cols-2 gap-4">
                                 <FormField control={editForm.control} name="unitAmount" render={({ field }) => (
@@ -612,9 +704,6 @@ export default function ProductsPage() {
                                     <FormItem><FormLabel>{t('editProductDialog.scaleUnitLabel')}</FormLabel><Select onValueChange={field.onChange} value={field.value}><FormControl><SelectTrigger><SelectValue /></SelectTrigger></FormControl><SelectContent>{scaleOptions.map(opt => (<SelectItem key={opt} value={opt}>{scaleTranslations[opt]}</SelectItem>))}</SelectContent></Select><FormMessage /></FormItem>
                                 )} />
                             </div>
-                            <FormField control={editForm.control} name="salePrice" render={({ field }) => (
-                                <FormItem><FormLabel>{t('editProductDialog.salePriceLabel')}</FormLabel><FormControl><InputWithDecimals prefix="$" fixedDecimalScale={true} value={field.value ?? ''} onValueChange={(v) => field.onChange(v.floatValue ?? 0)} /></FormControl><FormMessage /></FormItem>
-                            )} />
                         </div>
                         <DialogFooter><Button type="submit" className="bg-[#3560A0] hover:bg-[#3560A0]/90">{t('editProductDialog.saveButton')}</Button></DialogFooter>
                     </form>
@@ -622,33 +711,76 @@ export default function ProductsPage() {
             </DialogContent>
         </Dialog>
 
-      {/* Edit Components Dialog */}
+      {/* LDM Dialog: materials, live unit price / line cost, total cost, sale price, and profit % */}
         <Dialog open={isComponentsDialogOpen} onOpenChange={setIsComponentsDialogOpen}>
             <DialogContent className="sm:max-w-3xl">
                 <Form {...componentsForm}>
                     <form onSubmit={componentsForm.handleSubmit(handleEditComponents)}>
-                        <DialogHeader><DialogTitle>{t('editComponentsDialog.title', { productName: getEditingProduct(componentsForm.getValues('productId'))?.name || 'Product' })}</DialogTitle></DialogHeader>
+                        <DialogHeader><DialogTitle>{t('editComponentsDialog.title', { productName: getEditingProduct(componentsForm.getValues('productId'))?.name || t('availableProducts.bom.unknownMaterial') })}</DialogTitle></DialogHeader>
                         <div className="py-4 space-y-4 max-h-[60vh] overflow-y-auto pr-6">
-                            {fields.map((field, index) => (
-                               <div key={field.id} className="flex items-end gap-2 p-3 border rounded-lg">
+                            {(() => {
+                                const totalQtyAll = (watchedComponents || []).reduce((sum, c) => sum + (Number(c.quantity) || 0), 0);
+                                return fields.map((field, index) => {
+                                const selectedId = watchedComponents?.[index]?.rawMaterialId;
+                                const m = allRawMaterials.find(rm => rm.id === selectedId);
+                                const qty = Number(watchedComponents?.[index]?.quantity) || 0;
+                                const unitPrice = m?.price || 0;
+                                const lineCost = unitPrice * qty;
+                                const pctOfTotal = totalQtyAll > 0 ? (qty / totalQtyAll) * 100 : 0;
+                                return (
+                                <div key={field.id} className="flex items-end gap-2 p-3 border rounded-lg">
                                     <FormField control={componentsForm.control} name={`components.${index}.rawMaterialId`} render={({ field }) => (
                                         <FormItem className="flex-1"><FormLabel>{t('editComponentsDialog.materialLabel')}</FormLabel><Select onValueChange={field.onChange} value={field.value}>
                                             <FormControl><SelectTrigger><SelectValue placeholder={t('editComponentsDialog.materialPlaceholder')} /></SelectTrigger></FormControl>
-                                            <SelectContent>{allRawMaterials.map(m => (<SelectItem key={m.id} value={m.id}>{m.item} ({m.vendorName})</SelectItem>))}</SelectContent>
+                                            <SelectContent>{allRawMaterials.map(rm => (<SelectItem key={rm.id} value={rm.id}>{rm.item} ({rm.vendorName})</SelectItem>))}</SelectContent>
                                         </Select><FormMessage /></FormItem>
                                     )} />
-                                    <FormField control={componentsForm.control} name={`components.${index}.quantity`} render={({ field }) => {
-                                        const m = allRawMaterials.find(rm => rm.id === watchedComponents?.[index]?.rawMaterialId);
-                                        return (
-    <ProtectedPage pageName="catalogs.products" pageTitle="Products">
-<FormItem><FormLabel>{t('editComponentsDialog.quantityLabel')}</FormLabel><div className="flex items-center gap-1"><FormControl><Input type="number" step="0.01" {...field} className="w-24"/></FormControl><div className="h-10 px-3 py-2 border rounded-md bg-muted text-xs flex items-center min-w-[60px] justify-center">{tData(`scaleNames.${m?.scale}`, {}, { default: m?.scale }) || '----'}</div></div><FormMessage /></FormItem>
-    </ProtectedPage>
-  )
-                                    }} />
-                                     <Button type="button" variant="destructive" size="icon" onClick={() => remove(index)} disabled={fields.length <= 1}><Trash2 className="h-4 w-4" /></Button>
-                               </div>
-                            ))}
+                                    <FormField control={componentsForm.control} name={`components.${index}.quantity`} render={({ field }) => (
+                                        <FormItem><FormLabel>{t('editComponentsDialog.quantityLabel')}</FormLabel><div className="flex items-center gap-1"><FormControl><Input type="number" step="0.01" {...field} className="w-20"/></FormControl><div className="h-10 px-2 py-2 border rounded-md bg-muted text-xs flex items-center min-w-[50px] justify-center">{m ? tData(`scaleNames.${m.scale}`, {}, { default: m.scale }) : '—'}</div></div><FormMessage /></FormItem>
+                                    )} />
+                                    <div className="flex flex-col items-end min-w-[90px]">
+                                        <span className="text-[10px] text-muted-foreground">{t('editComponentsDialog.unitPrice')}</span>
+                                        <span className="text-xs font-medium">{formatCurrency(unitPrice)}</span>
+                                    </div>
+                                    <div className="flex flex-col items-end min-w-[90px]">
+                                        <span className="text-[10px] text-muted-foreground">{t('editComponentsDialog.lineCost')}</span>
+                                        <span className="text-xs font-bold">{formatCurrency(lineCost)}</span>
+                                    </div>
+                                    <div className="flex flex-col items-end min-w-[70px]">
+                                        <span className="text-[10px] text-muted-foreground">{t('availableProducts.bom.table.percentOfTotal')}</span>
+                                        <span className="text-xs font-medium">{pctOfTotal.toFixed(1)}%</span>
+                                    </div>
+                                    <Button type="button" variant="destructive" size="icon" onClick={() => remove(index)} disabled={fields.length <= 1}><Trash2 className="h-4 w-4" /></Button>
+                                </div>
+                                );
+                                });
+                            })()}
                              <Button type="button" variant="outline" size="sm" className="mt-2" onClick={() => append({ rawMaterialId: '', quantity: 1 })}><PlusCircle className="mr-2 h-4 w-4" />{t('editComponentsDialog.addButton')}</Button>
+
+                             {/* Cost summary + sale price + profit % */}
+                             <div className="grid grid-cols-2 gap-4 pt-4 border-t">
+                                <div className="space-y-1">
+                                    <p className="text-xs text-muted-foreground">{t('editComponentsDialog.materialsUsed')}</p>
+                                    <p className="text-lg font-semibold">{materialsUsedCount}</p>
+                                </div>
+                                <div className="space-y-1 text-right">
+                                    <p className="text-xs text-muted-foreground">{t('editComponentsDialog.totalCost')}</p>
+                                    <p className="text-lg font-semibold">{formatCurrency(componentsCost)}</p>
+                                </div>
+                                <FormField control={componentsForm.control} name="salePrice" render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>{t('editProductDialog.salePriceLabel')}</FormLabel>
+                                        <FormControl><InputWithDecimals prefix="$" fixedDecimalScale={true} value={field.value ?? ''} onValueChange={(v) => field.onChange(v.floatValue ?? 0)} /></FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )} />
+                                <div className="space-y-1 text-right">
+                                    <p className="text-xs text-muted-foreground">{t('editComponentsDialog.profitPercent')}</p>
+                                    <p className={cn("text-lg font-semibold", profitPercent < 0 ? "text-destructive" : "text-green-600")}>
+                                        {profitPercent.toFixed(1)}%
+                                    </p>
+                                </div>
+                             </div>
                         </div>
                         <DialogFooter><Button type="submit" className="bg-[#3560A0] hover:bg-[#3560A0]/90">{t('editComponentsDialog.saveButton')}</Button></DialogFooter>
                     </form>
@@ -656,5 +788,6 @@ export default function ProductsPage() {
             </DialogContent>
         </Dialog>
     </div>
+    </ProtectedPage>
   );
 }

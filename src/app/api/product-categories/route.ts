@@ -5,30 +5,70 @@ import type { ProductCategory } from '@/hooks/use-product-categories';
 
 export const dynamic = 'force-dynamic';
 
-const defaultProductCategories = ['Apparel', 'Accessories', 'Services'];
+// Canonical English names - translated for display via DefaultData.ProductCategoriesData
+const defaultProductCategories = [
+  'Apparel & Fashion',
+  'Automotive & Accessories',
+  'Baby & Kids',
+  'Beauty & Personal Care',
+  'Books & Stationery',
+  'Electronics & Gadgets',
+  'Food & Groceries',
+  'Furniture & Home Decor',
+  'Health & Wellness',
+  'Home Appliances',
+  'Jewelry & Accessories',
+  'Pet Supplies',
+  'Sports & Outdoors',
+  'Tools & Hardware',
+  'Toys & Games',
+  'Beverages & Ice',
+  'Others',
+];
 
-async function seedDefaultData() {
-    const collectionRef = adminDb.collection('product_categories');
-    const batch = adminDb.batch();
-    let hasChanges = false;
+// One-time seed guard: once this flag document exists, seeding never runs again,
+// so manually deleted categories stay deleted (fixes the old self-healing bug).
+async function seedDefaultDataOnce() {
+  const seedFlagRef = adminDb.collection('_meta').doc('product_categories_seed');
+  const seedFlagSnap = await seedFlagRef.get();
 
-    for (const categoryName of defaultProductCategories) {
-        const existingSnap = await collectionRef.where('name', '==', categoryName).limit(1).get();
-        if (existingSnap.empty) {
-            const docRef = collectionRef.doc();
-            batch.set(docRef, { name: categoryName });
-            hasChanges = true;
-        }
+  if (seedFlagSnap.exists) {
+    return; // Already seeded in the past - never touch existing data again
+  }
+
+  const collectionRef = adminDb.collection('product_categories');
+  const existingSnap = await collectionRef.get();
+  const existingNames = new Set(
+    existingSnap.docs
+      .map(doc => {
+        const data = doc.data();
+        return typeof data.name === 'string' ? data.name.toLowerCase() : null;
+      })
+      .filter((name): name is string => name !== null)
+  );
+
+  const batch = adminDb.batch();
+  let hasChanges = false;
+
+  for (const categoryName of defaultProductCategories) {
+    if (!existingNames.has(categoryName.toLowerCase())) {
+      const docRef = collectionRef.doc();
+      batch.set(docRef, { name: categoryName });
+      hasChanges = true;
     }
-    if (hasChanges) {
-        await batch.commit();
-    }
+  }
+
+  if (hasChanges) {
+    await batch.commit();
+  }
+
+  await seedFlagRef.set({ seededAt: new Date() });
 }
 
 // GET all categories
 export async function GET() {
   try {
-    await seedDefaultData();
+    await seedDefaultDataOnce(); // Only ever seeds once - won't resurrect deleted items
     const snapshot = await adminDb.collection('product_categories').orderBy('name').get();
     const categories = snapshot.docs.map(doc => {
         const data = doc.data();

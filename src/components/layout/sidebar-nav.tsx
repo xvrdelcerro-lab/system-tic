@@ -27,6 +27,7 @@ import {
   TrendingUp,
   Calculator,
   Shield,
+  Tags,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import {
@@ -64,6 +65,7 @@ const menuConfig = (t: (key: string) => string, tt: (key: string) => string) => 
       { href: '/catalogs/customers', label: t('Customers'), icon: Users },
       { href: '/catalogs/material-types', label: t('MaterialTypes'), icon: Shapes },
       { href: '/catalogs/phases', label: t('Phases'), icon: Timer },
+      { href: '/catalogs/product-categories', label: t('ProductCategories'), icon: Tags },
       { href: '/catalogs/products', label: t('Products'), icon: Package },
       { href: '/catalogs/raw-materials', label: t('RawMaterials'), icon: Box },
       { href: '/catalogs/scales', label: t('Scales'), icon: Ruler },
